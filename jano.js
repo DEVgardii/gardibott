@@ -129,7 +129,7 @@ client.on("message", (message) => {
     client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "WATCHING" });
     message.reply("Done\n  Now Activity is WATCHING  ");
   }
-  if (message.content == prefix + "ListIng") {
+  if (message.content == prefix + "ListenIng") {
     client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "LISTENING" });
     message.reply("Done\n  Now Activity is LISTENING ");
   }
