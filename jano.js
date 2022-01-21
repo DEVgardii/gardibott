@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const devs = "681553671364018196";
+const devs = "881116033916735570";
 const moment = require("moment");
 const client = new Discord.Client();
 const express = require('express');
@@ -118,15 +118,17 @@ client.on("message", message => {
 });
 
 //////////////////////////////////////////////
+client.on('ready',() => {
+console.log( ' Bot is now online ! Hurray!')
+client.user.setPresence({
+activity: {
+name: `${prefix}help | Server ${client.guilds.cache.size} , USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`,
+type: "WATCHING"
+},
+status: "dnd"
+})
+})
 
-client.on('ready', () => {
-	console.log(`${client.user.tag}`);
-	console.log(`${client.guilds.cache.size} Servers`);
-	console.log(`${client.users.cache.size} Members`);
-	console.log(`${client.channels.cache.size} Channels`);
-	console.log(`[ ${client.guilds.cache.map(g => g.name).join(', \n ')} ]`);
-	client.user.setActivity(`${prefix}help  Server ${client.guilds.cache.size} , Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: 'PLAYING' });
-});
 /////////////////
 
 
@@ -171,11 +173,7 @@ client.on("message", message => {
       return message.channel.send("`Usage : " + prefix + "say <message>`");
     }
     message.delete();
-    var embed = new Discord.MessageEmbed()
-      .setColor("RANDOM")
-      .setDescription(`${args}`)
-      .setFooter(`By ${message.author.tag}`);
-    message.channel.send(embed);
+    message.channel.send(`${args}`);
   }
 });
 //////////////////////////////////////////////////////////////////
