@@ -266,9 +266,9 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(client.user.avatarURL())
-      .setDescription(`
+      .setTitle(`
  
-[support](https://discord.gg/9n6dj99ZEN)`);
+[support](https://discord.gg/5cRNwVX89x)`);
     message.channel.send(embed);
   }
 });
@@ -280,8 +280,8 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setThumbnail(client.user.avatarURL())
-      .setDescription(`
-[invite](https://discord.com/api/oauth2/authorize?client_id=867208331659706379&permissions=8&scope=bot)
+      .setTitle(`
+[invite](https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot)
 `);
     message.channel.send(embed);
   }
