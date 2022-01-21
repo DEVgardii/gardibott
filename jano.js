@@ -32,11 +32,15 @@ const embed = new Discord.MessageEmbed()
 > \`clear\` - \`open\` - \`close\` - \`open all\`
 > \`close all\` - \`role add\` - \`role remove\` - \`nick\`
 > \`slowmode\` - \`sug\`
+**🤹‍♀️┇Gif
+> \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\` - \`couple\` - \`cat\`
+**🤪┇Funny
+> \`kiss\` , \`slap\` , \`hug\`
 **💎┇Link**
 [**Support**](https://discord.gg/5cRNwVX89x)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
 `)
 
-    .setFooter(` System bot ✨ | Coded by , JANO`, client.user.avatarURL)
+    .setFooter(` Gardi bot ✨ | ${prefix}help`, client.user.avatarURL)
     .setURL("https://images-ext-2.discordapp.net/external/4RET2OBD1PTYwUo-cgDNkj6szsR2CxU3_JMWi1MbwyQ/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/765396847379480660/e6eeb6d68aa374138b5862a8b674818c.png")
       
     message.channel.send(embed);
