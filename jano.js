@@ -264,20 +264,38 @@ client.on("message", message => {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
     const embed = new Discord.MessageEmbed()
-      .setColor("RANDOM")
-      .setThumbnail(client.user.avatarURL())
-      .setTitle(`
- 
-[support](https://discord.gg/5cRNwVX89x)`);
+       .setColor("random")
+    .setDescription (`
+Support is me
+I work
+\` moderation \`- \` game\` - \`gif\` -\` funny\`
+Link
+[support](https://discord.gg/5cRNwVX89x)`)
+    .setFooter(``)
+    .setImage(``)
+    .setTitle(``) 
+    .setThumbnail(client.user.avatarURL())
     message.channel.send(embed);
   }
 });
 ////////////////////////////////////////////////////////////////
 client.on("message", message => {
-  if (message.content === prefix + "invite") {
+  if (message.content === prefix + "support") {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
-    message.channel.send(`[invite](https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot));
+    const embed = new Discord.MessageEmbed()
+       .setColor("random")
+    .setDescription (`
+Support is me
+I work
+\` moderation \`- \` game\` - \`gif\` -\` funny\`
+Link
+[invite]( https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot)`)
+    .setFooter(``)
+    .setImage(``)
+    .setTitle(``) 
+    .setThumbnail(client.user.avatarURL())
+    message.channel.send(embed);
   }
 });
 
