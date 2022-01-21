@@ -37,7 +37,7 @@ const embed = new Discord.MessageEmbed()
 `)
 
     .setFooter(` System bot ✨ | Coded by , JANO`, client.user.avatarURL)
-    .setURL("https://discord.gg/9n6dj99ZEN")
+    .setURL("https://images-ext-2.discordapp.net/external/4RET2OBD1PTYwUo-cgDNkj6szsR2CxU3_JMWi1MbwyQ/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/765396847379480660/e6eeb6d68aa374138b5862a8b674818c.png")
       
     message.channel.send(embed);
     message.react("<a:jano_27:799630916820795422>");
@@ -53,7 +53,7 @@ client.on("message", msg => {
     if (msg.member.hasPermission("MENTION_EVERYONE")) return;
     if (!msg.channel.guild) return;
     msg.delete();
-    msg.reply("```You cant send everyone``` <a:jano_23:799630647513317387>");
+    msg.reply("```You cant send everyone```");
   }
 });
 /////////////
@@ -63,7 +63,7 @@ client.on("message", msg => {
     if (msg.member.hasPermission("MENTION_EVERYONE")) return;
     if (!msg.channel.guild) return;
     msg.delete();
-    msg.reply("```You cant send here ``` <a:jano_23:799630647513317387>");
+    msg.reply("```You cant send here ```");
   }
 });
 //////////////
