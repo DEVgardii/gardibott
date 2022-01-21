@@ -18,51 +18,24 @@ client.on("message", message => {
 if (message.content === prefix +"help") {
 const embed = new Discord.MessageEmbed()
 .setColor("BLACK")
-.setDescription(` 
-> **General Commands**
-> \`${prefix}avatar\`
-> \`${prefix}server \` 
-> \`${prefix}info\`
-> \`${prefix}stats\` 
-> \`${prefix}time\` 
-> \`${prefix}support\` 
-> \`${prefix}invite\` 
-> \`${prefix}id\` 
-> \`${prefix}emoji\` 
-> \`${prefix}bots\`
-> **Moderation Commands**
-> \`${prefix}clear\` 
-> \`${prefix}lock\`
-> \`${prefix}unlock\`
-> \`${prefix}roles\`
-> \`${prefix}slowmode\`
-> \`${prefix}say\`
-> \`${prefix}channelinfo\`
-> \`${prefix}channel all\`
-> \`${prefix}bot\` 
-> \`${prefix}ping\` 
-> \`${prefix}roleinfo \` 
-> **Game Commands**
- > \`${prefix}kiss  \` 
- > \`${prefix}slap  \` 
- > \`${prefix}slot \` 
- > \`${prefix}boom \` 
- > \`${prefix}hug \` 
- > \`${prefix}love \` 
- > \`${prefix}rps \` 
- > \`${prefix}fruit \` 
-> **Text Commands**
- > \`${prefix}textKurdish \` 
- > \`${prefix}textTurkish \` 
- > \`${prefix}textArabic \` 
- > \`${prefix}textEngish \` 
-> **anti everyone and anti partner**
-> \` use onle owner ship or administrator or MENTION_EVERYONE send [@everyone] \`
-> \` anti link use onle owner ship ord administrator or manage message send [anti partner] \`
+    .setDescription(`
+🌙 ┇ **Everyone**
+> \`invite\` - \`support\` - \`about\` - \`about owner\`
+> \`uptime\` - \`ping\` - \`user\`  -  \`srever\`
+> \`avatar\` - \`icon\` - \`date\` - \`se\`
+> \`allbots\` - \`prefix\`
+**⚙️┇Moderator**
+> \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
+> \`move\` - \`move all\` - \`kick\` - \`vkick\`
+> \`vban\` - \`unvban\` - \`ban\` - \`unban\`
+> \`lock\` - \`unlock\` - \`lock all\` - \`unlock all\`
+> \`clear\` - \`open\` - \`close\` - \`open all\`
+> \`close all\` - \`role add\` - \`role remove\` - \`nick\`
+> \`slowmode\` - \`sug\`
+**💎┇Link**
+[**Support**](https://discord.gg/5cRNwVX89x)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
+`)
 
-**[ invite ](https://discord.com/api/oauth2/authorize?client_id=867208331659706379&permissions=8&scope=bot)** , **[ support ](https://discord.gg/9n6dj99ZEN)**
- `)
-    
     .setFooter(` System bot ✨ | Coded by , JANO`, client.user.avatarURL)
     .setURL("https://discord.gg/9n6dj99ZEN")
       
