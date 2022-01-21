@@ -137,10 +137,7 @@ client.on("message", (message) => {
     client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "PLAYING" });
     message.reply("Done\n  Now Activity is PLAYING  ");
   }
-  if (message.content == prefix + "StreamIng") {
-    client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "STREAMING", url: "https://www.twitch.tv/tapoze"});
-    message.reply("Done\n  Now Activity is STREAMING ");
-}
+  
 });
 
 
