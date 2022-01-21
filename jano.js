@@ -268,7 +268,7 @@ client.on("message", message => {
     .setDescription (`
 Support is me
 I work
-\` moderation \`- \` game\` - \`gif\` -\` funny\`
+\` moderation \`- \`gif\` - \` funny\`
 Link
 [support](https://discord.gg/5cRNwVX89x)`)
     .setFooter(``)
@@ -288,7 +288,7 @@ client.on("message", message => {
     .setDescription (`
 Support is me
 I work
-\` moderation \`- \` game\` - \`gif\` -\` funny\`
+\` moderation \`- \`gif\` - \` funny\`
 Link
 [invite]( https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot)`)
     .setFooter(``)
