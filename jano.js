@@ -15,8 +15,7 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
 const prefix = ".";
 ////////////////////////
 
-```js
-let smsm = ['881116033916735570','']
+let smsm = ['881116033916735570']
 client.on('message', message=> {
   if(message.content.startsWith(prefix + "setavatar")){
   if(!smsm.includes(message.author.id))return
@@ -26,12 +25,6 @@ client.on('message', message=> {
   message.channel.send(`> Done SetAvatar To\n||${args}||`)
   }
 }) 
-```
-@Js 
-
-Code Set Avatar For Bot
-
-
 /////////////////////
 client.on("message", message => {
 if (message.content === prefix +"help") {
