@@ -32,9 +32,9 @@ const embed = new Discord.MessageEmbed()
 > \`clear\` - \`open\` - \`close\` - \`open all\`
 > \`close all\` - \`role add\` - \`role remove\` - \`nick\`
 > \`slowmode\` - \`sug\`
-**🤹‍♀️┇Gif
+**🤹‍♀️┇Gif**
 > \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\` - \`couple\` - \`cat\`
-**🤪┇Funny
+**🤪┇Funny**
 > \`kiss\` , \`slap\` , \`hug\`
 **💎┇Link**
 [**Support**](https://discord.gg/5cRNwVX89x)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
