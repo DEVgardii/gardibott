@@ -120,18 +120,28 @@ client.on("message", message => {
 });
 
 //////////////////////////////////////////////
-client.on('ready',() => {
-console.log( ' Bot is now online ! Hurray!')
-client.user.setPresence({
-activity: {
-name: `${prefix}help | Server ${client.guilds.cache.size} , USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`,
-type: "WATCHING"
-},
-status: "dnd"
-})
-})
 
-/////////////////
+
+const developers = ["881116033916735570"];
+client.on("message", (message) => {
+  if (!developers.includes(message.author.id)) return;
+  if (message.content.startsWith(prefix + "WatchIng")) {
+    client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "WATCHING" });
+    message.reply("Done\n  Now Activity is WATCHING  ");
+  }
+  if (message.content == prefix + "ListIng") {
+    client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "LISTENING" });
+    message.reply("Done\n  Now Activity is LISTENING ");
+  }
+  if (message.content == prefix + "PlayIng") {
+    client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "PLAYING" });
+    message.reply("Done\n  Now Activity is PLAYING  ");
+  }
+  if (message.content == prefix + "StreamIng") {
+    client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "STREAMING", url: "https://www.twitch.tv/tapoze"});
+    message.reply("Done\n  Now Activity is STREAMING ");
+}
+});
 
 
 ///////////////////////////////////////////////
