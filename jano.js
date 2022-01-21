@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
   console.log('Server Started.');
 });
-client.login("ODY3MjA4MzU5MzM3Mzk0MTk0.YPdwuA.3A7bYAjbwYc9XPwZIppd6FinqxM");
-const prefix = "+";
+client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
+const prefix = ".";
 ////////////////////////
 client.on("message", message => {
 if (message.content === prefix +"help") {
