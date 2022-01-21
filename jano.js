@@ -277,13 +277,7 @@ client.on("message", message => {
   if (message.content === prefix + "invite") {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
-    const embed = new Discord.MessageEmbed()
-      .setColor("RANDOM")
-      .setThumbnail(client.user.avatarURL())
-      .setTitle(`
-[invite](https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot)
-`);
-    message.channel.send(embed);
+    message.channel.send(`[invite](https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot));
   }
 });
 
