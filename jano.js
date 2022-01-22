@@ -14,6 +14,33 @@ app.listen(3000, () => {
 client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
 const prefix = ".";
 ////////////////////////
+client.on("message", message => {
+if (message.content.startsWith(prefix + "botinfo")) {
+message.channel.send({
+embed: new Discord.MessageEmbed()
+.setAuthor(client.user.username, client.user.avatarURL())
+.setThumbnail(client.user.avatarURL())
+.setColor("#00F0FF")
+.setTitle("INFO |__=_=__|")
+.addField(
+"``My Ping``",
+[`${Date.now() - message.createdTimestamp}` + "MS"],
+true
+)
+.addField("``Servers``", [client.guilds.cache.size], true)
+.addField("``Channels``", `[ ${client.channels.cache.size} ]`, true)
+.addField("``Users``", `[ ${client.users.cache.size} ]`, true)
+.addField("``My Name``", `[ ${client.user.tag} ]`, true)
+.addField("``My ID``", `[ ${client.user.id} ]`, true)
+.addField("``OWNER``", `[ <@670647563627659306> ]`, true)
+.addField("``ADMIN``", `[ <@724891404874285117> ]`, true)
+.addField("``My Prefix``", `[ ${prefix} ]`, true)
+.addField("``My Language``", `[ JavaScript ]`, true)
+.addField("``Bot Version``", `[ 12.5.3 ]`, true)
+});
+}
+});
+////////////////////////////////
 
 let smsm = ['881116033916735570']
 client.on('message', message=> {
