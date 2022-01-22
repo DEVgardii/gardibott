@@ -100,7 +100,7 @@ embed: new Discord.MessageEmbed()
 
 let smsm = ['881116033916735570']
 client.on('message', message=> {
-  if(message.content.startsWith(prefix + "setavatar")){
+  if(message.content.startsWith(prefix + "ava")){
   if(!smsm.includes(message.author.id))return
   const args = message.content.split(" ").slice(1).join(" ")
   if(!args) return message.reply(new Discord.MessageEmbed().setTitle(`Hi`))
@@ -234,23 +234,7 @@ client.on("message", (message) => {
   }
   
 });
-const developers = ["881116033916735570"];
-client.on("message", (message) => {
-  if (!developers.includes(message.author.id)) return;
-  if (message.content.startsWith(prefix + "online")) {
-    client.user.setStatus(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "online" });
-    message.reply("Done\n  Now Activity is WATCHING  ");
-  }
-  if (message.content == prefix + "idle") {
-    client.user.setStatus(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "idle" });
-    message.reply("Done\n  Now Activity is LISTENING ");
-  }
-  if (message.content == prefix + "dnd") {
-    client.user.setStatus(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "dnd" });
-    message.reply("Done\n  Now Activity is PLAYING  ");
-  }
-  
-});
+
 
 
 ///////////////////////////////////////////////
