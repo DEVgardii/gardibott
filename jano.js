@@ -786,11 +786,15 @@ client.on("message", async message => {
           value: `${message.guild.owner}`,
           inline: true
         },
+	      
+	      
         {
           name: "All Members: ",
           value: ` ${message.guild.memberCount} users`,
           inline: true
         },
+	      
+	      
         {
           name: "Members Online: ",
           value: ` ${
@@ -800,6 +804,8 @@ client.on("message", async message => {
           } users online`,
           inline: true
         },
+	      
+	      
         {
           name: "All Bots: ",
           value: ` ${
@@ -807,16 +813,22 @@ client.on("message", async message => {
           } bots`,
           inline: true
         },
+	      
+	      
         {
           name: "Creation Date: ",
           value: message.guild.createdAt.toLocaleDateString("en-us"),
           inline: true
         },
+	      
+	      
         {
           name: "Roles Number: ",
           value: ` ${message.guild.roles.cache.size} roles in this server.`,
           inline: true
         },
+	      
+	      
         
         {
           name: "Boosters: ",
@@ -826,6 +838,8 @@ client.on("message", async message => {
               : ` no boosters Found`,
           inline: true
         },
+	      
+	      
         {
           name: "Emojis: ",
           value:
@@ -834,6 +848,7 @@ client.on("message", async message => {
               : " no emojis Found",
           inline: true
         }
+	      
       );
     await message.channel.send(embed);
   }
