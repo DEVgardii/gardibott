@@ -132,7 +132,7 @@ const embed = new Discord.MessageEmbed()
 🌙 ┇ **Everyone**
 > \`invite\` - \`support\` - \`about\` - \`owner\`
 > \`uptime\` - \`ping\` - \`user\`  -  \`srever\`
-> \`avatar\` - \`date\` - \`se\`
+> \`avatar\` - \`date\` - \`se gif\` - \`se image\`
 > \`allbots\` - \`prefix\`
 **⚙️┇Moderator**
 > \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
