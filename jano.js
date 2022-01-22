@@ -152,6 +152,7 @@ const embed = new Discord.MessageEmbed()
 =========
 **🤪┇Funny**
   \`kiss\` , \`slap\` , \`hug\`
+  =========
 **💎┇Link**
 [**Support**](https://discord.gg/5cRNwVX89x)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
 `)
