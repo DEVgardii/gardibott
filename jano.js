@@ -364,7 +364,7 @@ function timeCon(time) {
 }
 //////////////////////////////////////////////////////////////////
 client.on("message", message => {
-  if (message.content === prefix + "time") {
+  if (message.content === prefix + "date") {
     var currentTime = new Date(),
       Year = currentTime.getFullYear(),
       Month = currentTime.getMonth() + 1,
@@ -372,7 +372,7 @@ client.on("message", message => {
 
     var clinet = new Discord.MessageEmbed()
       .setTitle("[ TODAY]  ")
-      .setColor("BLACK")
+      .setColor("RANDOM")
       .setTimestamp()
       .setDescription("" + Day + "-" + Month + "-" + Year + "");
     message.channel.send(clinet);
