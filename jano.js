@@ -795,15 +795,7 @@ client.on("message", async message => {
         },
 	      
 	      
-        {
-          name: "Members Online: ",
-          value: ` ${
-            message.guild.members.cache.filter(
-              m => m.user.presence.status == "online", "dnd", "idle"
-            ).size
-          } users online`,
-          inline: true
-        },
+        
 	      
 	      
         {
