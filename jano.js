@@ -78,7 +78,7 @@ const embed = new Discord.MessageEmbed()
 .setColor("BLACK")
     .setDescription(`
 🌙 ┇ **Everyone**
-> \`invite\` - \`support\` - \`about\` - \`about owner\`
+> \`invite\` - \`support\` - \`about\` - \`owner\`
 > \`uptime\` - \`ping\` - \`user\`  -  \`srever\`
 > \`avatar\` - \`icon\` - \`date\` - \`se\`
 > \`allbots\` - \`prefix\`
