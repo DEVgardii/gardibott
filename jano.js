@@ -15,7 +15,7 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
 const prefix = ".";
 ////////////////////////
 client.on("message", message => {
-  if (message.content.startsWith(PREFIX + "user")) {
+  if (message.content.startsWith(prefix + "user")) {
     if (!message.channel.guild) return;
     let user = message.mentions.users.first();
     var men = message.mentions.users.first();
