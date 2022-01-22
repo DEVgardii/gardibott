@@ -22,7 +22,7 @@ embed: new Discord.MessageEmbed()
 .setThumbnail(client.user.avatarURL())
 .setColor("RANDOM")
 .setTitle("Info Bot")
-.addField("``OWNER``", `[ <@881116033916735570> ] \`\`\`All info owener .owner\`\`\``, true)
+.addField("``OWNER``", `[ <@881116033916735570> ] \`\`\`All info owner .owner\`\`\``, true)
 .addField("``My Name``", `[ ${client.user.tag} ]`, true)
 .addField("``My ID``", `[ ${client.user.id} ]`, true)
 .addField("``Servers``", [client.guilds.cache.size], true)
@@ -37,7 +37,7 @@ embed: new Discord.MessageEmbed()
 });
 ///////////
 client.on("message", message => {
-if (message.content.startsWith(prefix + "about owner")) {
+if (message.content.startsWith(prefix + "owner")) {
 message.channel.send({
 embed: new Discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())
