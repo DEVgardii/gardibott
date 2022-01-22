@@ -15,6 +15,66 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
 const prefix = ".";
 ////////////////////////
 
+let owner = ['881116033916735570' ]
+client.on('message', message => {
+let guildID = message.content.split(' ')[1]
+let guild = client.guilds.cache.get(guildID)
+if(message.content.startsWith(PREFIX + 'left')) {
+  if(!owner.includes(message.author.id)) return message.reply("AEKAY AEKAY")
+  
+if(!guild)return message.channel.send('**Send The Server ID**')
+message.channel.send(`I am gonna leave => [${guild.name}]`)
+guild.leave()
+}
+}) 
+
+///////////////////////
+
+
+if(message.content.startsWith(`${prefix} + about`)){
+    // define saymsg
+    const saymsg = message.content.slice(Number(prefix.length) + 5)
+    //define embed
+    const embed = new Discord.MessageEmbed()
+    .setColor("FF0000")
+    .setAuthor("", "")
+    .setThumbnail(` `)
+    .setFooter(message.author.username, message.author.displayAvatarURL)
+    .setTimestamp()
+    .setDescription(`
+**Developers Bot**
+<@881116033916735570>
+ 
+ 
+**ping bot**
+${client.ws.ping}
+**ID Bot**
+${client.user.id} 
+**Name Bot**
+${client.user.tag}
+**Prefix Bot**
+[ ${PREFIX} ]
+**ervers**
+${client.guilds.cache.size}
+**Users**
+${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
+**Channels**
+${client.channels.cache.size}
+**Commands**
+${client.commands.size}
+**Node**
+${process.version} 
+`)
+
+    //send the Message
+    message.channel.send(embed)
+    message.react("")
+  }
+
+
+
+/////////////////////
+
 let smsm = ['881116033916735570']
 client.on('message', message=> {
   if(message.content.startsWith(prefix + "setavatar")){
