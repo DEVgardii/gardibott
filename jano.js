@@ -643,7 +643,7 @@ client.on("message", async message => {
     let chrka = Math.floor(client.uptime / 1000) % 60;
 
     return message.channel.send(
-      `__Uptime:__\n${rozh}d ${katzhmer}h ${daqa}m ${chrka}s`
+      `__Uptime:__\n\n${rozh}day ${katzhmer}hour ${daqa}minute ${chrka}socond`
     );
   }
 });
