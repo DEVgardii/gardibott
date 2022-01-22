@@ -43,7 +43,6 @@ client.on("message", message => {
         .addField("**Created Account At**", `${heg.createdAt}`, true)
         .addField("**Time Join Server**", message.member.joinedAt.toLocaleString())    
         .addField("**Bot**", `${heg.bot}`, true)
-        .addField("**Status** ", heg.user.presence.status, true)
         .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
         .setColor("FF0000")      
         .setTimestamp()
