@@ -20,15 +20,15 @@ message.channel.send({
 embed: new Discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())
 .setThumbnail(client.user.avatarURL())
-.setColor("#00F0FF")
-.setTitle("INFO |__=_=__|")
+.setColor("Random")
+.setTitle("Info Bot")
 .addField("``OWNER``", `[ <@881116033916735570> ]`, true)
 .addField("``My Name``", `[ ${client.user.tag} ]`, true)
 .addField("``My ID``", `[ ${client.user.id} ]`, true)
 .addField("``My Prefix``", `[ ${prefix} ]`, true)
-.addField("``Servers``", [client.guilds.cache.size], true)
-.addField("``Users``", `[ ${client.users.cache.size} ]`, true)
-.addField("``Channels``", `[ ${client.channels.cache.size} ]`, true)
+.addField("``Servers``", [${client.guilds.cache.size}], true)
+.addField("``Users``", `[${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},]`, true)
+.addField("``Channels``", `[]`, true)
 .addField(
 "``My Ping``",
 [`${Date.now() - message.createdTimestamp}` + "MS"],
