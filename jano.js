@@ -28,7 +28,7 @@ embed: new Discord.MessageEmbed()
 .addField("``My Prefix``", `[ ${prefix} ]`, true)
 .addField("``Servers``", [${client.guilds.cache.size}], true)
 .addField("``Users``", `[${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},]`, true)
-.addField("``Channels``", `[]`, true)
+.addField("``Channels``", `[${client.channels.cache.size}]`, true)
 .addField(
 "``My Ping``",
 [`${Date.now() - message.createdTimestamp}` + "MS"],
