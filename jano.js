@@ -15,7 +15,7 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
 const prefix = ".";
 ////////////////////////
 client.on("message", message => {
-if (message.content.startsWith(prefix + "botinfo")) {
+if (message.content.startsWith(prefix + "about")) {
 message.channel.send({
 embed: new Discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())
