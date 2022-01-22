@@ -134,7 +134,7 @@ const embed = new Discord.MessageEmbed()
   \`uptime\` - \`ping\` - \`user\`  -  \`srever\`
   \`avatar\` - \`date\` - \`se gif\` - \`se image\`
   \`allbots\` - \`prefix\`
-  //Moderation//
+  =========
 **⚙️┇Moderator**
   \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
   \`move\` - \`move all\` - \`kick\` - \`vkick\`
@@ -143,13 +143,13 @@ const embed = new Discord.MessageEmbed()
   \`clear\` - \`open\` - \`close\` - \`open all\`
   \`close all\` - \`role add\` - \`role remove\` - \`nick\`
   \`slowmode\` - \`sug\`
-  //gif//
+  =========
 **🤹‍♀️┇Gif**
   \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\` - \`couple\` - \`cat\`
-//photo//
+=========
 **📸┇Photo**
   \`pboy\` - \`pgirl\` - \`panime\`
-//funny//
+=========
 **🤪┇Funny**
   \`kiss\` , \`slap\` , \`hug\`
 **💎┇Link**
