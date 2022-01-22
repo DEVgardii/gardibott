@@ -795,7 +795,7 @@ client.on("message", async message => {
           name: "Members Online: ",
           value: ` ${
             message.guild.members.cache.filter(
-              m => m.user.presence.status == "online"
+              m => m.user.presence.status == "online", "dnd", "idle"
             ).size
           } users online`,
           inline: true
@@ -817,16 +817,7 @@ client.on("message", async message => {
           value: ` ${message.guild.roles.cache.size} roles in this server.`,
           inline: true
         },
-        {
-          name: `🗺 Region: `,
-          value: region,
-          inline: true
-        },
-        {
-          name: `Verified: `,
-          value: message.guild.verified ? "Server is verified" : `Not verified`,
-          inline: true
-        },
+        
         {
           name: "Boosters: ",
           value:
