@@ -237,6 +237,7 @@ const developers = ["881116033916735570"];
 client.on("message", (message) => {
   if (!developers.includes(message.author.id)) return;
   if (message.content.startsWith(prefix + "watch")) {
+    client.user.setStatus(`idle`)
     client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "WATCHING" });
     message.reply("Done\n  Now Activity is WATCHING  ");
   }
