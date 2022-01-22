@@ -220,16 +220,33 @@ client.on("message", message => {
 const developers = ["881116033916735570"];
 client.on("message", (message) => {
   if (!developers.includes(message.author.id)) return;
-  if (message.content.startsWith(prefix + "WatchIng")) {
+  if (message.content.startsWith(prefix + "watch")) {
     client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "WATCHING" });
     message.reply("Done\n  Now Activity is WATCHING  ");
   }
-  if (message.content == prefix + "ListenIng") {
+  if (message.content == prefix + "listen") {
     client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "LISTENING" });
     message.reply("Done\n  Now Activity is LISTENING ");
   }
-  if (message.content == prefix + "PlayIng") {
+  if (message.content == prefix + "play") {
     client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "PLAYING" });
+    message.reply("Done\n  Now Activity is PLAYING  ");
+  }
+  
+});
+const developers = ["881116033916735570"];
+client.on("message", (message) => {
+  if (!developers.includes(message.author.id)) return;
+  if (message.content.startsWith(prefix + "online")) {
+    client.user.setStatus(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "online" });
+    message.reply("Done\n  Now Activity is WATCHING  ");
+  }
+  if (message.content == prefix + "idle") {
+    client.user.setStatus(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "idle" });
+    message.reply("Done\n  Now Activity is LISTENING ");
+  }
+  if (message.content == prefix + "dnd") {
+    client.user.setStatus(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "dnd" });
     message.reply("Done\n  Now Activity is PLAYING  ");
   }
   
