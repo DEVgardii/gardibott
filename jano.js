@@ -130,7 +130,7 @@ const embed = new Discord.MessageEmbed()
 .setColor("BLACK")
     .setDescription(`
 🌙 ┇ **Everyone**
-> \`invite\` - \`support\` - \`about\` - \`owner\`
+  \`invite\` - \`support\` - \`about\` - \`owner\`
 > \`uptime\` - \`ping\` - \`user\`  -  \`srever\`
 > \`avatar\` - \`date\` - \`se gif\` - \`se image\`
 > \`allbots\` - \`prefix\`
