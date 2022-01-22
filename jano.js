@@ -13,6 +13,7 @@ app.listen(3000, () => {
 });
 client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
 const prefix = ".";
+const PREFIX = ".";
 ////////////////////////
 client.on("message", message => {
   if (message.content.startsWith(prefix + "user")) {
