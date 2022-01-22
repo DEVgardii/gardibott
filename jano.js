@@ -289,7 +289,7 @@ client.on("message", message => {
     .setDescription (`
 Support is me
 I work
-\` moderation \`- \`gif\` - \` funny\`
+\` moderation \`- \`gif\` - \` funny\` - \`photo\`
 Link
 [support](https://discord.gg/5cRNwVX89x)`)
     .setFooter(``)
@@ -301,7 +301,7 @@ Link
 });
 ////////////////////////////////////////////////////////////////
 client.on("message", message => {
-  if (message.content === prefix + "support") {
+  if (message.content === prefix + "invite") {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
     const embed = new Discord.MessageEmbed()
@@ -309,7 +309,7 @@ client.on("message", message => {
     .setDescription (`
 Support is me
 I work
-\` moderation \`- \`gif\` - \` funny\`
+\` moderation \`- \`gif\` - \` funny\` - \`photo\`
 Link
 [invite]( https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot)`)
     .setFooter(``)
