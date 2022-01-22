@@ -237,9 +237,14 @@ const developers = ["881116033916735570", "933026707756154925"];
 client.on("message", (message) => {
   if (!developers.includes(message.author.id)) return;
   if (message.content.startsWith(prefix + "watch")) {
-    client.user.setStatus(`idle`)
-    client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "WATCHING" });
-    message.reply("Done\n  Now Activity is WATCHING  ");
+    client.user.setPresence({
+activity: {
+name: `${prefix}help | Server ${client.guilds.cache.size}`,
+type: "WATCHING"
+},
+status: `idle`
+})
+    message.reply("Done\n  Now Activity is WATCHING  ")
   }
   if (message.content == prefix + "listen") {
     client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "LISTENING" });
