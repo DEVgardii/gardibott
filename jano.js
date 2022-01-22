@@ -131,23 +131,27 @@ const embed = new Discord.MessageEmbed()
     .setDescription(`
 🌙 ┇ **Everyone**
   \`invite\` - \`support\` - \`about\` - \`owner\`
-> \`uptime\` - \`ping\` - \`user\`  -  \`srever\`
-> \`avatar\` - \`date\` - \`se gif\` - \`se image\`
-> \`allbots\` - \`prefix\`
+  \`uptime\` - \`ping\` - \`user\`  -  \`srever\`
+  \`avatar\` - \`date\` - \`se gif\` - \`se image\`
+  \`allbots\` - \`prefix\`
+  
 **⚙️┇Moderator**
-> \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
-> \`move\` - \`move all\` - \`kick\` - \`vkick\`
-> \`vban\` - \`unvban\` - \`ban\` - \`unban\`
-> \`lock\` - \`unlock\` - \`lock all\` - \`unlock all\`
-> \`clear\` - \`open\` - \`close\` - \`open all\`
-> \`close all\` - \`role add\` - \`role remove\` - \`nick\`
-> \`slowmode\` - \`sug\`
+  \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
+  \`move\` - \`move all\` - \`kick\` - \`vkick\`
+  \`vban\` - \`unvban\` - \`ban\` - \`unban\`
+  \`lock\` - \`unlock\` - \`lock all\` - \`unlock all\`
+  \`clear\` - \`open\` - \`close\` - \`open all\`
+  \`close all\` - \`role add\` - \`role remove\` - \`nick\`
+  \`slowmode\` - \`sug\`
+  
 **🤹‍♀️┇Gif**
-> \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\` - \`couple\` - \`cat\`
+  \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\` - \`couple\` - \`cat\`
+
 **📸┇Photo**
-> \`pboy\` - \`pgirl\` - \`panime\`
+  \`pboy\` - \`pgirl\` - \`panime\`
+
 **🤪┇Funny**
-> \`kiss\` , \`slap\` , \`hug\`
+  \`kiss\` , \`slap\` , \`hug\`
 **💎┇Link**
 [**Support**](https://discord.gg/5cRNwVX89x)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
 `)
