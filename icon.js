@@ -1,7 +1,7 @@
 const { Client, Collection, MessageEmbed } = require(`discord.js`);
 const { 
   PREFIX, 
-} = require(`../index.js`);
+} = require(`../jano.js`);
 
   
 
