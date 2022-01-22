@@ -457,7 +457,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "slap")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("%slap <@USER>");
+    if (!user) return message.reply("slap <@USER>");
     let slaps = [
       "https://media.discordapp.net/attachments/738277612039962688/775009108402372608/image0.gif",
       "https://media.discordapp.net/attachments/738277612039962688/775009109166522428/image1.gif",
@@ -643,7 +643,7 @@ client.on("message", async message => {
     let chrka = Math.floor(client.uptime / 1000) % 60;
 
     return message.channel.send(
-      `__Uptime:__\n\n${rozh}day ${katzhmer}hour ${daqa}minute ${chrka}socond`
+      `__Uptime:__\n\n${rozh}day ${katzhmer}hour ${daqa}minute ${chrka}seconds`
     );
   }
 });
