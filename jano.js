@@ -51,7 +51,7 @@ embed: new Discord.MessageEmbed()
 	
 .addField("`Iam`", `Devloper And Designer`, true)
 	
-.addField("``I Work``", `Student In clasd 9`, true)
+.addField("``I Work``", `Student In class 9`, true)
 	
 .addField("``I'm From``", `kurdistan`, true)
 	
