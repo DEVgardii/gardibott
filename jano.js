@@ -15,22 +15,6 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
 const prefix = ".";
 ////////////////////////
 
-let owner = ['881116033916735570' ]
-client.on('message', message => {
-let guildID = message.content.split(' ')[1]
-let guild = client.guilds.cache.get(guildID)
-if(message.content.startsWith(PREFIX + 'left')) {
-  if(!owner.includes(message.author.id)) return message.reply("AEKAY AEKAY")
-  
-if(!guild)return message.channel.send('**Send The Server ID**')
-message.channel.send(`I am gonna leave => [${guild.name}]`)
-guild.leave()
-}
-}) 
-
-///////////////////////
-/////////////////////
-
 let smsm = ['881116033916735570']
 client.on('message', message=> {
   if(message.content.startsWith(prefix + "setavatar")){
