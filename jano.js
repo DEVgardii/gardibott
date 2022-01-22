@@ -22,7 +22,7 @@ embed: new Discord.MessageEmbed()
 .setThumbnail(client.user.avatarURL())
 .setColor("RANDOM")
 .setTitle("Info Bot")
-.addField("``OWNER``", `[ <@881116033916735570> ] \`\`\`All info owener .about owner\`\`\``, true)
+.addField("``OWNER``", `[ <@881116033916735570> ] \`\`\`All info owener .owner\`\`\``, true)
 .addField("``My Name``", `[ ${client.user.tag} ]`, true)
 .addField("``My ID``", `[ ${client.user.id} ]`, true)
 .addField("``Servers``", [client.guilds.cache.size], true)
@@ -43,13 +43,18 @@ embed: new Discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())
 .setThumbnail(client.user.avatarURL())
 .setColor("RANDOM")
-.setTitle("Info Bot")
 .addField("``My Name``", `Zhanyar`, true)
+	
 .addField("`I Nick Name`", `Gardi`, true)
+	
 .addField("``Age``", `15`, true)
+	
 .addField("`Iam`", `Devloper And Designer`, true)
+	
 .addField("``I Work``", `Student In clasd 9`, true)
+	
 .addField("``I'm From``", `kurdistan`, true)
+	
 .addField("``I life``",`hawler`,true)
 });
 }
