@@ -100,7 +100,7 @@ embed: new Discord.MessageEmbed()
 
 let smsm = ['881116033916735570']
 client.on('message', message=> {
-  if(message.content.startsWith(prefix + "ava")){
+  if(message.content.startsWith(prefix + "setav")){
   if(!smsm.includes(message.author.id))return
   const args = message.content.split(" ").slice(1).join(" ")
   if(!args) return message.reply(new Discord.MessageEmbed().setTitle(`Hi`))
@@ -251,7 +251,7 @@ client.on("message", (message) => {
     if (JANO.content.startsWith(prefix + "avatar")) {
   var embed = new Discord.MessageEmbed()
          .setAuthor(`${JANO.author.username}`, JANO.author.avatarURL({dynamic: true}))
-         .setColor('#0000ff')
+         .setColor('RANDOM')
          .setDescription(`**[Avatar Link](${JANO.author.avatarURL({dynamic: true, format: 'png', size: 1024})})**`)
          .setImage(JANO.author.avatarURL({dynamic: true, format: 'png', size: 1024}))
          .setFooter(`Requsted by ${JANO.author.tag}`, JANO.author.avatarURL({dynamic: true}))
