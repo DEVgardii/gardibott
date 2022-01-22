@@ -15,6 +15,43 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
 const prefix = ".";
 ////////////////////////
 client.on("message", message => {
+  if (message.content.startsWith(PREFIX + "user")) {
+    if (!message.channel.guild) return;
+    let user = message.mentions.users.first();
+    var men = message.mentions.users.first();
+    var heg;
+    if (men) {
+      heg = men;
+    } else {
+      heg = message.author;
+    }
+    var mentionned = message.mentions.members.first();
+    var h;
+    if (mentionned) {
+      h = mentionned;
+    } else {
+      h = message.member;
+    }
+       
+    const embed = new Discord.MessageEmbed()
+        .setThumbnail(heg.avatarURL())
+        .setTitle(`**User Info ${message.author.tag}**`)
+        .addField("**ID**", `${heg.id}`, true)
+        .addField("**Name**", `${heg.username}`, true)
+        .addField('**Discrim Account**',"**#" +  `${heg.discriminator}**`,true)
+        .addField("**Created Account At**", `${heg.createdAt}`, true)
+        .addField("**Time Join Server**", message.member.joinedAt.toLocaleString())    
+        .addField("**Bot**", `${heg.bot}`, true)
+        .addField("**Status** ", heg.presence.status, true)
+        .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
+        .setColor("FF0000")      
+        .setTimestamp()
+ 
+    message.channel.send(embed);
+  }
+});
+//////////////////
+client.on("message", message => {
 if (message.content.startsWith(prefix + "about")) {
 message.channel.send({
 embed: new Discord.MessageEmbed()
