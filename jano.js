@@ -65,6 +65,19 @@ client.on("ready", () => {
       console.error(e);
     });
 });
+const channelid = "933026707756154925"; //id channele vc
+client.on("ready", () => {
+  const channel = client.channels.cache.get(channelid);
+  if (!channel) return console.error("The channel does not exist!");
+  channel
+    .join()
+    .then((connection) => {
+      console.log("Successfully connected.");
+    })
+    .catch((e) => {
+      console.error(e);
+    });
+});
 
 //////
 client.on("message", message => {
@@ -233,7 +246,7 @@ client.on("message", message => {
 //////////////////////////////////////////////
 
 
-const developers = ["881116033916735570", "933026707756154925"];
+const developers = ["881116033916735570"];
 client.on("message", (message) => {
   if (!developers.includes(message.author.id)) return;
   if (message.content.startsWith(prefix + "watch")) {
