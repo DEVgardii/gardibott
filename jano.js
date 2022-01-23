@@ -244,26 +244,19 @@ client.on("message", (message) => {
 }
 }); 
    ///////////////////////////
-   client.on("message", (message) => {
-  if (message.content.split(" ")[0] === prefix + "avatar") {
-    if (message.author.bot || message.channel.type == "dm") return;
-    var args = message.content.split(" ")[1];
-    var avt = args || message.author.id;
-    client
-      .fetchUser(avt)
-      .then((user) => {
-        avt = user;
-        let avtEmbed = new Discord.RichEmbed()
-          .setColor("#36393e")
-          .setAuthor(`${avt.username}'s Avatar`, message.author.avatarURL)
-          .setImage(avt.avatarURL)
-          .setFooter(`Avatar`, message.client.user.avatarURL);
-        message.channel.send(avtEmbed);
-      })
-      .catch(() => message.channel.send(`يجب عليك وضع ايدي الشخص`));
-  } // Julian
-}); // Codes - Toxic Codes
-
+client.on('message',async message => {
+  if(message.content.startsWith(prefix + "avatar")) {
+ 
+    let args = message.content.split(" ").slice(1).join(" ");   
+   let member = message.mentions.users.first() || message.author
+    let avatar = member.displayAvatarURL({size: 1024})
+      const embed = new Discord.MessageEmbed()
+        .setTitle(`${member.username}'s avatar`)
+        .setImage(avatar)
+        .setColor("BLACK")
+        message.channel.send(embed);
+    
+  }})
 ////////////////////////////
 client.on("message", message => {
   let commands = message.content.split(" ");
