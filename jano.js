@@ -192,7 +192,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.author.bot) return;
   if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong | <a:jano_24:799630717507862558> ").then(msg => {
+    message.channel.send("").then(msg => {
       var PinG = `${Date.now() - msg.createdTimestamp}`;
       var ApL = `${Math.round(client.ping)}`;
       msg.edit(`\`\`\`javascript\n⏳Time taken: \n📶${PinG} ms.\`\`\``);
