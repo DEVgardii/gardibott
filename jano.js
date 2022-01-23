@@ -15,6 +15,71 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
+
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "moveall")) {
+    if (!message.member.hasPermission("MOVE_MEMBERS"))
+      return message.channel.send("**:x: You Dont Have Perms `MOVE_MEMBERS`**");
+    if (!message.guild.member(client.user).hasPermission("MOVE_MEMBERS"))
+      return message.reply("**:x: I Dont Have Perms `MOVE_MEMBERS`**");
+    if (message.member.voice.channel == null)
+      return message.channel.send(`**You Have To Be In Room Voice**`);
+    var author = message.member.voice.channel.id;
+    var m = message.guild.members.cache.filter(m => m.voice.channel);
+    message.guild.members.cache.filter(m => m.voice.channel).forEach(m => {
+        m.voice.setChannel(author);
+      })
+    const embed = new Discord.MessageEmbed()
+        .setColor('#FF0000')
+        .setThumbnail(message.author.avatarURL())
+        .setAuthor(message.author.username,message.author.avatarURL())
+        .setTitle("**Done Chek Move all**")
+        .addField("Moderation", message.author.tag)
+        message.channel.send(embed);
+  }
+});
+
+//////////
+
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "move")) {
+    let args = message.content.split(" ");
+    let user = message.guild.member(
+      message.mentions.users.first() || message.guild.members.cache.get(args[1])
+    );
+    if (!message.channel.guild || message.author.bot) return;
+    if (!message.guild.member(message.author).hasPermission("MOVE_MEMBERS"))
+      return message.channel.send("Please Check Your Permission");
+    if (!message.guild.member(client.user).hasPermission("MOVE_MEMBERS"))
+      return message.channel.send("Please Check My Permission");
+    if (!message.member.voice.channel)
+      return message.channel.send("Your are not in voice channel");
+    if (!user) return message.channel.send(`**>>> ${prefix}move <@mention or id>**`);
+    if (!message.guild.member(user.id).voice.channel)
+      return message.channel.send(
+        `**${user.user.username}** Has not in Voice channel`
+      );
+    message.guild
+      .member(user.id)
+      .voice.setChannel(message.member.voice.channel.id)
+      .then(() => {
+        message.channel.send(
+          `**${user.user.username}** has been moved to **${
+            message.guild.member(message.author).voice.channel.name
+          }**`
+        );
+      });
+  }
+  if (message.content.toLowerCase() === prefix + "help move") {
+    let move = new Discord.MessageEmbed()
+      .setTitle(`Command: move`)
+      .addField("Usage", `${prefix}move @user`)
+      .addField("Information", "move members");
+    message.channel.send(move);
+  }
+});
+
+/////////////
 client.on("message", message => {
 if(message.content.startsWith(PREFIX + "vmute")) {
 var mention = message.mentions.members.first();
@@ -226,7 +291,7 @@ const embed = new Discord.MessageEmbed()
 **⚙️┇Moderator**
 \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
 .
-\`move\` - \`move all\` - \`kick\` - \`vkick\`
+\`move\` - \`moveall\` - \`kick\` - \`vkick\`
 .
 \`vban\` - \`unvban\` - \`ban\` - \`unban\`
 .
