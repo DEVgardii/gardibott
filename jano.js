@@ -66,7 +66,7 @@ const embed = new Discord.MessageEmbed()
           .setTitle("**__UNBAN Member__**")
           .addField(" _Server Name_", message.guild.name)
           .addField(" _Channel_", `${message.channel.name}`) 
-          .addField(" _Member ban_", unban)
+          .addField(" _Member unban_", unban)
           .addField(" _Moderation_", `<@${message.author.id}>`, true)
           .addField(" _Moderation Id_", `${message.author.id}`, true)
           .setColor("FF0000");
