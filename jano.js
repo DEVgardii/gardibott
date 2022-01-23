@@ -966,12 +966,12 @@ client.on("message", async message => {
 	  const embed = new Discord.MessageEmbed()
         .setAuthor(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
           .setFooter(`${client.user.username}`)
-          .setTitle("Unmute Member ")
-          .addField(" **Server Name **", message.guild.name)
-          .addField("** Channel **", `${message.channel.name}`) 
-          .addField("** Member Unmute **", `${user.username}`)
-          .addField("** Moderation **", `<@${message.author.id}>`, true)
-          .addField(" **Moderation Id** ", `${message.author.id}`, true)
+          .setTitle("🔔"+"Mute Member"+"🔔")
+          .addField("〽️ | **Server Name**", message.guild.name)
+          .addField("#️⃣ | **Channel**", `${message.channel.name}`) 
+          .addField("🔔 | **Member Unmute**", `${user.username}`)
+          .addField("👑 | **Moderation**", `<@${message.author.id}>`, true)
+          .addField("🆔 | **Moderation Id** ", `${message.author.id}`, true)
           .setColor("RANDOM");
     message.channel.send(embed);
   }
@@ -1018,12 +1018,12 @@ client.on("message", async message => {
     const embed = new Discord.MessageEmbed()
         .setAuthor(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
           .setFooter(`${client.user.username}`)
-          .setTitle("Mute Member ")
-          .addField(" **Server Name **", message.guild.name)
-          .addField("** Channel **", `${message.channel.name}`) 
-          .addField("** Member Mute **", `${user.username}`)
-          .addField("** Moderation **", `<@${message.author.id}>`, true)
-          .addField(" **Moderation Id** ", `${message.author.id}`, true)
+          .setTitle("🔕"+"Mute Member"+"🔕")
+          .addField("〽️ | **Server Name**", message.guild.name)
+          .addField("#️⃣ | **Channel**", `${message.channel.name}`) 
+          .addField("🔕 | **Member Mute**", `${user.username}`)
+          .addField("👑 | **Moderation**", `<@${message.author.id}>`, true)
+          .addField("🆔 | **Moderation Id** ", `${message.author.id}`, true)
           .setColor("RANDOM");
     message.channel.send(embed);
   }
