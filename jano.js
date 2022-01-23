@@ -780,7 +780,7 @@ client.on("message", async message => {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(message.guild.iconURL({ dynamic: true }))
       .setColor("RANDOM")
-      .setTitle(`${message.guild.name} server Info`)
+      .setTitle(`server Info`)
       .addFields(
         {
           name: "👑 | Owner: ",
