@@ -1005,7 +1005,9 @@ client.on("message", async message => {
       });
     });
     message.guild.member(user).roles.add(mute);
-    message.channel.send(`**successfully member muted ${user.username}**`);
+    const embed = new Discord.MessageEmbed()
+        .setTitle(`Command: Mute `)
+    message.channel.send(embed);
   }
   if (message.content.toLowerCase() === `${PREFIX}hmute`) {
     let mute = new Discord.MessageEmbed()
