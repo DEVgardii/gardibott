@@ -238,14 +238,6 @@ client.on("message", (message) => {
 
 
 ///////////////////////////////////////////////
-   client.on('message', message => {
-    if (message.content.startsWith(prefix + "id")) {
-    let user = message.mentions.users.first();
-    if (!user) return message.channel.send('**id A member User**');
-      message.channel.send(`<a:jano_28:840493514244751400>** [ ${user.username} ] Id :**<a:jano_28:840493514244751400>`);
-      message.channel.send(`${user.id}`);
-}
-}); 
    ///////////////////////////
 client.on('message',async message => {
   if(message.content.startsWith(prefix + "avatar")) {
@@ -661,7 +653,7 @@ client.on("message", async message => {
     let chrka = Math.floor(client.uptime / 1000) % 60;
 
     return message.channel.send(
-      `__Uptime:__\n\n${rozh}day ${katzhmer}hour ${daqa}minute ${chrka}seconds`
+      `__Uptime:__\n\n☀️${rozh}day \n⏳${katzhmer}hour \n⏱${daqa}minute \n⏲${chrka}seconds`
     );
   }
 });
