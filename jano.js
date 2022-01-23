@@ -17,6 +17,55 @@ const PREFIX = ".";
 ////////////////////////
 
 client.on("message", message => {
+  if (message.content.startsWith(PREFIX + "kick")) {
+  if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("<a:cycycydtd6xyc6d6r6r6r6d6emoji_53:918260430470774855>I'm sorry, you don't have permission. ")
+    let tag = message.mentions.members.first();
+    if(!tag) return message.reply('select member')
+    let args = message.content.split(" ").slice(1); 
+    let reason = message.content.split(" ").slice(2).join(" ")
+    if(!args) return message.reply('select member')
+ 
+    var blackjack = 'Black sestam'
+    const kick = new Discord.MessageEmbed()
+    .setTitle('**Kicked In a Server**')
+    .addField('Server', message.guild.name)
+    .addField(' Name member ', tag)
+    .addField('Moderation', message.author.tag)
+    .setFooter(`${client.user.username}`) 
+    .setColor("FF0000")
+    message.channel.send(kick)
+    tag.kick();
+  }})
+
+
+client.on('message',async message => {
+  if(message.content.startsWith(PREFIX + "vkick")) { 
+   if (!message.member.hasPermission("MANAGE_GUILD")) {
+      return message.channel.send("I'm sorry, you don't have permission. ");
+    }
+ 
+    if (!message.mentions.members.first())
+      return message.channel.send(
+        `select member`
+      );
+ 
+    let { channel} = message.mentions.members.first().voice;
+ 
+    if (!channel)
+      return message.channel.send(`This person is not in the voice.`);
+ 
+    message.mentions.members.first().voice.kick();
+ 
+    message.channel.send(`successfully member voice kicked`)
+  }
+}) 
+
+
+
+
+////////////
+
+client.on("message", message => {
   if (message.content.startsWith(prefix + "moveall")) {
     if (!message.member.hasPermission("MOVE_MEMBERS"))
       return message.channel.send("**:x: You Dont Have Perms `MOVE_MEMBERS`**");
