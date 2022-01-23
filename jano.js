@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
   console.log('Server Started.');
 });
-client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.xVTomm-LEbD3oH87ioVjUFxXoXI");
+client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
@@ -38,14 +38,14 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
         .setThumbnail(heg.avatarURL())
         .setTitle(`**User Info ${message.author.tag}**`)
-        .addField("**ID**", `${heg.id}`, true)
-        .addField("**Name**", `${heg.username}`, true)
-        .addField('**Discrim Account**',"**#" +  `${heg.discriminator}**`,true)
-        .addField("**Created Account At**", `${heg.createdAt}`, true)
-        .addField("**Time Join Server**", message.member.joinedAt.toLocaleString())    
-        .addField("**Bot**", `${heg.bot}`, true)
+        .addField("🆔 | **ID**", `${heg.id}`, true)
+        .addField("🧑‍🏫 | **Name**", `${heg.username}`, true)
+        .addField('#️⃣ | **Discrim Account**',"**#" +  `${heg.discriminator}**`,true)
+        .addField("⏳ | **Created Account At**", `${heg.createdAt}`, true)
+        .addField("⏱ | **Time Join Server**", message.member.joinedAt.toLocaleString())    
+        .addField("🤖 | **Bot**", `${heg.bot}`, true)
         .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
-        .setColor("FF0000")      
+        .setColor("RANDOM")      
         .setTimestamp()
  
     message.channel.send(embed);
