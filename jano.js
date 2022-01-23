@@ -1116,9 +1116,9 @@ client.on('message', message=> {
   if(message.content.startsWith(prefix + "setav")){
   if(!smsm.includes(message.author.id))return
   const args = message.content.split(" ").slice(1).join(" ")
-  if(!args) return message.reply(new Discord.MessageEmbed().setTitle(`Hi`))
+  if(!args) return message.reply(new Discord.MessageEmbed().setTitle(``))
   client.user.setAvatar(`${args}`)
-  message.channel.send(`> Done SetAvatar To\n||${args}||`)
+  message.channel.send(`> Done SetAvatar To\n\n\n||${args}||`)
   }
 }) 
 /////////////////////
