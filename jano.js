@@ -15,6 +15,81 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
+client.on("message", message => {
+  if (message.content === PREFIX + "close") {
+    if (!message.channel.guild) return;
+    if (!message.member.hasPermission("MANAGE_CHANNELS"))
+      return message.reply("You Dont Have Perms `MANAGE CHANNELS` :x:");
+    message.channel.createOverwrite(message.guild.id, {
+      VIEW_CHANNEL: false
+    });
+    const embed = new Discord.MessageEmbed()
+      .setThumbnail(message.author.avatarURL())
+      .setTitle("**Channel Hide**")
+      .addField("_Server name_", message.guild.name)
+      .addField("_Channel_", message.channel.name)
+      .addField("_Moderation_", `<@${message.author.id}>`, true)
+      .setColor("FF0000");
+    message.channel.send(embed).then(bj => {
+      bj.react("");
+    });
+  }
+});
+client.on("message", message => {
+  if (message.content === PREFIX + "open") {
+    if (!message.channel.guild) return;
+    if (!message.member.hasPermission("MANAGE_CHANNELS"))
+      return message.reply("You dont have Perms `MANAGE CHANNELS`:x:");
+    message.channel.createOverwrite(message.guild.id, {
+      VIEW_CHANNEL: true
+    });
+    const embed = new Discord.MessageEmbed()
+      .setThumbnail(message.author.avatarURL())
+      .setTitle("**Channel Hide**")
+      .addField("_Server name_", message.guild.name)
+      .addField("_Channel_", message.channel.name)
+      .addField("_Moderation_", `<@${message.author.id}>`, true)
+      .setColor("FF0000");
+    message.channel.send(embed).then(bj => {
+      bj.react("");
+    });
+  }
+});
+//////////
+client.on("message", msg => {
+  if (msg.content === prefix + "closeall") {
+    if (!msg.member.hasPermission("MANAGE_CHANNELS"))  return;
+    msg.guild.channels.cache.forEach(c => {
+      c.createOverwrite(msg.guild.id, {
+        SEND_MESSAGES: false,
+        VIEW_CHANNEL: false
+      });
+    });
+    msg.channel.send("Done check hide all");
+  }
+});
+ 
+client.on("message", msg => {
+  if (msg.content === prefix + "openall") {
+    if (!msg.member.hasPermission("MANAGE_CHANNELS"))   return;
+    msg.guild.channels.cache.forEach(c => {
+      c.createOverwrite(msg.guild.id, {
+        SEND_MESSAGES: true,
+        VIEW_CHANNEL: true
+      });
+    });
+    msg.channel.send("done check hide all");
+  }
+});
+
+
+
+
+
+
+
+
+/////////////////////////
 
 
 client.on("message", message => {
@@ -359,7 +434,7 @@ client.on("message", async message => {
         "I'm sorry, you don't have permission. "
       );
     if (!user)
-      return message.channel.send(`>select member`);
+      return message.channel.send(`select member`);
     let mute = message.guild.roles.cache.find(role => role.name === "Muted");
     message.guild.channels.cache.forEach(async channel => {
       await channel.createOverwrite(mute, {
