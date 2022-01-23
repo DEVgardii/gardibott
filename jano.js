@@ -622,7 +622,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (!message.channel.guild) return;
 
-  if (message.content.startsWith(prefix + "bots")) {
+  if (message.content.startsWith(prefix + "allbots")) {
     if (message.author.bot) return;
     let i = 1;
     const botssize = message.guild.members.cache
