@@ -15,67 +15,6 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
-client.on('message', message => {
-         if (message.content === PREFIX + "date") {
-         if (!message.channel.guild) return   
-         var currentTime = new Date(),
-            hours = currentTime.getHours() + 4 ,
-            hours2 = currentTime.getHours() + 3 ,
-            hours3 = currentTime.getHours() + 2 ,
-            hours4 = currentTime.getHours() + 3 ,
-            minutes = currentTime.getMinutes(),
-            seconds = currentTime.getSeconds(),
-            Year = currentTime.getFullYear(),
-            Month = currentTime.getMonth() + 1,
-            Day = currentTime.getDate();
-             var h = hours
-  if(hours > 12) {
-               hours -= 12;
-            } else if(hours == 0) {
-                hours = "12";
-            }  
-             if(hours2 > 12) {
-               hours2 -= 12;
-            } else if(hours2 == 0) {
-                hours2 = "12";
-            
-            }  
-                         if(hours3 > 12) {
-               hours3 -= 12;
-            } else if(hours3 == 0) {
-                hours3 = "12";
-            } 
-            if (minutes < 10) {
-                minutes = '0' + minutes;
-            }
-            var suffix = 'AM';
-            if (hours >= 12) {
-                suffix = 'PM';
-                hours = hours - 12;
-            }
-            if (hours == 0) {
-                hours = 12;
-            }
- 
-
-                var Date15= new Discord.MessageEmbed()
-                .setThumbnail("https://images-ext-1.discordapp.net/external/zAOgT5JghDfCTsRJ7xVpuEywEdM1BbmLNEnYNGU70zA/https/cdn.discordapp.com/emojis/915185607075061770.gif") 
-                .setTitle( "TIME AND DATE")
-                .setColor('FF0000')
-                .setFooter("BLACK SECURITY PRIME")
-                .setFooter(message.author.username, message.author.avatarURL())
-                 .addField(`_Time_`,
-                "『"+ hours2 + ":" + minutes +":"+ seconds  + "』") 
-              
-                .addField(`_Date\`,
-                "『"+ Day + "-" + Month + "-" + Year +  "』")
-                 message.channel.send(Date15);
-        }
-    });
-
-
-
-
 
 //////////////////////
 client.on("message", message => {
@@ -665,9 +604,7 @@ const embed = new Discord.MessageEmbed()
 .
 \`open\` - \`close\` - \`openall\` - \`closeall\`
 .
-\`roleadd\` - \`roleremove\` - \`nick\`
-.
-\`sug\`
+\`roleadd\` - \`roleremove\` - \`nick\` - \`sug\`
 ============
 **🤹‍♀️┇Gif**
 > \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\`
