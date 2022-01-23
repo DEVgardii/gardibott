@@ -15,22 +15,20 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
-
+client.on("ready",() =>{
+let guild = client.guilds.cache.get('933026707118637167') // ايدي السيرفر
+if(!guild) return console.log('I can\'t find the server')
+let channel = guild.channels.cache.get('934870122189951166')//ايدي الروم
+if(!channel) return console.log('I can\'t the channel') // عشان يتاكد ان الروم موجود
+if(channel){
+  setInterval(() => {
+    channel.setName('Members :' + guild.memberCount)
+  }, ms("1m"));
+}
+})
 //////////////////////
 
-client.on('message', async normal => {
-          if(normal.content.startsWith(prefix + 'role-all')) {
-          if(!normal.member.hasPermission("MANAGE_ROLES")) return normal.channel.send(`You Don't have the permission : *MANAGE_ROLES**`);
-     var rrole = normal.content.split(" ").slice(1).join(" ");
-          var role = normal.mentions.roles.first() || normal.guild.roles.cache.find(r => r.name === rrole)||normal.guild.roles.cache.find(r => r.id === rrole);
-          if(!role) return normal.channel.send(`**I can't find this role ${rrole}!?**`);
-            normal.guild.members.cache.forEach(async m => { 
-             await
-              m.roles.add(role)
-             })
-       normal.channel.send(`**${role.name} has been added to all the members in this server**`)
-   }
- })
+
 
 /////////
 
