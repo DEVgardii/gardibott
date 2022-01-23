@@ -15,17 +15,20 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
-client.on("ready",() =>{
-let guild = client.guilds.cache.get('933026707118637167') // ايدي السيرفر
-if(!guild) return console.log('I can\'t find the server')
-let channel = guild.channels.cache.get('934870122189951166')//ايدي الروم
-if(!channel) return console.log('I can\'t the channel') // عشان يتاكد ان الروم موجود
-if(channel){
-  setInterval(() => {
-    channel.setName('Members :' + guild.memberCount)
-  }, ms("1m"));
-}
-})
+client.on('message', badboy => {
+  if(badboy.content.startsWith("https://")){
+
+    if(badboy.author.bot || !badboy.guild) return
+
+    const muterole = badboy.guild.roles.cache.find(r => r.name === "Muted");
+  
+   badboy.member.roles.add(muterole)
+  var mutelog = badboy.guild.channels.cache.find(r=> r.name ==='log');
+mutelog.send(`Muted ${badboy.author.username} `)
+    badboy.delete()
+  }
+  })
+
 //////////////////////
 
 
