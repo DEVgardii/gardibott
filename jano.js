@@ -68,14 +68,14 @@ client.on("message", async message => {
       mute = await message.guild.roles.create({
         data: {
           name: "Muted",
-          color: "FF0000",
+          color: "RANDOM",
           permissions: []
         }
       });
     message.guild.channels.cache.forEach(async channel => {
       await channel.createOverwrite(mute, {
         SEND_MESSAGES: false,
-        ADD_REACTIONS: false
+        ADD_REACTIONS: false,
       });
     });
     message.guild.member(user).roles.add(mute);
