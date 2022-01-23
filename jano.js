@@ -109,8 +109,8 @@ const embed = new Discord.MessageEmbed()
     .setDescription(`
 🌙 ┇ **Everyone**
   \`invite\` - \`support\` - \`about\`
-  \`uptime\` - \`ping\` - \`user\`  -  \`srever\`
-  \`avatar\` - \`date\` - \`se gif\` - \`se image\`
+  \`uptime\` - \`ping\` - \`user\`
+  \`srever\` - \`avatar\` - \`date\`
   \`allbots\` - \`prefix\`
   =========
 **⚙️┇Moderator**
