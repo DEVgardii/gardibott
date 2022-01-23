@@ -181,35 +181,35 @@ const embed = new Discord.MessageEmbed()
 .setColor("BLACK")
     .setDescription(`
 🌙 ┇ **Everyone**
-  \`invite\` - \`support\` - \`about\`
-  \`uptime\` - \`ping\` - \`user\`
-  \`srever\` - \`avatar\` - \`date\`
-  \`allbots\`
-  =========
+> \`invite\` - \`support\` - \`about\`
+> \`uptime\` - \`ping\` - \`user\`
+> \`srever\` - \`avatar\` - \`date\`
+> \`allbots\`
+============
 **⚙️┇Moderator**
-  \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
-  .
-  \`move\` - \`move all\` - \`kick\` - \`vkick\`
-  .
-  \`vban\` - \`unvban\` - \`ban\` - \`unban\`
-  .
-  \`lock\` - \`unlock\` - \`lockall\` - \`unlockall\`
-  .
-  \`clear\` - \`open\` - \`close\` - \`openall\`
-  .
-  \`closeall\` - \`roleadd\` - \`roleremove\` - \`nick\`
-  .
-  \`slowmode\` - \`sug\`
-  =========
+\`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
+.
+\`move\` - \`move all\` - \`kick\` - \`vkick\`
+.
+\`vban\` - \`unvban\` - \`ban\` - \`unban\`
+.
+\`lock\` - \`unlock\` - \`lockall\` - \`unlockall\`
+.
+\`clear\` - \`open\` - \`close\` - \`openall\`
+.
+\`closeall\` - \`roleadd\` - \`roleremove\` - \`nick\`
+.
+\`slowmode\` - \`sug\`
+============
 **🤹‍♀️┇Gif**
-  \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\`
-=========
+> \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\`
+============
 **📸┇Photo**
-  \`pboy\` - \`pgirl\` - \`panime\`
-=========
+> \`pboy\` - \`pgirl\` - \`panime\`
+============
 **🤪┇Funny**
-  \`kiss\` - \`slap\` - \`hug\` - \`love\` - \`boom\`
-  =========
+> \`kiss\` - \`slap\` - \`hug\` - \`love\` - \`boom\`
+============
 **💎┇Link**
 [**Support**](https://discord.gg/5cRNwVX89x)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
 `)
