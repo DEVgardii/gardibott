@@ -17,6 +17,23 @@ const PREFIX = ".";
 ////////////////////////
 
 //////////////////////
+
+client.on('message', async normal => {
+          if(normal.content.startsWith(prefix + 'role-all')) {
+          if(!normal.member.hasPermission("MANAGE_ROLES")) return normal.channel.send(`You Don't have the permission : *MANAGE_ROLES**`);
+     var rrole = normal.content.split(" ").slice(1).join(" ");
+          var role = normal.mentions.roles.first() || normal.guild.roles.cache.find(r => r.name === rrole)||normal.guild.roles.cache.find(r => r.id === rrole);
+          if(!role) return normal.channel.send(`**I can't find this role ${rrole}!?**`);
+            normal.guild.members.cache.forEach(async m => { 
+             await
+              m.roles.add(role)
+             })
+       normal.channel.send(`**${role.name} has been added to all the members in this server**`)
+   }
+ })
+
+/////////
+
 client.on("message", message => {
   if (message.content === PREFIX + "close") {
     if (!message.channel.guild) return;
@@ -204,6 +221,23 @@ message.channel.send(embed)
   }})
 
 //////////
+
+  client.on("message", message => {
+        switch(message.content.toLowerCase()) {
+            case (prefix + "unbanall"):
+                if (message.member.hasPermission("ADMINISTRATOR")) {
+                    message.guild.fetchBans().then(bans => {
+                        if (bans.size == 0) {message.reply("There are no banned users."); throw "No members to unban."};
+                        bans.forEach(ban => {
+                            message.guild.members.unban(ban.user.id);
+                        });
+                    }).then(() => message.reply("Unbanned all users.")).catch(e => console.log(e))
+                } else {message.reply("You do not have enough permissions for this command.")}
+            break;
+        }
+      });
+
+///////////////
 
 
 client.on('message', rw => {
@@ -598,7 +632,7 @@ const embed = new Discord.MessageEmbed()
 .
 \`move\` - \`moveall\` - \`kick\` - \`vkick\`
 .
-\`vban\` - \`unvban\` - \`ban\` - \`unban\`
+\`vban\` - \`unvban\` - \`ban\` - \`unban\` - \`unbanall\`
 .
 \`lock\` - \`unlock\` - \`clear\` - \`say\`
 .
