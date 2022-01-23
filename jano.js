@@ -250,16 +250,16 @@ if (message.content == prefix + "streamuser") {
 }
 
 if (message.content == prefix + "online") {
-    client.user.setActivity(`online`);
-    message.reply("Done\n  Now Activity is STREAMING ");
+    client.user.setStatus(`online`);
+    message.reply("Done\n  Now Status is online ");
 }
 if (message.content == prefix + "idle") {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size} | USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "STREAMING", url: "https://www.twitch.tv/tapoze"});
-    message.reply("Done\n  Now Activity is STREAMING ");
+    client.user.setStatus(`idle`);
+    message.reply("Done\n  Now Status is idle ");
 }
 if (message.content == prefix + "dnd") {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size} | USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "STREAMING", url: "https://www.twitch.tv/tapoze"});
-    message.reply("Done\n  Now Activity is STREAMING ");
+    client.user.setStatus(`dnd`);
+    message.reply("Done\n  Now Status is dnd ");
 }
 }); 
 
