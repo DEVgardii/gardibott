@@ -195,7 +195,7 @@ client.on("message", message => {
     message.channel.send("pong | <a:jano_24:799630717507862558> ").then(msg => {
       var PinG = `${Date.now() - msg.createdTimestamp}`;
       var ApL = `${Math.round(client.ping)}`;
-      msg.edit(`\`\`\`javascript\nTime taken: ${PinG} ms.\`\`\``);
+      msg.edit(`\`\`\`javascript\n⏳Time taken: \n📶${PinG} ms.\`\`\``);
     });
   }
 });
