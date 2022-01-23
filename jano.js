@@ -14,31 +14,7 @@ app.listen(3000, () => {
 client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
-/////////////////////
-
-
-
-
-                
-      
-client.on("message", message=>{
-    if(message.content.startsWith(prefix+"owner")){
-      var embed = new Discord.MessageEmbed()
-      .setAuthor(message.guild.owner.user.username, message.guild.owner.user.avatarURL({dynamic:true}))
-      .setThumbnail(message.guild.owner.user.avatarURL({dynamic:true}))
-      .setTitle("📃INFO OWNER:")
-  .addField("✏️ UserName:",message.guild.owner.user.tag,)
-  .addField("#️⃣ Tag:",`#${message.guild.owner.user.discriminator}`,)
-  .addField("🆔 Id:",message.guild.owner.user.id,)
-  .addField("🟢 Status:",message.guild.owner.user.presence.status,)
-  .addField("🕐 Creadt At:",`${moment(message.guild.owner.user.createdAt).format('YYYY/M/D')}\n\`${moment(message.guild.owner.user.createdAt, "YYYYMMDD").fromNow()}\``,)
-  .setFooter(client.user.username,client.user.avatarURL({dynamic:true}))
-  .setTimestamp()
-     message.channel.send(embed)
-    }
-  })
-
-
+////////////////
 //////////////
 
 
@@ -693,7 +669,7 @@ const embed = new Discord.MessageEmbed()
 .
 \`open\` - \`close\` - \`openall\` - \`closeall\`
 .
-\`roleadd\` - \`roleremove\` - \`nick\` - \`sug\`
+\`nick\` - \`sug\`
 ============
 **🤹‍♀️┇Gif**
 > \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\`
