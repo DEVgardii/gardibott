@@ -15,6 +15,27 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////
+
+client.on("message", message => {
+  if(message.content.startsWith(PREFIX + "nick")){
+      if (!message.member.hasPermission("MANAGE_NICKNAMES")) return message.reply("**You Dont hAve Premission MANAGE NICKNAMES**")
+  var user = message.mentions.members.first();
+  var args = message.content.split(" ").slice(2);
+  var nick = args.join(" ");
+  if(!user || !args) return message.channel.send(`?nick tag member`);
+  message.guild.member(user.user).setNickname(`${nick}`);
+  const blackj = new Discord.MessageEmbed()
+  .setAuthor(message.author.username,message.author.avatarURL())
+  .setThumbnail(message.author.avatarURL())
+  .setTitle("**Done The Changed NickName**")
+  .addField("_Name User_", user)
+  .addField("_Nickname New_", nick)
+  .addField("_Moderation_", message.author.tag)
+  .setColor("FF0000")
+  message.channel.send(blackj)
+  }
+  });
+
 //////////////
 
 
