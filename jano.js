@@ -17,6 +17,57 @@ const PREFIX = ".";
 ////////////////////////
 
 
+client.on("message", message => {
+  if (message.content.startsWith(PREFIX + "lock")) {
+    let blackjack = "created by black jack";
+    if (!message.guild.member(message.author).hasPermission("MANAGE_CHANNELS"))
+      return message.channel.send("**Please Check Your Permissions**");
+    message.channel
+      .createOverwrite(message.guild.id, { SEND_MESSAGES: false })
+      .then(() => {
+        const embed = new Discord.MessageEmbed()
+          .setThumbnail(message.author.avatarURL())
+          .setAuthor(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
+          .setFooter(`${client.user.username}`)
+          .setTitle("** locked Channel **")
+          .addField("_Server Name_", message.guild.name) 
+          .addField("_Server Id_", message.guild.id)
+          .addField("_Channel_", `${message.channel.name}`)
+          .addField("_Channel Id_", `${message.channel.id}`)
+          .addField("_Moderation_", `<@${message.author.id}>`, true)
+          .addField("_Moderation Id_", `${message.author.id}`, true)
+          .setColor("FF0000");
+        return message.channel.send(embed);
+      });
+  }
+});
+client.on("message", message => {
+  if (message.content.startsWith(PREFIX + "unlock")) {
+    let blackjack = "created by black jack";
+    if (!message.member.hasPermission("MANAGE_CHANNELS"))
+      return message.channel.send("**Please Check Your Permission**");
+    message.channel
+      .createOverwrite(message.guild.id, { SEND_MESSAGES: true })
+      .then(() => {
+        const embed = new Discord.MessageEmbed()
+         .setThumbnail(message.author.avatarURL())
+          .setAuthor(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
+          .setFooter(`${client.user.username}`)
+          .setTitle("** locked Channel **")
+          .addField("_Server Name_", message.guild.name) 
+          .addField("_Server Id_", message.guild.id)
+          .addField("_Channel_", `${message.channel.name}`)
+          .addField("_ Channel Id_", `${message.channel.id}`)
+          .addField("_Moderation_", `<@${message.author.id}>`, true)
+          .addField("_Moderation Id_", `${message.author.id}`, true)
+          .setColor("FF0000");
+        return message.channel.send(embed);
+      });
+  }
+});
+//////
+
+
 client.on('message',message => {
 
 if(message.content.startsWith(PREFIX + 'ban')) {
