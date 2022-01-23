@@ -16,6 +16,33 @@ const prefix = ".";
 const PREFIX = ".";
 /////////////////////
 
+
+
+const shorten = require('isgd');
+client.on('message', ninja => {
+ if (ninja.content.startsWith(prefix + 'short')) {
+   if (!ninja.channel.guild) return;
+    ninja.channel
+   if(!ninja.member.hasPermission('ADMINISTRATOR'))
+    return ninja.channel.send('**ليس لديك صلاحيات**');
+    let args = ninja.content.split(" ").slice(1);
+  if (!args[0]) return ninja.channel.send(`${prefix}short <link>`)
+  if (!args[1]) {
+    shorten.shorten(args[0], function(res) {
+      ninja.channel.send(`Link Shortcut : **${res}**`);
+    })
+  } else {
+    shorten.custom(args[0], args[1], function(res) {
+      if (res.startsWith('Error:')) return ninja.channel.send(`اختصار الرابط:**${res}**`);
+      ninja.channel.send(`اختصار الرابط:**${res}**`);
+    })
+  }}
+});
+
+
+
+///////////////////////////
+
 client.on('message', msg => {
     if (msg.content === prefix + 'setup colors' || msg.content === 'setup colors') {
         msg.guild.roles.create({
