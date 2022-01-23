@@ -907,11 +907,11 @@ client.on("message", message => {
 if(message.content.startsWith(PREFIX + "vmute")) {
 var mention = message.mentions.members.first();
 if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("MUTE_MEMBERS") || !message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return;
-if(!mention) return message.channel.send(`select member`);
+if(!mention) return message.channel.send(`🤐 | **.**vmute @user`);
 if(!mention.voice.channel) return message.channel.send(`This person is not in the voice.`);
 mention.voice.setMute(true).then(() => {
 const embed = new Discord.MessageEmbed()
-        .setColor("FF0000")
+        .setColor("RANDOM")
         .setThumbnail(message.author.avatarURL())
         .setAuthor(message.author.username,message.author.avatarURL()) 
         .addField("Moderation", message.author.tag)
@@ -924,11 +924,11 @@ const embed = new Discord.MessageEmbed()
 if(message.content.startsWith(PREFIX + "unvmute")) {
 var mention = message.mentions.members.first();
 if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("MUTE_MEMBERS") || !message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return;
-if(!mention) return message.channel.send(`select member`);
+if(!mention) return message.channel.send(`🤐 | **.**unvmute @user`);
 if(!mention.voice.channel) return message.channel.send(`This person is not in the voice.`);
 mention.voice.setMute(false).then(() => {
 const embed = new Discord.MessageEmbed()
-        .setColor('FF0000')
+        .setColor('RANDOM')
         .setThumbnail(message.author.avatarURL())
         .setAuthor(message.author.username,message.author.avatarURL())
         .addField("Moderation", message.author.tag)
