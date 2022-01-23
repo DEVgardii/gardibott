@@ -374,9 +374,10 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
        .setColor("random")
     .setDescription (`
-Support is me
-I work
-\` moderation \`- \`gif\` - \` funny\` - \`photo\`
+☺️Support is me
+--------------
+📊I work
+\` ⚙️moderation \`- \`🤹gif\` - \` 🤪funny\` - \`📸photo\`
 Link
 [support](https://discord.gg/5cRNwVX89x)`)
     .setFooter(``)
@@ -394,9 +395,10 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
        .setColor("random")
     .setDescription (`
-Support is me
-I work
-\` moderation \`- \`gif\` - \` funny\` - \`photo\`
+☺️Invite is me
+--------------
+📊I work
+\` ⚙️moderation \`- \`🤹gif\` - \` 🤪funny\` - \`📸photo\`
 Link
 [invite]( https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot)`)
     .setFooter(``)
