@@ -62,20 +62,20 @@ client.on("message", async message => {
         "I'm sorry, you don't have permission."
       );
     if (!user)
-      return message.channel.send(`${prefix}mute @user`);
+      return message.channel.send(`select member`);
     let mute = message.guild.roles.cache.find(role => role.name === "Muted");
     if (!mute)
       mute = await message.guild.roles.create({
         data: {
           name: "Muted",
-          color: "RANDOM",
+          color: "FF0000",
           permissions: []
         }
       });
     message.guild.channels.cache.forEach(async channel => {
       await channel.createOverwrite(mute, {
         SEND_MESSAGES: false,
-        ADD_REACTIONS: false,
+        ADD_REACTIONS: false
       });
     });
     message.guild.member(user).roles.add(mute);
@@ -89,7 +89,6 @@ client.on("message", async message => {
     message.channel.send(mute);
   }
 });
-
 ///////////////////
 client.on("message", message => {
   if (message.content.startsWith(prefix + "user")) {
