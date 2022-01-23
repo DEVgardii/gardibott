@@ -690,7 +690,7 @@ const embed = new Discord.MessageEmbed()
 .
 \`open\` - \`close\` - \`openall\` - \`closeall\`
 .
-\`nick\` - \`sug\`
+\`nick\`
 ============
 **🤹‍♀️┇Gif**
 > \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\`
