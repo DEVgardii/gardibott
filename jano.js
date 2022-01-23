@@ -17,6 +17,27 @@ const PREFIX = ".";
 /////////////////////
 
 
+client.on("message", message=>{
+    if(message.content.startsWith(prefix+"owner")){
+      var embed = new Discord.MessageEmbed()
+      .setAuthor(message.guild.owner.user.username, message.guild.owner.user.avatarURL({dynamic:true}))
+      .setThumbnail(message.guild.owner.user.avatarURL({dynamic:true}))
+      .setTitle("📃INFO OWNER:")
+  .addField("✏️ UserName:",message.guild.owner.user.tag,)
+  .addField("#️⃣ Tag:",`#${message.guild.owner.user.discriminator}`,)
+  .addField("🆔 Id:",message.guild.owner.user.id,)
+  .addField("🟢 Status:",message.guild.owner.user.presence.status,)
+  .addField("🕐 Creadt At:",`${moment(message.guild.owner.user.createdAt).format('YYYY/M/D')}\n\`${moment(message.guild.owner.user.createdAt, "YYYYMMDD").fromNow()}\``,)
+  .setFooter(client.user.username,client.user.avatarURL({dynamic:true}))
+  .setTimestamp()
+     message.channel.send(embed)
+    }
+  })
+
+
+//////////////
+
+
 client.on("message", async message => {
   if (
     message.content.includes(
