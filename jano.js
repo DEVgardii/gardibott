@@ -15,6 +15,81 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
+client.on("message", async message => {
+  let args = message.content.split(" ");
+  let user = message.mentions.users.first();
+  if (message.content.startsWith(PREFIX + "unmute")) {
+    if (!message.guild.member(message.author).hasPermission("MUTE_MEMBERS"))
+      return message.channel.send(
+        "I'm sorry, you don't have permission. "
+      );
+    if (!message.guild.member(client.user).hasPermission("MUTE_MEMBERS"))
+      return message.channel.send(
+        "I'm sorry, you don't have permission. "
+      );
+    if (!user)
+      return message.channel.send(`>select member`);
+    let mute = message.guild.roles.cache.find(role => role.name === "Muted");
+    message.guild.channels.cache.forEach(async channel => {
+      await channel.createOverwrite(mute, {
+        SEND_MESSAGES: false,
+        ADD_REACTIONS: false
+      });
+    });
+    message.guild.member(user).roles.remove(mute);
+    message.channel.send(`**successfully member unmuted ${user.username}**`);
+  }
+  if (message.content.toLowerCase() === `${PREFIX}hunmute`) {
+    let unmute = new Discord.MessageEmbed()
+      .setTitle(`Command: unmute `)
+      .addField("Usage", `${prefix}unmute @user`)
+      .addField("Information", "unmute Members");
+    message.channel.send(unmute);
+  }
+});
+
+client.on("message", async message => {
+  let args = message.content.split(" ");
+  let user =
+    message.mentions.users.first() || message.guild.members.cache.get(args[1]);
+  if (message.content.startsWith(PREFIX + "mute")) {
+    if (!message.guild.member(message.author).hasPermission("MUTE_MEMBERS"))
+      return message.channel.send(
+        "I'm sorry, you don't have permission. "
+      );
+    if (!message.guild.member(client.user).hasPermission("MUTE_MEMBERS"))
+      return message.channel.send(
+        "I'm sorry, you don't have permission."
+      );
+    if (!user)
+      return message.channel.send(`select member`);
+    let mute = message.guild.roles.cache.find(role => role.name === "Muted");
+    if (!mute)
+      mute = await message.guild.roles.create({
+        data: {
+          name: "Muted",
+          color: "FF0000",
+          permissions: []
+        }
+      });
+    message.guild.channels.cache.forEach(async channel => {
+      await channel.createOverwrite(mute, {
+        SEND_MESSAGES: false,
+        ADD_REACTIONS: false
+      });
+    });
+    message.guild.member(user).roles.add(mute);
+    message.channel.send(`**successfully member muted ${user.username}**`);
+  }
+  if (message.content.toLowerCase() === `${PREFIX}hmute`) {
+    let mute = new Discord.MessageEmbed()
+      .setTitle(`Command: Mute `)
+      .addField("Usage", `${PREFIX}mute @user`)
+      .addField("Information", "Mute Members");
+    message.channel.send(mute);
+  }
+});
+
 ///////////////////
 client.on("message", message => {
   if (message.content.startsWith(prefix + "user")) {
