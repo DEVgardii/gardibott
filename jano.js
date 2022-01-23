@@ -225,7 +225,7 @@ message.channel.send(embed)
 
   client.on("message", message => {
         switch(message.content.toLowerCase()) {
-            case (prefix + "unbanall"):
+            case (prefix + "unbandall"):
                 if (message.member.hasPermission("ADMINISTRATOR")) {
                     message.guild.fetchBans().then(bans => {
                         if (bans.size == 0) {message.reply("There are no banned users."); throw "No members to unban."};
@@ -633,7 +633,7 @@ const embed = new Discord.MessageEmbed()
 .
 \`move\` - \`moveall\` - \`kick\` - \`vkick\`
 .
-\`vban\` - \`unvban\` - \`ban\` - \`unban\` - \`unbanall\`
+\`vban\` - \`unvban\` - \`ban\` - \`unban\` - \`unbandall\`
 .
 \`lock\` - \`unlock\` - \`clear\` - \`say\`
 .
