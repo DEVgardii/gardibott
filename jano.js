@@ -705,7 +705,7 @@ const embed = new Discord.MessageEmbed()
 [**Support**](https://discord.gg/5cRNwVX89x)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
 `)
 
-    .setFooter(` Gardi bot ✨ | ${prefix}help`, client.user.avatarURL)
+    .setFooter(` Gardi bot ✨ | By : PW๛ᗰᗩᗰ  ᘜᗩᖇᗪI ᴰᔆ✨#1000`, client.user.avatarURL)
     .setURL("https://images-ext-2.discordapp.net/external/4RET2OBD1PTYwUo-cgDNkj6szsR2CxU3_JMWi1MbwyQ/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/765396847379480660/e6eeb6d68aa374138b5862a8b674818c.png")
       
     message.channel.send(embed);
