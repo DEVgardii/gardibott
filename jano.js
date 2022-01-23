@@ -15,7 +15,13 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////
-
+client.on('guildMemberAdd', message => {
+if (message.guild.id === ("758704504047665192"))
+{
+ let user = message.author;
+message.setNickname(`${message.user.username}-ᴰᔆ`);
+}
+});
 /////////////
 client.on("message", message => {
   if (message.content.startsWith(PREFIX + "boy")) {
