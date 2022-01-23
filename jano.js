@@ -268,7 +268,7 @@ client.on("message", (message) => {
 }); 
    ///////////////////////////
    client.on("message", (message) => {
-  if (message.content.split(" ")[0] === prefix + "avtatar") {
+  if (message.content.split(" ")[0] === prefix + "avatar") {
     if (message.author.bot || message.channel.type == "dm") return;
     var args = message.content.split(" ")[1];
     var avt = args || message.author.id;
@@ -490,35 +490,6 @@ client.on("message", async message => {
   }
 });
 //////////////////////////////////////////////////////////////////
-client.on("message", message => {
-  if (message.content.startsWith(prefix + "emoji")) {
-    let Emojis = "";
-    let EmojisAnimated = "";
-    let EmojiCount = 0;
-    let Animated = 0;
-    let OverallEmojis = 0;
-    function Emoji(id) {
-      return client.emojis.cache.get(id).toString();
-    }
-    message.guild.emojis.cache.forEach(emoji => {
-      OverallEmojis++;
-      if (emoji.animated) {
-        Animated++;
-        EmojisAnimated += Emoji(emoji.id);
-      } else {
-        EmojiCount++;
-        Emojis += Emoji(emoji.id);
-      }
-    });
-    let Embed = new Discord.MessageEmbed()
-      .setTitle(`Emojis in ${message.guild.name}.`)
-      .setDescription(
-        `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}\n\n**All Emoji [${OverallEmojis}]**`
-      )
-      .setColor(`RANDOM`);
-    message.channel.send(Embed);
-  }
-});
 //////////////////////////////////////////////////////////////////
 client.on("message", message => {
   if (message.content.startsWith(prefix + "slap")) {
