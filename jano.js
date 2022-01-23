@@ -1113,7 +1113,7 @@ const embed = new Discord.MessageEmbed()
 ============
 **⚙️┇Moderator**
 \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
-.
+
 \`move\` - \`moveall\` - \`kick\` - \`vkick\`
 .
 \`vban\` - \`unvban\` - \`ban\` - \`unban\` - \`unbandall\`
