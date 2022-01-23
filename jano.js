@@ -783,15 +783,15 @@ client.on("message", async message => {
       .setTitle(`${message.guild.name} server Info`)
       .addFields(
         {
-          name: "Owner: ",
+          name: "👑 | Owner: ",
           value: `${message.guild.owner}`,
           inline: true
         },
 	      
 	      
         {
-          name: "All Members: ",
-          value: ` ${message.guild.memberCount} users`,
+          name: "`🧑‍🏫 | All Members: ",
+          value: `${message.guild.memberCount} users`,
           inline: true
         },
 	      
@@ -800,7 +800,7 @@ client.on("message", async message => {
 	      
 	      
         {
-          name: "All Bots: ",
+          name: "🤖 | All Bots: ",
           value: ` ${
             message.guild.members.cache.filter(m => m.user.bot).size
           } bots`,
@@ -809,14 +809,14 @@ client.on("message", async message => {
 	      
 	      
         {
-          name: "Creation Date: ",
+          name: "⏳ | Creation Date: ",
           value: message.guild.createdAt.toLocaleDateString("en-us"),
           inline: true
         },
 	      
 	      
         {
-          name: "Roles Number: ",
+          name: "〽 | Roles Number: ",
           value: ` ${message.guild.roles.cache.size} roles in this server.`,
           inline: true
         },
@@ -824,7 +824,7 @@ client.on("message", async message => {
 	      
         
         {
-          name: "Boosters: ",
+          name: "⁉️ | Boosters: ",
           value:
             message.guild.premiumSubscriptionCount >= 1
               ? ` ${message.guild.premiumSubscriptionCount} Boosters`
@@ -834,7 +834,7 @@ client.on("message", async message => {
 	      
 	      
         {
-          name: "Emojis: ",
+          name: "⚠️ | Emojis: ",
           value:
             message.guild.emojis.cache.size >= 1
               ? `All emojis ${message.guild.emojis.cache.size} !`
