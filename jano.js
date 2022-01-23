@@ -787,7 +787,7 @@ client.on("message", message => {
       Day = currentTime.getDate();
 
     var clinet = new Discord.MessageEmbed()
-      .setTitle("⏱ ```Date Today``` ⏱")
+      .setTitle("⏱Date Today⏱")
       .setColor("RANDOM")
       .setTimestamp()
       .setDescription("" + Day + "/" + Month + "/" + Year + "🗓");
