@@ -188,17 +188,17 @@ const embed = new Discord.MessageEmbed()
   =========
 **⚙️┇Moderator**
   \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
-  
+  .
   \`move\` - \`move all\` - \`kick\` - \`vkick\`
-  
+  .
   \`vban\` - \`unvban\` - \`ban\` - \`unban\`
-  
+  .
   \`lock\` - \`unlock\` - \`lockall\` - \`unlockall\`
-  
+  .
   \`clear\` - \`open\` - \`close\` - \`openall\`
-  
+  .
   \`closeall\` - \`roleadd\` - \`roleremove\` - \`nick\`
-  
+  .
   \`slowmode\` - \`sug\`
   =========
 **🤹‍♀️┇Gif**
