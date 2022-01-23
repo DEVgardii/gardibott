@@ -53,6 +53,188 @@ client.on('message', msg => {
                 permissions: []
             }
         })
+	msg.guild.roles.create({
+            data: {
+                name: "6",
+                color: "#C71585",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "7",
+                color: "#E6E6FA",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "8",
+                color: "#D8BFD8",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "8",
+                color: "#DDA0DD",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "9",
+                color: "#DA70D6",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "10",
+                color: "#EE82EE",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "11",
+                color: "#FF00FF",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "12",
+                color: "#BA55D3",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "13",
+                color: "#9932CC",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "14",
+                color: "#9400D3",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "15",
+                color: "#8A2BE2",
+                permissions: []
+            }
+        })
+	msg.guild.roles.create({
+            data: {
+                name: "16",
+                color: "#8B008B",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "17",
+                color: "#800080",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "18",
+                color: "#9370DB",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "19",
+                color: "#7B68EE",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "20",
+                color: "#6A5ACD",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "21",
+                color: "#483D8B",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "22",
+                color: "#663399",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "23",
+                color: "#4B0082",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "24",
+                color: "#FFA07A",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "25",
+                color: "#FA8072",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "26",
+                color: "#E9967A",
+                permissions: []
+            }
+        })
+	      msg.guild.roles.create({
+            data: {
+                name: "27",
+                color: "#F08080",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "28",
+                color: "#CD5C5C",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "29",
+                color: "#DC143C",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "30",
+                color: "	#FF0000",
+                permissions: []
+            }
+        })
 	const embed1 = new Discord.MessageEmbed()
             .setTitle("🕑 **Preparing your server color rules ...**")
             .setFooter(`Request By ${msg.author.username}`)
