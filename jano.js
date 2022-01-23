@@ -523,13 +523,13 @@ const embed = new Discord.MessageEmbed()
 .
 \`vban\` - \`unvban\` - \`ban\` - \`unban\`
 .
-\`lock\` - \`unlock\` - \`lockall\` - \`unlockall\`
+\`lock\` - \`unlock\` - \`clear\` - \`slowmode\`
 .
-\`clear\` - \`open\` - \`close\` - \`openall\`
+\`open\` - \`close\` - \`openall\` - \`closeall\`
 .
-\`closeall\` - \`roleadd\` - \`roleremove\` - \`nick\`
+\`roleadd\` - \`roleremove\` - \`nick\`
 .
-\`slowmode\` - \`sug\`
+\`sug\`
 ============
 **🤹‍♀️┇Gif**
 > \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\`
