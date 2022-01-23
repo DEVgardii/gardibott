@@ -378,10 +378,10 @@ client.on("message", message => {
       Day = currentTime.getDate();
 
     var clinet = new Discord.MessageEmbed()
-      .setTitle("[ TODAY]  ")
+      .setTitle("⏱ ```Date Today``` ⏱")
       .setColor("RANDOM")
       .setTimestamp()
-      .setDescription("" + Day + "-" + Month + "-" + Year + "");
+      .setDescription("" + Day + "/" + Month + "/" + Year + "🗓");
     message.channel.send(clinet);
   }
 });
@@ -662,10 +662,10 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setDescription(
-        `**Found ${
+        `**All Bots Is ${
           message.guild.members.cache.filter(m => m.user.bot).size
-        } bots in this Server**
-${botssize.join("\n")}`
+        } In Server**
+${botssize.join("🤖 | \n")}`
       )
       .setFooter(client.user.username, client.user.avatarURL())
       .setTimestamp();
@@ -790,7 +790,7 @@ client.on("message", async message => {
 	      
 	      
         {
-          name: "`🧑‍🏫 | All Members: ",
+          name: "🧑‍🏫 | All Members: ",
           value: `${message.guild.memberCount} users`,
           inline: true
         },
