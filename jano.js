@@ -16,6 +16,61 @@ const prefix = ".";
 const PREFIX = ".";
 /////////////////////
 
+client.on('message', msg => {
+    if (msg.content === prefix + 'setup colors' || msg.content === 'setup colors') {
+        msg.guild.roles.create({
+            data: {
+                name: "1",
+                color: "#FFB6C1",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "2",
+                color: "#FFC0CB",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "3",
+                color: "#FF69B4",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "4",
+                color: "#FF1493",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "5",
+                color: "#DB7093",
+                permissions: []
+            }
+        })
+	const embed1 = new Discord.MessageEmbed()
+            .setTitle("🕑 **Preparing your server color rules ...**")
+            .setFooter(`Request By ${msg.author.username}`)
+            .setTimestamp()
+        const embed2 = new Discord.MessageEmbed()
+            .setTitle("✅ **Your colors is ready**")
+            .setFooter(`Request By ${msg.author.username}`)
+            .setTimestamp()
+        msg.channel.send(embed1).then(m => {
+            setTimeout(() => {
+                m.delete()
+                m.channel.send(embed2)
+            }, 30000)
+        })
+    }
+})
+
+
 
 client.on("message", message=>{
     if(message.content.startsWith(prefix+"owner")){
