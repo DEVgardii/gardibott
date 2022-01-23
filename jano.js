@@ -37,7 +37,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username} BOY GIFS",
+          description: ` ${message.author.username} BOY GIFS`,
           image: {
             url: man[Math.floor(Math.random() * man.length)]
           }
@@ -67,7 +67,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username} GIRL GIFS ",
+          description: ` ${message.author.username} GIRL GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -105,7 +105,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username} BABY GIFS ",
+          description: ` ${message.author.username} BABY GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -136,7 +136,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username} ANIME GIFS ",
+          description: ` ${message.author.username} ANIME GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -167,7 +167,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username} SMOKE GIFS ",
+          description: ` ${message.author.username} SMOKE GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -197,7 +197,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username} SAD GIFS",
+          description: ` ${message.author.username} SAD GIFS`,
           image: {
             url: sads[Math.floor(Math.random() * sads.length)]
           }
@@ -232,7 +232,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username} NEON GIFS ",
+          description: ` ${message.author.username} NEON GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -268,7 +268,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username}   Couple GIFS ",
+          description: ` ${message.author.username}   Couple GIFS `,
           image: {
             url: loves[Math.floor(Math.random() * loves.length)]
           }
@@ -299,7 +299,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username} CAT GIFS ",
+          description: ` ${message.author.username} CAT GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -330,7 +330,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: " ${message.author.username} CARTOON GIFS ",
+          description: ` ${message.author.username} CARTOON GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -1125,7 +1125,7 @@ const embed = new Discord.MessageEmbed()
 \`nick\`
 ============
 **🤹‍♀️┇Gif**
-> \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\`
+> \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\` - \`carton\`
 ============
 **📸┇Photo**
 > \`pboy\` - \`pgirl\` - \`panime\`
