@@ -907,7 +907,7 @@ client.on("message", message => {
 if(message.content.startsWith(PREFIX + "vmute")) {
 var mention = message.mentions.members.first();
 if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("MUTE_MEMBERS") || !message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return;
-if(!mention) return message.channel.send(`🤐 | **.**vmute @user`);
+if(!mention) return message.channel.send(`🔇 | **.**vmute @user`);
 if(!mention.voice.channel) return message.channel.send(`This person is not in the voice.`);
 mention.voice.setMute(true).then(() => {
 const embed = new Discord.MessageEmbed()
@@ -924,7 +924,7 @@ const embed = new Discord.MessageEmbed()
 if(message.content.startsWith(PREFIX + "unvmute")) {
 var mention = message.mentions.members.first();
 if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("MUTE_MEMBERS") || !message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return;
-if(!mention) return message.channel.send(`🤐 | **.**unvmute @user`);
+if(!mention) return message.channel.send(`🔈 | **.**unvmute @user`);
 if(!mention.voice.channel) return message.channel.send(`This person is not in the voice.`);
 mention.voice.setMute(false).then(() => {
 const embed = new Discord.MessageEmbed()
@@ -954,7 +954,7 @@ client.on("message", async message => {
         "I'm sorry, you don't have permission. "
       );
     if (!user)
-      return message.channel.send(`🤐 | **.**unmute @user`);
+      return message.channel.send(`🔔 | **.**unmute @user`);
     let mute = message.guild.roles.cache.find(role => role.name === "Muted");
     message.guild.channels.cache.forEach(async channel => {
       await channel.createOverwrite(mute, {
@@ -998,7 +998,7 @@ client.on("message", async message => {
         "I'm sorry, you don't have permission."
       );
     if (!user)
-      return message.channel.send(`🤐 | **.**mute @user`);
+      return message.channel.send(`🔕 | **.**mute @user`);
     let mute = message.guild.roles.cache.find(role => role.name === "Muted");
     if (!mute)
       mute = await message.guild.roles.create({
