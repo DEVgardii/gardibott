@@ -15,6 +15,55 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 /////////////////////
+
+
+client.on("message", async message => {
+  if (
+    message.content.includes(
+      "@everyon",
+      "@here",
+    )
+  ) {
+ if(message.member.hasPermission("MENTION_EVERYONE")) return;
+    if (!message.channel.guild) return;
+    message.delete();
+    var command = message.content.split(" ")[0];
+    let muterole = message.guild.roles.cache.find(
+      role => role.name === `Muted`
+    );
+    if (!muterole) {
+      try {
+        muterole = await message.guild.roles.create({
+          name: "Muted",
+          color: "#000001",
+          permissions: []
+        });
+        message.guild.channels.cache.forEach(async (channel, id) => {
+          await channel.updateOverwrite(muterole, {
+            SEND_TTS_MESSAGES: false,
+            SEND_MESSAGES: false,
+            ADD_REACTIONS: false,
+            
+            SPEAK: false
+          });
+        });
+      } catch (e) {
+        console.log(e.stack);
+      }
+    }
+    message.member.roles.add(muterole);
+    const embed500 = new Discord.MessageEmbed()
+      .setTitle("Muted Ads")
+      .addField(`**  You Have Been Muted **`, `**Reason : Uses mention Everyone Or Here**`)
+      .setColor("c91616")
+      .setThumbnail(message.author.avatarURL())
+      .setAuthor(message.author.username, message.author.avatarURL())
+      .setFooter(`${message.guild.name} `);
+    message.channel.send(embed500);
+  }
+});
+
+///////////////
 client.on("message", message => {
   if (message.content === PREFIX + "close") {
     if (!message.channel.guild) return;
