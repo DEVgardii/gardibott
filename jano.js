@@ -230,6 +230,10 @@ client.on("message", (message) => {
     client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "PLAYING" });
     message.reply("Done\n  Now Activity is PLAYING  ");
   }
+  if (message.content == prefix + "stream") {
+    client.user.setActivity(`${prefix}help | Server ${client.guilds.cache.size}`, { type: "STREAMING" });
+    message.reply("Done\n  Now Activity is PLAYING  ");
+  }
   
 });
 
