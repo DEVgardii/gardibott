@@ -267,17 +267,25 @@ client.on("message", (message) => {
 }
 }); 
    ///////////////////////////
-   client.on("message", JANO => {
-    if (JANO.content.startsWith(prefix + "avatar")) {
-  var embed = new Discord.MessageEmbed()
-         .setAuthor(`${JANO.author.username}`, JANO.author.avatarURL({dynamic: true}))
-         .setColor('RANDOM')
-         .setDescription(`**[Avatar Link](${JANO.author.avatarURL({dynamic: true, format: 'png', size: 1024})})**`)
-         .setImage(JANO.author.avatarURL({dynamic: true, format: 'png', size: 1024}))
-         .setFooter(`Requsted by ${JANO.author.tag}`, JANO.author.avatarURL({dynamic: true}))
-    JANO.channel.send(embed);
-}
-});
+   client.on("message", (message) => {
+  if (message.content.split(" ")[0] === prefix + "avtatar") {
+    if (message.author.bot || message.channel.type == "dm") return;
+    var args = message.content.split(" ")[1];
+    var avt = args || message.author.id;
+    client
+      .fetchUser(avt)
+      .then((user) => {
+        avt = user;
+        let avtEmbed = new Discord.RichEmbed()
+          .setColor("#36393e")
+          .setAuthor(`${avt.username}'s Avatar`, message.author.avatarURL)
+          .setImage(avt.avatarURL)
+          .setFooter(`Avatar`, message.client.user.avatarURL);
+        message.channel.send(avtEmbed);
+      })
+      .catch(() => message.channel.send(`يجب عليك وضع ايدي الشخص`));
+  } // Julian
+}); // Codes - Toxic Codes
 
 ////////////////////////////
 client.on("message", message => {
