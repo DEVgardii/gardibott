@@ -15,20 +15,78 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
-client.on('message', badboy => {
-  if(badboy.content.startsWith("https://")){
-
-    if(badboy.author.bot || !badboy.guild) return
-
-    const muterole = badboy.guild.roles.cache.find(r => r.name === "Muted");
-  
-   badboy.member.roles.add(muterole)
-  var mutelog = badboy.guild.channels.cache.find(r=> r.name ==='log');
-mutelog.send(`Muted ${badboy.author.username} `)
-    badboy.delete()
-  }
-  })
-
+client.on('message', msg => {
+    if (msg.content === prefix + 'setup colors' || msg.content === 'setup colors') {
+        msg.guild.roles.create({
+            data: {
+                name: "1",
+                color: "#FFB6C1",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "2",
+                color: "#FFC0CB",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "3",
+                color: "#FF69B4",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "4",
+                color: "#FF1493",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "5",
+                color: "#DB7093",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "6",
+                color: "#C71585",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "7",
+                color: "#E6E6FA",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "8",
+                color: "#D8BFD8",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "8",
+                color: "#DDA0DD",
+                permissions: []
+            }
+        })
+        msg.guild.roles.create({
+            data: {
+                name: "9",
+                color: "#DA70D6",
+                permissions: []
+            }
+        })
 //////////////////////
 
 
