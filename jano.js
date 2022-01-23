@@ -62,7 +62,7 @@ client.on("message", async message => {
         "I'm sorry, you don't have permission."
       );
     if (!user)
-      return message.channel.send(`select member`);
+      return message.channel.send(`${prefix}mute @user \n Example \n${prefix}mute ${clint.id}`);
     let mute = message.guild.roles.cache.find(role => role.name === "Muted");
     if (!mute)
       mute = await message.guild.roles.create({
