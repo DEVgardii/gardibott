@@ -15,36 +15,7 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////
-client.on('message', message => {
-const yt = require('ytdl-core');
-  if (message.content.startsWith(prefix + 'join')) {
-              if(!message.channel.guild) return message.reply('** This command only for servers **');
 
-    const voiceChannel = message.member.voice.channel;
-    if (!voiceChannel) {
-      return message.reply(`Join Voice Channel `);
-    }
-    voiceChannel.join()
-      .then(connnection => {
-        let stream = yt('https://youtu.be/_XofJwVp8PE', {audioonly: true});
-        const dispatcher = connnection.playStream(stream);
-        dispatcher.on('end', () => {
-          voiceChannel.leave();
-        });
-      });
-  }
-  
-  if (message.content.startsWith(prefix + 'left')) {
-              if(!message.channel.guild) return message.reply('** This command only for servers **');
-
-    const voiceChannel = message.member.voice.channel;
-    if (!voiceChannel) {
-      return message.reply(`Join Voice Channel`);
-    }
-voiceChannel.leave();
-  }
-
-});
 /////////////
 client.on("message", message => {
   if (message.content.startsWith(PREFIX + "boy")) {
