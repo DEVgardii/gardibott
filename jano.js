@@ -1112,7 +1112,7 @@ const embed = new Discord.MessageEmbed()
 > \`allbots\`
 ============
 **⚙️┇Moderator**
-**\`mute\`** - \`unmute\` - \`vmute\` - \`unvmute\`
+**__\`mute\`__** - \`unmute\` - \`vmute\` - \`unvmute\`
 
 \`move\` - \`moveall\` - \`kick\` - \`vkick\`
 
