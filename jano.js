@@ -75,16 +75,14 @@ embed: new Discord.MessageEmbed()
 .setThumbnail(client.user.avatarURL())
 .setColor("RANDOM")
 .setTitle("Info Bot")
-.addField("``OWNER``", `[ <@881116033916735570> ] \`\`\`All info owner .owner\`\`\``, true)
-.addField("``My Name``", `[ ${client.user.tag} ]`, true)
-.addField("``My ID``", `[ ${client.user.id} ]`, true)
-.addField("``Servers``", [client.guilds.cache.size], true)
-.addField("``Users``", `[ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} ]`, true)
-.addField("``Channels``", `[ ${client.channels.cache.size} ]`, true)
-.addField("``My Ping``",[`${Date.now() - message.createdTimestamp}` + "MS"],true)
-.addField("``My Prefix``", `[ ${prefix} ]`, true)
-.addField("``My Language``", `[ JavaScript ]`, true)
-.addField("``Bot Version``", `[ 12.5.3 ]`, true)
+.addField("👑``OWNER``", `[ <@881116033916735570> ] \`\`\`All info owner .owner\`\`\``, true)
+.addField(👨‍🏫"``My Name``", `[ ${client.user.tag} ]`, true)
+.addField("🆔``My ID``", `[ ${client.user.id} ]`, true)
+.addField("🖇``Servers``", [client.guilds.cache.size], true)
+.addField(⚠️``Users``", `[ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} ]`, true)
+.addField("#️⃣``Channels``", `[ ${client.channels.cache.size} ]`, true)
+.addField("📶``My Ping``",[`${Date.now() - message.createdTimestamp}` + "MS"],true)
+.addField("🔐``My Prefix``", `[ ${prefix} ]`, true)
 });
 }
 });
@@ -377,7 +375,10 @@ client.on("message", message => {
 ☺️Support is me
 --------------
 📊I work
-\` ⚙️moderation \`- \`🤹gif\` - \` 🤪funny\` - \`📸photo\`
+ \`⚙️moderation\`
+ \`🤹gif\`
+ \`🤪funny\`
+ \`📸photo\`
 Link
 [support](https://discord.gg/5cRNwVX89x)`)
     .setFooter(``)
@@ -398,7 +399,10 @@ client.on("message", message => {
 ☺️Invite is me
 --------------
 📊I work
-\` ⚙️moderation \`- \`🤹gif\` - \` 🤪funny\` - \`📸photo\`
+\` ⚙️moderation \`
+\`🤹gif\`
+\` 🤪funny\`
+\`📸photo\`
 Link
 [invite]( https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot)`)
     .setFooter(``)
