@@ -123,7 +123,7 @@ const embed = new Discord.MessageEmbed()
   \`slowmode\` - \`sug\`
   =========
 **🤹‍♀️┇Gif**
-  \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\` - \`couple\` - \`cat\`
+  \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\`
 =========
 **📸┇Photo**
   \`pboy\` - \`pgirl\` - \`panime\`
