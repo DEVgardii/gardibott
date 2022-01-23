@@ -88,30 +88,7 @@ embed: new Discord.MessageEmbed()
 }
 });
 ///////////
-client.on("message", message => {
-if (message.content.startsWith(prefix + "owner")) {
-message.channel.send({
-embed: new Discord.MessageEmbed()
-.setAuthor(client.user.username, client.user.avatarURL())
-.setThumbnail(client.user.avatarURL())
-.setColor("RANDOM")
-.addField("``My Name``", `Zhanyar`, true)
-	
-.addField("`I Nick Name`", `Gardi`, true)
-	
-.addField("``Age``", `15`, true)
-	
-.addField("`Iam`", `Devloper And Designer`, true)
-	
-.addField("``I Work``", `Student In class 9`, true)
-	
-.addField("``I'm From``", `kurdistan`, true)
-	
-.addField("``I life``",`hawler`,true)
-});
-}
-});
-////////////////////////////////
+
 
 let smsm = ['881116033916735570']
 client.on('message', message=> {
@@ -130,7 +107,7 @@ const embed = new Discord.MessageEmbed()
 .setColor("BLACK")
     .setDescription(`
 🌙 ┇ **Everyone**
-  \`invite\` - \`support\` - \`about\` - \`owner\`
+  \`invite\` - \`support\` - \`about\`
   \`uptime\` - \`ping\` - \`user\`  -  \`srever\`
   \`avatar\` - \`date\` - \`se gif\` - \`se image\`
   \`allbots\` - \`prefix\`
