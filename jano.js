@@ -15,6 +15,44 @@ client.login("NzY1Mzk2ODQ3Mzc5NDgwNjYw.X4UNXA.r0P3FjZpDpcGGh2Bb5b12RrZTuM");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
+client.on("message", message => {
+if(message.content.startsWith(PREFIX + "vmute")) {
+var mention = message.mentions.members.first();
+if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("MUTE_MEMBERS") || !message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return;
+if(!mention) return message.channel.send(`select member`);
+if(!mention.voice.channel) return message.channel.send(`This person is not in the voice.`);
+mention.voice.setMute(true).then(() => {
+const embed = new Discord.MessageEmbed()
+        .setColor("FF0000")
+        .setThumbnail(message.author.avatarURL())
+        .setAuthor(message.author.username,message.author.avatarURL()) 
+        .addField("Moderation", message.author.tag)
+        .addField("Member vmute", mention)
+        .setFooter(`${client.user.tag}`)
+        .setTimestamp()
+        message.channel.send(embed);    
+}).catch(console.error);
+}
+if(message.content.startsWith(PREFIX + "unvmute")) {
+var mention = message.mentions.members.first();
+if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("MUTE_MEMBERS") || !message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return;
+if(!mention) return message.channel.send(`select member`);
+if(!mention.voice.channel) return message.channel.send(`This person is not in the voice.`);
+mention.voice.setMute(false).then(() => {
+const embed = new Discord.MessageEmbed()
+        .setColor('FF0000')
+        .setThumbnail(message.author.avatarURL())
+        .setAuthor(message.author.username,message.author.avatarURL())
+        .addField("Moderation", message.author.tag)
+        .addField("Member unvmute", mention)
+        .setFooter(`${client.user.username}`)
+        .setTimestamp()
+        message.channel.send(embed);   
+}).catch(console.error);
+}
+});
+
+//////
 client.on("message", async message => {
   let args = message.content.split(" ");
   let user = message.mentions.users.first();
