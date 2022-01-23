@@ -1115,13 +1115,13 @@ const embed = new Discord.MessageEmbed()
 \`mute\` - \`unmute\` - \`vmute\` - \`unvmute\`
 
 \`move\` - \`moveall\` - \`kick\` - \`vkick\`
-.
+
 \`vban\` - \`unvban\` - \`ban\` - \`unban\` - \`unbandall\`
-.
+
 \`lock\` - \`unlock\` - \`clear\` - \`say\`
-.
+
 \`open\` - \`close\` - \`openall\` - \`closeall\`
-.
+
 \`nick\`
 ============
 **🤹‍♀️┇Gif**
