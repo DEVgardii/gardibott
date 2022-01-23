@@ -1106,10 +1106,10 @@ const embed = new Discord.MessageEmbed()
 .setColor("BLACK")
     .setDescription(`
 🌙 ┇ **Everyone**
-> \`invite\` - \`support\` - \`about\`
-> \`uptime\` - \`ping\` - \`user\`
-> \`srever\` - \`avatar\` - \`date\`
-> \`allbots\`
+> \`invite\` - \`support\` - \`about\` - \`ping\`
+> \`user\` - \`srever\` - \`avatar\` - \`allbots\`
+>  \`date\` - \`uptime\`
+> 
 ============
 **⚙️┇Moderator**
 **__\`mute\`__** - **__\`unmute\`__** - **__\`vmute\`__** - **__\`unvmute\`__**
