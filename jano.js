@@ -1112,15 +1112,15 @@ const embed = new Discord.MessageEmbed()
 > \`allbots\`
 ============
 **⚙️┇Moderator**
-**__\`mute\`__** - \`unmute\` - \`vmute\` - \`unvmute\`
+**__\`mute\`__** - **__\`unmute\`__** - **__\`vmute\`__** - **__\`unvmute\`__**
 
 \`move\` - \`moveall\` - \`kick\` - \`vkick\`
 
-\`vban\` - \`unvban\` - \`ban\` - \`unban\` - \`unbandall\`
+**__\`vban\`__** - **__\`unvban\`__** - **__\`ban\`__** - **__\`unban\`__** - **__\`unbandall\`__**
 
 \`lock\` - \`unlock\` - \`clear\` - \`say\`
 
-\`open\` - \`close\` - \`openall\` - \`closeall\`
+**__\`open\`__** - **__\`close\`__** - **__\`openall\`__** - **__\`closeall\`__**
 
 \`nick\`
 ============
