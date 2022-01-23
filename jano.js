@@ -16,6 +16,73 @@ const prefix = ".";
 const PREFIX = ".";
 ////////////////////////
 
+
+client.on('message', rw => {
+  if (rw.content.startsWith(prefix + 'vban')) {
+if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
+let men = rw.mentions.users.first()
+let mas = rw.author
+if(!men) return rw.channel.send('**:rolling_eyes: - I cant find this member **'); 
+rw.guild.channels.cache.forEach(c => {
+c.createOverwrite(men.id, { 
+          CONNECT: false
+})
+    })
+const embed = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setDescription(`**
+ <@${men.id}>
+YOU CANT JOIN THE VOICE ROOM
+BANNER : <@${rw.author.id}> **`)
+.setThumbnail("https://image.flaticon.com/icons/svg/1810/1810742.svg")
+          
+client.users.cache.get(men.id).send(embed)
+const Embed11 = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setAuthor(rw.guild.name, rw.guild.iconURL())
+.setDescription(`          <@${men.id}>
+BANNED
+BANNER : <@${rw.author.id}> `)
+.setThumbnail("https://image.flaticon.com/icons/svg/1810/1810742.svg")
+rw.channel.send(Embed11).then(rw => {rw.delete(10000)})
+    }
+})
+ 
+ //فكه 
+client.on('message', rw => {
+  if (rw.content.startsWith(prefix + 'unvban')) {
+if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
+ let men = rw.mentions.users.first()
+ let mas = rw.author
+ if(!men) return rw.channel.send('`MANTION THE MEMBER `');
+ rw.guild.channels.cache.forEach(c => { 
+ c.createOverwrite(men.id, {
+         CONNECT: true
+ })
+    })
+const embed = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setDescription(`**
+ <@${men.id}>
+ Welcome Back
+Back With : <@${rw.author.id}> **`) 
+.setThumbnail("https://image.flaticon.com/icons/svg/443/443138.svg")
+          
+client.users.cache.get(men.id).send(embed)
+const Embed11 = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setAuthor(rw.guild.name, rw.guild.iconURL())
+.setDescription(`          <@${men.id}>
+GO FOR VOICE NOW
+With : <@${rw.author.id}>
+`)
+.setThumbnail("https://image.flaticon.com/icons/svg/443/443138.svg")
+rw.channel.send(Embed11).then(rw => {rw.delete(15000)})
+    } 
+})
+
+////////////
+
 client.on("message", message => {
   if (message.content.startsWith(PREFIX + "kick")) {
   if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("<a:cycycydtd6xyc6d6r6r6r6d6emoji_53:918260430470774855>I'm sorry, you don't have permission. ")
