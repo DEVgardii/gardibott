@@ -253,7 +253,7 @@ client.on('message',async message => {
       const embed = new Discord.MessageEmbed()
         .setTitle(`${member.username}'s avatar`)
         .setImage(avatar)
-        .setColor("BLACK")
+        .setColor("RWNDOM")
         message.channel.send(embed);
     
   }})
