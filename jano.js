@@ -529,7 +529,7 @@ const embed = new Discord.MessageEmbed()
 .
 \`roleadd\` - \`roleremove\` - \`nick\`
 .
-\`sug\`
+\`sug\` - \`say\`
 ============
 **🤹‍♀️┇Gif**
 > \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\`
