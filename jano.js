@@ -822,6 +822,7 @@ client.on("message", message => {
 
 client.on('message',async message => {
   if(message.content.startsWith(PREFIX + "vkick")) { 
+	  var mention = message.mentions.members.first();
    if (!message.member.hasPermission("MANAGE_GUILD")) {
       return message.channel.send("I'm sorry, you don't have permission. ");
     }
@@ -837,8 +838,15 @@ client.on('message',async message => {
       return message.channel.send(`This person is not in the voice.`);
  
     message.mentions.members.first().voice.kick();
- 
-    message.channel.send(`:white_check_mark: ** ${user}kicked from the voice! **`)
+    const embed = new Discord.MessageEmbed()
+        .setColor("RANDOM")
+        .setThumbnail(message.author.avatarURL())
+        .setAuthor(message.author.username,message.author.avatarURL()) 
+        .addField("👑 | Moderation", message.author.tag)
+        .addField("🔇 | Member vmute", mention)
+        .setFooter(`${client.user.tag}`)
+        .setTimestamp()
+    message.channel.send(embed)
   }
 }) 
 
