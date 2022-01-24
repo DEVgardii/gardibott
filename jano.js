@@ -844,7 +844,7 @@ client.on('message',async message => {
     .addField('👑 | Moderation', message.author.tag)
     .setFooter(`${client.user.username}`) 
     .setColor("RANDOM")
-    message.channel.send(kick)
+    message.channel.send(kick + "✅")
   }
 }) 
 
