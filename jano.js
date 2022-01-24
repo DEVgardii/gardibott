@@ -1149,7 +1149,7 @@ const embed = new Discord.MessageEmbed()
 **__\`mute\`__** - **__\`unmute\`__** - **__\`vmute\`__** - **__\`unvmute\`__**
 \`move\` - \`moveall\` - \`kick\` - \`vkick\`
 **__\`vban\`__** - **__\`unvban\`__** - **__\`ban\`__** - **__\`unban\`__** - **__\`unban-all\`__**
-\`lock\` - \`unlock\` - \`clear\` - \`say\`
+\`lock\` - \`unlock\` - \`clear\` - \`say\` - \`esay\`
 **__\`open\`__** - **__\`close\`__** - **__\`openall\`__** - **__\`closeall\`__**
 \`nick\`
 ============
@@ -1261,7 +1261,7 @@ client.on('message',async message => {
       const embed = new Discord.MessageEmbed()
         .setTitle(`${member.username}'s avatar`)
         .setImage(avatar)
-        .setColor("RWNDOM")
+        .setColor("RANDOM")
         message.channel.send(embed);
     
   }})
@@ -1271,10 +1271,10 @@ client.on("message", message => {
   if (commands[0] == prefix + "say") {
     if (!message.guild) return;
     if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
-      return message.reply("**You Dont Have `ADMINISTRATOR` Permission ** <a:jano_11:799293444136108084>");
+      return message.reply("**You Dont Have `ADMINISTRATOR` Permission ** ");
     if (!message.guild.member(client.user).hasPermission("ADMINISTRATOR"))
       return message.reply(
-        "Please Check My Role Permission To `ADMINISTRATOR <a:jano_11:799293444136108084>"
+        "Please Check My Role Permission To `ADMINISTRATOR"
       );
     var args = message.content
       .split(" ")
@@ -1284,7 +1284,37 @@ client.on("message", message => {
       return message.channel.send("`Usage : " + prefix + "say <message>`");
     }
     message.delete();
-    message.channel.send(`${args}`);
+    message.channel.send(`**${args}**`);
+  }
+});
+
+client.on("message", message => {
+  let commands = message.content.split(" ");
+  if (commands[0] == prefix + "esay") {
+    if (!message.guild) return;
+    if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
+      return message.reply("**You Dont Have `ADMINISTRATOR` Permission ** ");
+    if (!message.guild.member(client.user).hasPermission("ADMINISTRATOR"))
+      return message.reply(
+        "Please Check My Role Permission To `ADMINISTRATOR"
+      );
+    var args = message.content
+      .split(" ")
+      .slice(1)
+      .join(" ");
+    if (!args) {
+      return message.channel.send("`Usage : " + prefix + "say <message>`");
+    }
+    message.delete();
+const embed = new Discord.MessageEmbed()
+       .setColor("random")
+    .setAuthor(message.author.tag, message.author.avatarURL())
+    .setDescription (`**${args}**`)
+    .setFooter(`GARDI BOT ✨`)
+    .setImage(``)
+    .setTitle(`Embed Say`) 
+    .setThumbnail(client.user.avatarURL())
+    message.channel.send(embed);
   }
 });
 //////////////////////////////////////////////////////////////////
@@ -1293,7 +1323,8 @@ client.on("message", message => {
   if (message.author.bot) return;
   let args = message.content.split(" ");
   let command = args[0].toLowerCase();
-  if (command === prefix + "clear") {
+  if (command === prefix + "clear") 
+  if (command === "0") {
     if (!message.member.hasPermission("MANAGE_MESSAGES"))
       return message.channel.send(
         `❌ You are missing the permission \`MANAGE MESSAGES\`.`
@@ -1308,7 +1339,7 @@ client.on("message", message => {
         .then(m =>
           message.channel
             .send(`\`\`\`\nDeleted ${m.size} messages\n\`\`\``)
-            .then(p => p.delete({ timeout: 3000 }))
+            .then(p => p.delete({ timeout: 1500 }))
         );
     } else {
       message.delete().then(n => {
@@ -1317,7 +1348,7 @@ client.on("message", message => {
           .then(m =>
             message.channel
               .send(`\`\`\`\nDeleted ${m.size} messages\n\`\`\``)
-              .then(p => p.delete({ timeout: 3000 }))
+              .then(p => p.delete({ timeout: 1500 }))
           );
       });
     }
