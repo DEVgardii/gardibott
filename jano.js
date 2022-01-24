@@ -1201,35 +1201,35 @@ const developers = ["881116033916735570"];
 client.on("message", (message) => {
   if (!developers.includes(message.author.id)) return;
   if (message.content.startsWith(prefix + "watch")) {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size}`, { type: "WATCHING" });
+    client.user.setActivity(`${prefix}help ${client.guilds.cache.size} Server`, { type: "WATCHING" });
     message.reply("Done\n  Now Activity is WATCHING  ");
   }
 if (message.content.startsWith(prefix + "watchuser")) {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size} | USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "WATCHING" });
+    client.user.setActivity(`${prefix}help Server ${client.guilds.cache.size} USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "WATCHING" });
     message.reply("Done\n  Now Activity is WATCHING  ");
   }
   if (message.content == prefix + "listen") {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size}`, { type: "LISTENING" });
+    client.user.setActivity(`${prefix}help ${client.guilds.cache.size} Server`, { type: "LISTENING" });
     message.reply("Done\n  Now Activity is LISTENING ");
   }
 if (message.content == prefix + "listenuser") {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size} | USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "LISTENING" });
+    client.user.setActivity(`${prefix}help Server ${client.guilds.cache.size} USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "LISTENING" });
     message.reply("Done\n  Now Activity is LISTENING ");
   }
   if (message.content == prefix + "play") {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size}`, { type: "PLAYING" });
+    client.user.setActivity(`${prefix}help ${client.guilds.cache.size} Server`, { type: "PLAYING" });
     message.reply("Done\n  Now Activity is PLAYING  ");
   }
 if (message.content == prefix + "playuser") {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size} | USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "PLAYING" });
+    client.user.setActivity(`${prefix}help Server ${client.guilds.cache.size} USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "PLAYING" });
     message.reply("Done\n  Now Activity is PLAYING  ");
   }
   if (message.content == prefix + "stream") {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size}`, { type: "STREAMING", url: "https://www.twitch.tv/tapoze"});
+    client.user.setActivity(`${prefix}help ${client.guilds.cache.size} Server`, { type: "STREAMING", url: "https://www.twitch.tv/tapoze"});
     message.reply("Done\n  Now Activity is STREAMING ");
 }
 if (message.content == prefix + "streamuser") {
-    client.user.setActivity(`${prefix}help : Server ${client.guilds.cache.size} | USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "STREAMING", url: "https://www.twitch.tv/tapoze"});
+    client.user.setActivity(`${prefix}help Server ${client.guilds.cache.size} USER ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}`, { type: "STREAMING", url: "https://www.twitch.tv/tapoze"});
     message.reply("Done\n  Now Activity is STREAMING ");
 }
 
