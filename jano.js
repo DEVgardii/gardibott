@@ -828,7 +828,7 @@ client.on('message',async message => {
  
     if (!message.mentions.members.first())
       return message.channel.send(
-        `🎤 | select member`
+        `🗣 | select member`
       );
  
     let { channel} = message.mentions.members.first().voice;
@@ -837,9 +837,11 @@ client.on('message',async message => {
       return message.channel.send(`This person is not in the voice.`);
  
     message.mentions.members.first().voice.kick();
+ 
     message.channel.send(`:white_check_mark: **${user.username} kicked from the voice! **`)
   }
 }) 
+
 
 
 
