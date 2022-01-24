@@ -749,7 +749,7 @@ const embed = new Discord.MessageEmbed()
  <@${men.id}>
 YOU CANT JOIN THE VOICE ROOM
 BANNER : <@${rw.author.id}> **`)
-.setThumbnail("https://image.flaticon.com/icons/svg/1810/1810742.svg")
+.setThumbnail("")
           
 client.users.cache.get(men.id).send(embed)
 const Embed11 = new Discord.MessageEmbed()
@@ -758,7 +758,7 @@ const Embed11 = new Discord.MessageEmbed()
 .setDescription(`          <@${men.id}>
 BANNED
 BANNER : <@${rw.author.id}> `)
-.setThumbnail("https://image.flaticon.com/icons/svg/1810/1810742.svg")
+.setThumbnail("")
 rw.channel.send(Embed11).then(rw => {rw.delete(10000)})
     }
 })
@@ -838,7 +838,7 @@ client.on('message',async message => {
  
     message.mentions.members.first().voice.kick();
  
-    message.channel.send(`:white_check_mark: **${user.username} kicked from the voice! **`)
+    message.channel.send(`:white_check_mark: **kicked from the voice! **`)
   }
 }) 
 
