@@ -780,19 +780,21 @@ if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT
     })
 const embed = new Discord.MessageEmbed()
 .setColor("RANDOM")
+.setAuthor(`${rw.guild.name}`)
 .setDescription(`**
- <@${men.id}>
- Welcome Back
-Back With : <@${rw.author.id}> **`) 
+ 🔊 | <@${men.id}>
+ Welcome Back To Voice
+👑 | Back With : <@${rw.author.id}> **`) 
 .setThumbnail("https://image.flaticon.com/icons/svg/443/443138.svg")
           
 client.users.cache.get(men.id).send(embed)
 const Embed11 = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setAuthor(rw.guild.name, rw.guild.iconURL())
-.setDescription(`          <@${men.id}>
-GO FOR VOICE NOW
-With : <@${rw.author.id}>
+.setDescription(` 
+❤️ | GO FOR VOICE NOW
+<@${men.id}>
+👑 | With : <@${rw.author.id}>
 `)
 .setThumbnail("https://image.flaticon.com/icons/svg/443/443138.svg")
 rw.channel.send(Embed11).then(rw => {rw.delete(15000)})
