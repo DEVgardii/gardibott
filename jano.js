@@ -619,7 +619,7 @@ client.on("message", message => {
         
           
           
-        return message.replay.send(`**:lock: <#${message.channel.id}> has been locked.**`);
+        return message.channel.send(`**:lock: <#${message.channel.id}> has been locked.**`);
       });
   }
 });
