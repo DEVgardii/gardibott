@@ -19,7 +19,7 @@ client.on('guildMemberAdd', message => {
 if (message.guild.id === ("758704504047665192"))
 {
  let user = message.author;
-message.setNickname(`${message.user.username}  ᴰᔆ`);
+message.setNickname(`${message.user.username} ᴰᔆ`);
 }
 });
 /////////////
