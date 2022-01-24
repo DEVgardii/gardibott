@@ -662,7 +662,7 @@ if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("I'
    
 let Ban = message.mentions.members.first();
 let hokar = args.slice(1).join(" ");
-if(!args[0]) return message.channel.send('**✈️** | \`select member\`')
+if(!args[0]) return message.channel.send('✈️ |select member')
 if(!Ban) return message.channel.send(`${args[0]} is not a member - member tag`)
 
 if(!Ban.bannable) {
