@@ -551,9 +551,9 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(message.author.avatarURL())
       .setTitle("**Channel Hide**")
-      .addField("〽 | **Server name_", message.guild.name)
-      .addField("#️⃣ | **Channel_", message.channel.name)
-      .addField("👑 | **Moderation_", `<@${message.author.id}>`, true)
+      .addField("〽 | **Server name**", message.guild.name)
+      .addField("#️⃣ | **Channel**", message.channel.name)
+      .addField("👑 | **Moderation**", `<@${message.author.id}>`, true)
       .setColor("RANDOM");
     message.channel.send(embed).then(bj => {
       bj.react("");
