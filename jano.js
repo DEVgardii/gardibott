@@ -619,7 +619,7 @@ client.on("message", message => {
         
           
           
-        return message.channel.send(`:lock: #${message.channel.name} **has been locked.**`);
+        return message.channel.send(`**:lock: <#${message.channel.id}> has been locked.**`);
       });
   }
 });
@@ -631,7 +631,7 @@ client.on("message", message => {
     message.channel
       .createOverwrite(message.guild.id, { SEND_MESSAGES: true })
       .then(() => {
-        return message.channel.send(`:unlock: #${message.channel.name} **has been unlocked.**`);
+        return message.channel.send(`**:unlock: <#${message.channel.id}> has been unlocked.**`);
       });
   }
 });
