@@ -475,7 +475,7 @@ client.on("message",message=>{
       if(!message.member.hasPermission("CHANGE_NICKNAME")) return message.reply("❌ | You Dont Have Permission")
       const args = message.content.slice(prefix.length).trim().split(/ +/g);
       let member = message.mentions.users.first() || message.guild.members.cache.get(args[1])||message.guild.members.cache.find(r => r.user.username === args[1])
-      if(!member) return message.reply("❓ | Type User Example:${prefix}setnick @TAG hhhhh")
+      if(!member) return message.reply(`❓ | Type User Example:${prefix}setnick @TAG hhhhh`)
       let nick = message.content.split(" ").slice(2).join(" ")
       let g = message.guild.members.cache.get(member.id)
       if(!nick){
