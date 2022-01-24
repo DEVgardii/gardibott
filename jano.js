@@ -745,6 +745,7 @@ c.createOverwrite(men.id, {
     })
 const embed = new Discord.MessageEmbed()
 .setColor("RANDOM")
+.setAuthor(`${rw.guild.name}`)
 .setDescription(`**
  🎤 | <@${men.id}>
 YOU CANT JOIN THE VOICE ROOM
