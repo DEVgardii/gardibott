@@ -19,7 +19,7 @@ client.on('guildMemberAdd', message => {
 if (message.guild.id === ("758704504047665192"))
 {
  let user = message.author;
-message.setNickname(`${message.user.username}-ᴰᔆ`);
+message.setNickname(`${message.user.username}  ᴰᔆ`);
 }
 });
 /////////////
@@ -1167,7 +1167,7 @@ const embed = new Discord.MessageEmbed()
 `)
 
     .setFooter(` Gardi bot ✨ | By : PW๛ᗰᗩᗰ  ᘜᗩᖇᗪI ᴰᔆ✨#1000`, client.user.avatarURL)
-    .setURL("https://images-ext-2.discordapp.net/external/4RET2OBD1PTYwUo-cgDNkj6szsR2CxU3_JMWi1MbwyQ/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/765396847379480660/e6eeb6d68aa374138b5862a8b674818c.png")
+   .setURL("https://discord.gg/5cRNwVX89x")
       
     message.channel.send(embed);
     message.react("<a:jano_27:799630916820795422>");
