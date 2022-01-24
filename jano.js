@@ -837,17 +837,7 @@ client.on('message',async message => {
       return message.channel.send(`This person is not in the voice.`);
  
     message.mentions.members.first().voice.kick();
-    const embed = new Discord.MessageEmbed()
-        .setAuthor(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
-          .setFooter(`${client.user.username}`)
-          .setTitle("🔔"+"Voice Kick Member"+"🔔")
-          .addField("〽️ | **Server Name**", message.guild.name)
-          .addField("#️⃣ | **Channel**", `${message.channel.name}`) 
-          .addField("🔔 | **Member Voice Kick**", `${user.username}`)
-          .addField("👑 | **Moderation**", `<@${message.author.id}>`, true)
-          .addField("🆔 | **Moderation Id** ", `${message.author.id}`, true)
-          .setColor("RANDOM");
-    message.channel.send(embed)
+    message.channel.send(`:white_check_mark: **${user.username} kicked from the voice! **`)
   }
 }) 
 
