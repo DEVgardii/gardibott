@@ -1312,7 +1312,6 @@ const embed = new Discord.MessageEmbed()
     .setDescription (`**${args}**`)
     .setFooter(`GARDI BOT ✨`)
     .setImage(``)
-    .setTitle(`Embed Say`) 
     .setThumbnail(client.user.avatarURL())
     message.channel.send(embed);
   }
