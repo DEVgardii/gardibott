@@ -731,8 +731,6 @@ message.channel.send(embed)
 
 
 ///////////////
-
-f
 client.on('message', rw => {
   if (rw.content.startsWith(prefix + 'vban')) {
 if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
