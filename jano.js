@@ -611,19 +611,10 @@ client.on("message", message => {
     message.channel
       .createOverwrite(message.guild.id, { SEND_MESSAGES: false })
       .then(() => {
-        const embed = new Discord.MessageEmbed()
-          .setThumbnail(message.author.avatarURL())
-          .setAuthor(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
-          .setFooter(`${client.user.username}`)
-          .setTitle("** locked Channel **")
-          .addField("_Server Name_", message.guild.name) 
-          .addField("_Server Id_", message.guild.id)
-          .addField("_Channel_", `${message.channel.name}`)
-          .addField("_Channel Id_", `${message.channel.id}`)
-          .addField("_Moderation_", `<@${message.author.id}>`, true)
-          .addField("_Moderation Id_", `${message.author.id}`, true)
-          .setColor("FF0000");
-        return message.channel.send(embed);
+        
+          
+          
+        return message.channel.send(`**:lock: ${message.channel.name} has been locked.**`);
       });
   }
 });
@@ -635,19 +626,7 @@ client.on("message", message => {
     message.channel
       .createOverwrite(message.guild.id, { SEND_MESSAGES: true })
       .then(() => {
-        const embed = new Discord.MessageEmbed()
-         .setThumbnail(message.author.avatarURL())
-          .setAuthor(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
-          .setFooter(`${client.user.username}`)
-          .setTitle("** locked Channel **")
-          .addField("_Server Name_", message.guild.name) 
-          .addField("_Server Id_", message.guild.id)
-          .addField("_Channel_", `${message.channel.name}`)
-          .addField("_ Channel Id_", `${message.channel.id}`)
-          .addField("_Moderation_", `<@${message.author.id}>`, true)
-          .addField("_Moderation Id_", `${message.author.id}`, true)
-          .setColor("FF0000");
-        return message.channel.send(embed);
+        return message.channel.send(`**:unlock: ${message.channel.name} has been unlocked.**`);
       });
   }
 });
