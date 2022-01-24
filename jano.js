@@ -805,16 +805,16 @@ client.on("message", message => {
     if(!tag) return message.reply('select member')
     let args = message.content.split(" ").slice(1); 
     let reason = message.content.split(" ").slice(2).join(" ")
-    if(!args) return message.reply('select member')
+    if(!args) return message.reply('🦵 | select member')
  
-    var blackjack = 'Black sestam'
+    var blackjack = 'Gardi Bot'
     const kick = new Discord.MessageEmbed()
-    .setTitle('**Kicked In a Server**')
-    .addField('Server', message.guild.name)
-    .addField(' Name member ', tag)
-    .addField('Moderation', message.author.tag)
+    .setTitle("🦵"+'**Kicked In a Server**'+"🦵")
+    .addField('〽 | Server', message.guild.name)
+    .addField('👤 | Name member ', tag)
+    .addField('👑 | Moderation', message.author.tag)
     .setFooter(`${client.user.username}`) 
-    .setColor("FF0000")
+    .setColor("RANDOM")
     message.channel.send(kick)
     tag.kick();
   }})
@@ -828,7 +828,7 @@ client.on('message',async message => {
  
     if (!message.mentions.members.first())
       return message.channel.send(
-        `select member`
+        `🎤 | select member`
       );
  
     let { channel} = message.mentions.members.first().voice;
@@ -837,8 +837,14 @@ client.on('message',async message => {
       return message.channel.send(`This person is not in the voice.`);
  
     message.mentions.members.first().voice.kick();
- 
-    message.channel.send(`successfully member voice kicked`)
+    const kick = new Discord.MessageEmbed()
+    .setTitle("🗣"+'**Voice kicked In a Server**'+"🗣")
+    .addField('〽 | Server', message.guild.name)
+    .addField('👤 | Name member ', tag)
+    .addField('👑 | Moderation', message.author.tag)
+    .setFooter(`${client.user.username}`) 
+    .setColor("RANDOM")
+    message.channel.send(embed)
   }
 }) 
 
@@ -861,7 +867,7 @@ client.on("message", message => {
         m.voice.setChannel(author);
       })
     const embed = new Discord.MessageEmbed()
-        .setColor('#FF0000')
+        .setColor('RANDOM')
         .setThumbnail(message.author.avatarURL())
         .setAuthor(message.author.username,message.author.avatarURL())
         .setTitle("**Done Chek Move all**")
