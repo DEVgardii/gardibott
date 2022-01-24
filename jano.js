@@ -475,7 +475,7 @@ client.on("message",message=>{
       if(!message.member.hasPermission("CHANGE_NICKNAME")) return message.reply("❌ | You Dont Have Permission")
       const args = message.content.slice(prefix.length).trim().split(/ +/g);
       let member = message.mentions.users.first() || message.guild.members.cache.get(args[1])||message.guild.members.cache.find(r => r.user.username === args[1])
-      if(!member) return message.channel.send(`❓ | Type User Example:**${prefix}setnick @TAG __Nickname New__**`)
+      if(!member) return message.channel.send(`❓ | Type User Example: => **${prefix}setnick @TAG __Nickname New__**`)
       let nick = message.content.split(" ").slice(2).join(" ")
       let g = message.guild.members.cache.get(member.id)
       if(!nick){
@@ -535,9 +535,9 @@ client.on("message", async message => {
     }
     message.member.roles.add(muterole);
     const embed500 = new Discord.MessageEmbed()
-      .setTitle("Muted Ads")
+      .setTitle("🔕"+"Muted Ads"+"🔕")
       .addField(`**  You Have Been Muted **`, `**Reason : Uses mention Everyone Or Here**`)
-      .setColor("c91616")
+      .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL())
       .setAuthor(message.author.username, message.author.avatarURL())
       .setFooter(`${message.guild.name} `);
@@ -550,13 +550,13 @@ client.on("message", message => {
   if (message.content === PREFIX + "close") {
     if (!message.channel.guild) return;
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
-      return message.reply("You Dont Have Perms `MANAGE CHANNELS` :x:");
+      return message.reply("❌ | You Dont Have Perms `MANAGE CHANNELS` :x:");
     message.channel.createOverwrite(message.guild.id, {
       VIEW_CHANNEL: false
     });
     const embed = new Discord.MessageEmbed()
       .setThumbnail(message.author.avatarURL())
-      .setTitle("**Channel Hide**")
+      .setTitle("🙈"+"**Channel Hide**"+"🙈")
       .addField("〽 | **Server name**", message.guild.name)
       .addField("#️⃣ | **Channel**", message.channel.name)
       .addField("👑 | **Moderation**", `<@${message.author.id}>`, true)
@@ -570,13 +570,13 @@ client.on("message", message => {
   if (message.content === PREFIX + "open") {
     if (!message.channel.guild) return;
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
-      return message.reply("You dont have Perms `MANAGE CHANNELS`:x:");
+      return message.reply("❌ | You dont have Perms `MANAGE CHANNELS`:x:");
     message.channel.createOverwrite(message.guild.id, {
       VIEW_CHANNEL: true
     });
     const embed = new Discord.MessageEmbed()
       .setThumbnail(message.author.avatarURL())
-      .setTitle("**Channel Unhide**")
+      .setTitle("🙉"+"**Channel Unhide**"+"🙉")
       .addField("〽 | **Server name**", message.guild.name)
       .addField("#️⃣ | **Channel**", message.channel.name)
       .addField("👑 | **Moderation**", `<@${message.author.id}>`, true)
@@ -596,7 +596,7 @@ client.on("message", msg => {
         VIEW_CHANNEL: false
       });
     });
-    msg.channel.send("Done check hide all");
+    msg.channel.send("🙈 | **Done check hide all**");
   }
 });
  
@@ -609,7 +609,7 @@ client.on("message", msg => {
         VIEW_CHANNEL: true
       });
     });
-    msg.channel.send("**done check hide all**");
+    msg.channel.send("🙉 | **done check unhide all**");
   }
 });
 
@@ -627,14 +627,14 @@ client.on("message", message => {
   if (message.content.startsWith(PREFIX + "lock")) {
     let blackjack = "created by black jack";
     if (!message.guild.member(message.author).hasPermission("MANAGE_CHANNELS"))
-      return message.channel.send("**Please Check Your Permissions**");
+      return message.channel.send("🔒 | **Please Check Your Permissions**");
     message.channel
       .createOverwrite(message.guild.id, { SEND_MESSAGES: false })
       .then(() => {
         
           
           
-        return message.channel.send(`**:lock: <#${message.channel.id}> has been locked.**`);
+        return message.reply(`**:lock: <#${message.channel.id}> has been locked.**`);
       });
   }
 });
@@ -642,11 +642,11 @@ client.on("message", message => {
   if (message.content.startsWith(PREFIX + "unlock")) {
     let blackjack = "created by black jack";
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
-      return message.channel.send("**Please Check Your Permission**");
+      return message.channel.send("🔓 | **Please Check Your Permission**");
     message.channel
       .createOverwrite(message.guild.id, { SEND_MESSAGES: true })
       .then(() => {
-        return message.channel.send(`**:unlock: <#${message.channel.id}> has been unlocked.**`);
+        return message.reply(`**:unlock: <#${message.channel.id}> has been unlocked.**`);
       });
   }
 });
@@ -657,15 +657,15 @@ client.on('message',message => {
 
 if(message.content.startsWith(PREFIX + 'ban')) {
 let args = message.content.split(" ").slice(1)
-if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("I'm sorry, you don't have permission.")
+if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("❌ | I'm sorry, you don't have permission.")
    
 let Ban = message.mentions.members.first();
 let hokar = args.slice(1).join(" ");
-if(!args[0]) return message.channel.send('✈️ |select member')
+if(!args[0]) return message.channel.send('✈️ | select member')
 if(!Ban) return message.channel.send(`${args[0]} is not a member - member tag`)
 
 if(!Ban.bannable) {
-return message.channel.send('I cannot ban someone that is mod/admin.')
+return message.channel.send('❌ | I cannot ban someone that is mod/admin.')
 
 }
 
@@ -690,7 +690,7 @@ Ban.ban();
       client.on('message', async message=>{
   
   if(message.content.startsWith(PREFIX + 'unban')){
-if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("<a:cycycydtd6xyc6d6r6r6r6d6emoji_53:918260430470774855>I'm sorry, you don't have permission.")
+if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("❌ | I'm sorry, you don't have permission.")
     let args = message.content.split(" ").slice(1)
 if(!args[0]) return message.channel.send('🤗 | select member')
 const reason = args[1] || "dont reason"
@@ -715,15 +715,15 @@ message.channel.send(embed)
 
   client.on("message", message => {
         switch(message.content.toLowerCase()) {
-            case (prefix + "unban-all"):
+            case (prefix + "!unban-all"):
                 if (message.member.hasPermission("ADMINISTRATOR")) {
                     message.guild.fetchBans().then(bans => {
-                        if (bans.size == 0) {message.reply("There are no banned users."); throw "No members to unban."};
+                        if (bans.size == 0) {message.reply("🔎 | There are no banned users."); throw "No members to unban."};
                         bans.forEach(ban => {
                             message.guild.members.unban(ban.user.id);
                         });
                     }).then(() => message.reply("🤗 | Unbanned all users.")).catch(e => console.log(e))
-                } else {message.reply("You do not have enough permissions for this command.")}
+                } else {message.reply("❌ | You do not have enough permissions for this command.")}
             break;
         }
       });
@@ -770,7 +770,7 @@ client.on('message', rw => {
 if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
  let men = rw.mentions.users.first()
  let mas = rw.author
- if(!men) return rw.channel.send('`MANTION THE MEMBER `');
+ if(!men) return rw.channel.send('🔎 | `MANTION THE MEMBER `');
  rw.guild.channels.cache.forEach(c => { 
  c.createOverwrite(men.id, {
          CONNECT: true
@@ -783,7 +783,7 @@ const embed = new Discord.MessageEmbed()
  🔊 | <@${men.id}>
  Welcome Back To Voice
 👑 | Back With : <@${rw.author.id}> **`) 
-.setThumbnail("https://image.flaticon.com/icons/svg/443/443138.svg")
+.setThumbnail("")
           
 client.users.cache.get(men.id).send(embed)
 const Embed11 = new Discord.MessageEmbed()
@@ -794,7 +794,7 @@ const Embed11 = new Discord.MessageEmbed()
 <@${men.id}>
 👑 | With : <@${rw.author.id}>
 `)
-.setThumbnail("https://image.flaticon.com/icons/svg/443/443138.svg")
+.setThumbnail("")
 rw.channel.send(Embed11).then(rw => {rw.delete(15000)})
     } 
 })
@@ -803,9 +803,9 @@ rw.channel.send(Embed11).then(rw => {rw.delete(15000)})
 
 client.on("message", message => {
   if (message.content.startsWith(PREFIX + "kick")) {
-  if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("<a:cycycydtd6xyc6d6r6r6r6d6emoji_53:918260430470774855>I'm sorry, you don't have permission. ")
+  if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("❌ | I'm sorry, you don't have permission. ")
     let tag = message.mentions.members.first();
-    if(!tag) return message.reply('select member')
+    if(!tag) return message.reply('🦵 | select member')
     let args = message.content.split(" ").slice(1); 
     let reason = message.content.split(" ").slice(2).join(" ")
     if(!args) return message.reply('🦵 | select member')
@@ -827,7 +827,7 @@ client.on('message',async message => {
   if(message.content.startsWith(PREFIX + "vkick")) { 
 	  var mention = message.mentions.members.first();
    if (!message.member.hasPermission("MANAGE_GUILD")) {
-      return message.channel.send("I'm sorry, you don't have permission. ");
+      return message.channel.send("❌ | I'm sorry, you don't have permission. ");
     }
  
     if (!message.mentions.members.first())
@@ -838,7 +838,7 @@ client.on('message',async message => {
     let { channel} = message.mentions.members.first().voice;
  
     if (!channel)
-      return message.channel.send(`This person is not in the voice.`);
+      return message.channel.send(`🔎 | This person is not in the voice.`);
  
     message.mentions.members.first().voice.kick();
     const embed = new Discord.MessageEmbed()
@@ -862,11 +862,11 @@ client.on('message',async message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "moveall")) {
     if (!message.member.hasPermission("MOVE_MEMBERS"))
-      return message.channel.send("**:x: You Dont Have Perms `MOVE_MEMBERS`**");
+      return message.channel.send("**❌ |  You Dont Have Perms `MOVE_MEMBERS`**");
     if (!message.guild.member(client.user).hasPermission("MOVE_MEMBERS"))
-      return message.reply("**:x: I Dont Have Perms `MOVE_MEMBERS`**");
+      return message.reply("**❌ |  I Dont Have Perms `MOVE_MEMBERS`**");
     if (message.member.voice.channel == null)
-      return message.channel.send(`**You Have To Be In Room Voice**`);
+      return message.channel.send(`🔎 | **You Have To Be In Room Voice**`);
     var author = message.member.voice.channel.id;
     var m = message.guild.members.cache.filter(m => m.voice.channel);
     message.guild.members.cache.filter(m => m.voice.channel).forEach(m => {
@@ -876,8 +876,8 @@ client.on("message", message => {
         .setColor('RANDOM')
         .setThumbnail(message.author.avatarURL())
         .setAuthor(message.author.username,message.author.avatarURL())
-        .setTitle("**Done Chek Move all**")
-        .addField("Moderation", message.author.tag)
+        .setTitle("✅ | **Done Chek Move all**")
+        .addField("👑 | Moderation", message.author.tag)
         message.channel.send(embed);
   }
 });
@@ -892,28 +892,28 @@ client.on("message", message => {
     );
     if (!message.channel.guild || message.author.bot) return;
     if (!message.guild.member(message.author).hasPermission("MOVE_MEMBERS"))
-      return message.channel.send("Please Check Your Permission");
+      return message.channel.send("❌ | Please Check Your Permission");
     if (!message.guild.member(client.user).hasPermission("MOVE_MEMBERS"))
-      return message.channel.send("Please Check My Permission");
+      return message.channel.send("❌ | Please Check My Permission");
     if (!message.member.voice.channel)
-      return message.channel.send("Your are not in voice channel");
-    if (!user) return message.channel.send(`**>>> ${prefix}move <@mention or id>**`);
+      return message.channel.send("🔎 | Your are not in voice channel");
+    if (!user) return message.channel.send(`🔎 | **>>> ${prefix}move <@mention or id>**`);
     if (!message.guild.member(user.id).voice.channel)
       return message.channel.send(
-        `**${user.user.username}** Has not in Voice channel`
+        `❌ | **${user.user.username}** Has not in Voice channel`
       );
     message.guild
       .member(user.id)
       .voice.setChannel(message.member.voice.channel.id)
       .then(() => {
       message.channel.send(
-          `**${user.user.username}** has been moved to **${
+          `👨‍🏫**${user.user.username}** \nhas been moved to \n👑**${
             message.guild.member(message.author).voice.channel.name
           }**`
         );
       });
   }
-  if (message.content.toLowerCase() === prefix + "help move") {
+  if (message.content.toLowerCase() ==="") {
     let move = new Discord.MessageEmbed()
       .setTitle(`Command: move`)
       .addField("Usage", `${prefix}move @user`)
@@ -928,7 +928,7 @@ if(message.content.startsWith(PREFIX + "vmute")) {
 var mention = message.mentions.members.first();
 if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("MUTE_MEMBERS") || !message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return;
 if(!mention) return message.channel.send(`🔇 | **.**vmute @user`);
-if(!mention.voice.channel) return message.channel.send(`This person is not in the voice.`);
+if(!mention.voice.channel) return message.channel.send(`🔎 | This person is not in the voice.`);
 mention.voice.setMute(true).then(() => {
 const embed = new Discord.MessageEmbed()
         .setColor("RANDOM")
@@ -945,7 +945,7 @@ if(message.content.startsWith(PREFIX + "unvmute")) {
 var mention = message.mentions.members.first();
 if(message.author.bot || message.channel.type == "dm" || !message.member.hasPermission("MUTE_MEMBERS") || !message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return;
 if(!mention) return message.channel.send(`🔈 | **.**unvmute @user`);
-if(!mention.voice.channel) return message.channel.send(`This person is not in the voice.`);
+if(!mention.voice.channel) return message.channel.send(`🔎 | This person is not in the voice.`);
 mention.voice.setMute(false).then(() => {
 const embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
@@ -967,11 +967,11 @@ client.on("message", async message => {
   if (message.content.startsWith(PREFIX + "unmute")) {
     if (!message.guild.member(message.author).hasPermission("MUTE_MEMBERS"))
       return message.channel.send(
-        "I'm sorry, you don't have permission. "
+        "❌ | I'm sorry, you don't have permission. "
       );
     if (!message.guild.member(client.user).hasPermission("MUTE_MEMBERS"))
       return message.channel.send(
-        "I'm sorry, you don't have permission. "
+        "❌ | I'm sorry, you don't have permission. "
       );
     if (!user)
       return message.channel.send(`🔔 | **.**unmute @user`);
@@ -995,7 +995,7 @@ client.on("message", async message => {
           .setColor("RANDOM");
     message.channel.send(embed);
   }
-  if (message.content.toLowerCase() === `${PREFIX}hunmute`) {
+  if (message.content.toLowerCase() === "") {
     let unmute = new Discord.MessageEmbed()
       .setTitle(`Command: unmute `)
       .addField("Usage", `${prefix}unmute @user`)
@@ -1011,11 +1011,11 @@ client.on("message", async message => {
   if (message.content.startsWith(PREFIX + "mute")) {
     if (!message.guild.member(message.author).hasPermission("MUTE_MEMBERS"))
       return message.channel.send(
-        "I'm sorry, you don't have permission. "
+        "❌ | I'm sorry, you don't have permission. "
       );
     if (!message.guild.member(client.user).hasPermission("MUTE_MEMBERS"))
       return message.channel.send(
-        "I'm sorry, you don't have permission."
+        "❌ | I'm sorry, you don't have permission."
       );
     if (!user)
       return message.channel.send(`🔕 | **.**mute @user`);
@@ -1024,7 +1024,7 @@ client.on("message", async message => {
       mute = await message.guild.roles.create({
         data: {
           name: "Muted",
-          color: "FF0000",
+          color: "RANDOM",
           permissions: []
         }
       });
@@ -1131,7 +1131,7 @@ embed: new Discord.MessageEmbed()
 
 let smsm = ['881116033916735570']
 client.on('message', message=> {
-  if(message.content.startsWith(prefix + "setav")){
+  if(message.content.startsWith(prefix + "setava")){
   if(!smsm.includes(message.author.id))return
   const args = message.content.split(" ").slice(1).join(" ")
   if(!args) return message.reply(new Discord.MessageEmbed().setTitle(``))
@@ -1143,7 +1143,7 @@ client.on('message', message=> {
 client.on("message", message => {
 if (message.content === prefix +"help") {
 const embed = new Discord.MessageEmbed()
-.setColor("BLACK")
+.setColor("RANDOM")
     .setDescription(`
 🌙 ┇ **Everyone**
 > \`invite\` - \`support\` - \`about\` - \`ping\`
@@ -1277,10 +1277,10 @@ client.on("message", message => {
   if (commands[0] == prefix + "say") {
     if (!message.guild) return;
     if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
-      return message.reply("**You Dont Have `ADMINISTRATOR` Permission ** ");
+      return message.reply("❌ | **You Dont Have `ADMINISTRATOR` Permission ** ");
     if (!message.guild.member(client.user).hasPermission("ADMINISTRATOR"))
       return message.reply(
-        "Please Check My Role Permission To `ADMINISTRATOR"
+        "❌ | Please Check My Role Permission To `ADMINISTRATOR"
       );
     var args = message.content
       .split(" ")
