@@ -1303,7 +1303,7 @@ client.on("message", message => {
       .slice(1)
       .join(" ");
     if (!args) {
-      return message.channel.send("`Usage : " + prefix + "say <message>`");
+      return message.channel.send("`Usage : " + prefix + "esay <message>`");
     }
     message.delete();
 const embed = new Discord.MessageEmbed()
