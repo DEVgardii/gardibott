@@ -24,6 +24,14 @@ message.setNickname(`${message.user.username} ᴰᔆ`);
 });
 /////////////
 
+client.on('message', id441 => {
+  const madara = new RegExp(`^<@!?${client.user.id}>( |)$`);
+  if (id441.content.match(madara)) {
+    id441.channel.send(`Bot Prefix Is **${prefix}**);
+  }
+})
+
+
 
 
 ///////////////////
@@ -619,7 +627,7 @@ client.on("message", message => {
         
           
           
-        return message.reply.send(`**:lock: <#${message.channel.id}> has been locked.**`);
+        return message.channel.send(`**:lock: <#${message.channel.id}> has been locked.**`);
       });
   }
 });
