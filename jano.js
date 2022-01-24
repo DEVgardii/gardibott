@@ -843,7 +843,7 @@ client.on('message',async message => {
         .setThumbnail(message.author.avatarURL())
         .setAuthor(message.author.username,message.author.avatarURL()) 
         .addField("👑 | Moderation", message.author.tag)
-        .addField("🔇 | Member vmute", mention)
+        .addField("🗣 | Member vkick", mention)
         .setFooter(`${client.user.tag}`)
         .setTimestamp()
     message.channel.send(embed)
