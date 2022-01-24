@@ -25,32 +25,6 @@ message.setNickname(`${message.user.username} ᴰᔆ`);
 /////////////
 
 
-client.on("message",message => {
-    var args = message.content.split(" ");
-    var command = args[0];
-    var emojisname = args[1];
-    var emojislink = args[2];
-    if (command === prefix + "addemoji"){
-        if (!message.guild){
-            return message.channel.send("you can use it in your server only");
-        }
-        if (!message.guild.member(client.user).hasPermission("MANAGE_EMOJIS")){
-            return message.channel.send("i don't have any premissions  `MANAGE_EMOJIS`");
-        }
-        if(!message.guild.member(message.author).hasPermission("MANAGE_EMOJIS")) {
-            return message.channel.send("you don't hane any premissions `MANAGE_EMOJIS`");
-        }
-        if(!emojisname){
-            return message.channel.send("Type emoji's name");
-        }
-        if (!emojislink){
-            return message.channel.send("Type emoji's url");
-        }
-        message.guild.emojis.create(emojislink, emojisname).then(emoji =>{
-            message.channel.send("Emoji Created . <:"+emoji.name+":"+emoji.id+">")
-        }).catch(err => message.channel.send("Emoji must be under 256kb in size"));
-    }
-});
 
 ///////////////////
 
@@ -645,7 +619,7 @@ client.on("message", message => {
         
           
           
-        return message.channel.send(`**:lock: #${message.channel.name} has been locked.**`);
+        return message.channel.send(`:lock: #${message.channel.name} **has been locked.**`);
       });
   }
 });
@@ -657,7 +631,7 @@ client.on("message", message => {
     message.channel
       .createOverwrite(message.guild.id, { SEND_MESSAGES: true })
       .then(() => {
-        return message.channel.send(`**:unlock: #${message.channel.name} has been unlocked.**`);
+        return message.channel.send(`:unlock: #${message.channel.name} **has been unlocked.**`);
       });
   }
 });
