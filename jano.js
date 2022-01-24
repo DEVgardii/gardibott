@@ -723,11 +723,12 @@ message.channel.send(embed)
                         bans.forEach(ban => {
                             message.guild.members.unban(ban.user.id);
                         });
-                    }).then(() => message.reply("😉 | Unbanned all users.")).catch(e => console.log(e))
+                    }).then(() => message.reply("🤗 | Unbanned all users.")).catch(e => console.log(e))
                 } else {message.reply("You do not have enough permissions for this command.")}
             break;
         }
       });
+
 
 ///////////////
 
