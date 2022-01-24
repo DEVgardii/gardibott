@@ -662,7 +662,7 @@ if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("I'
    
 let Ban = message.mentions.members.first();
 let hokar = args.slice(1).join(" ");
-if(!args[0]) return message.channel.send('select member')
+if(!args[0]) return message.channel.send('**✈️** | \`select member\`')
 if(!Ban) return message.channel.send(`${args[0]} is not a member - member tag`)
 
 if(!Ban.bannable) {
@@ -675,13 +675,13 @@ if(Ban.bannable) {
 const embed = new Discord.MessageEmbed()
           .setAuthor(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
           .setFooter(`${client.user.username}`)
-          .setTitle("BAN Member ")
-          .addField(" **Server Name **", message.guild.name)
-          .addField("** Channel **", `${message.channel.name}`) 
-          .addField("** Member ban **", Ban)
-          .addField("** Moderation **", `<@${message.author.id}>`, true)
-          .addField(" **Moderation Id** ", `${message.author.id}`, true)
-          .setColor("FF0000");
+          .setTitle("✈️"+"BAN Member "+"✈️")
+          .addField("〽️ | **Server Name **", message.guild.name)
+          .addField("#️⃣ | **Channel**", `${message.channel.name}`) 
+          .addField("✈️ | **Member ban**", Ban)
+          .addField("👑 | **Moderation**", `<@${message.author.id}>`, true)
+          .addField("🆔 | **Moderation Id** ", `${message.author.id}`, true)
+          .setColor("RANDOM");
 message.channel.send(embed)
 
 Ban.ban();
@@ -693,7 +693,7 @@ Ban.ban();
   if(message.content.startsWith(PREFIX + 'unban')){
 if(!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("<a:cycycydtd6xyc6d6r6r6r6d6emoji_53:918260430470774855>I'm sorry, you don't have permission.")
     let args = message.content.split(" ").slice(1)
-if(!args[0]) return message.channel.send('<:2ueyisagreatplacetoworkfo:915185934683738133>select member')
+if(!args[0]) return message.channel.send('🤗 | select member')
 const reason = args[1] || "dont reason"
 let unban = await client.users.fetch(args[0])
 
@@ -701,12 +701,12 @@ message.guild.members.unban(unban,reason)
 const embed = new Discord.MessageEmbed()
      .setFooter(`${client.user.username}`)
           .setTitle("**__UNBAN Member__**")
-          .addField(" _Server Name_", message.guild.name)
-          .addField(" _Channel_", `${message.channel.name}`) 
-          .addField(" _Member unban_", unban)
-          .addField(" _Moderation_", `<@${message.author.id}>`, true)
-          .addField(" _Moderation Id_", `${message.author.id}`, true)
-          .setColor("FF0000");
+          .addField("〽️ | **Server Name**", message.guild.name)
+          .addField("#️⃣ | **Channel**", `${message.channel.name}`) 
+          .addField("🤗 | **Member unban**", unban)
+          .addField("👑 | **Moderation**", `<@${message.author.id}>`, true)
+          .addField("🆔 | **Moderation Id**", `${message.author.id}`, true)
+          .setColor("RANDOM");
     
 message.channel.send(embed)
 
@@ -723,7 +723,7 @@ message.channel.send(embed)
                         bans.forEach(ban => {
                             message.guild.members.unban(ban.user.id);
                         });
-                    }).then(() => message.reply("Unbanned all users.")).catch(e => console.log(e))
+                    }).then(() => message.reply("😉 | Unbanned all users.")).catch(e => console.log(e))
                 } else {message.reply("You do not have enough permissions for this command.")}
             break;
         }
@@ -731,7 +731,7 @@ message.channel.send(embed)
 
 ///////////////
 
-
+f
 client.on('message', rw => {
   if (rw.content.startsWith(prefix + 'vban')) {
 if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
