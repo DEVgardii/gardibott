@@ -551,10 +551,10 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(message.author.avatarURL())
       .setTitle("**Channel Hide**")
-      .addField("_Server name_", message.guild.name)
-      .addField("_Channel_", message.channel.name)
-      .addField("_Moderation_", `<@${message.author.id}>`, true)
-      .setColor("FF0000");
+      .addField("〽 | **Server name_", message.guild.name)
+      .addField("#️⃣ | **Channel_", message.channel.name)
+      .addField("👑 | **Moderation_", `<@${message.author.id}>`, true)
+      .setColor("RANDOM");
     message.channel.send(embed).then(bj => {
       bj.react("");
     });
@@ -570,11 +570,11 @@ client.on("message", message => {
     });
     const embed = new Discord.MessageEmbed()
       .setThumbnail(message.author.avatarURL())
-      .setTitle("**Channel Hide**")
-      .addField("_Server name_", message.guild.name)
-      .addField("_Channel_", message.channel.name)
-      .addField("_Moderation_", `<@${message.author.id}>`, true)
-      .setColor("FF0000");
+      .setTitle("**Channel Unhide**")
+      .addField("〽 | **Server name**", message.guild.name)
+      .addField("#️⃣ | **Channel**", message.channel.name)
+      .addField("👑 | **Moderation**", `<@${message.author.id}>`, true)
+      .setColor("RANDOM");
     message.channel.send(embed).then(bj => {
       bj.react("");
     });
@@ -603,7 +603,7 @@ client.on("message", msg => {
         VIEW_CHANNEL: true
       });
     });
-    msg.channel.send("done check hide all");
+    msg.channel.send("**done check hide all**");
   }
 });
 
