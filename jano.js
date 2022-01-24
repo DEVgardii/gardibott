@@ -746,18 +746,20 @@ c.createOverwrite(men.id, {
 const embed = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setDescription(`**
- <@${men.id}>
+ 🎤 | <@${men.id}>
 YOU CANT JOIN THE VOICE ROOM
-BANNER : <@${rw.author.id}> **`)
+👑 | BANNER : <@${rw.author.id}> **`)
 .setThumbnail("")
           
 client.users.cache.get(men.id).send(embed)
 const Embed11 = new Discord.MessageEmbed()
 .setColor("RANDOM")
 .setAuthor(rw.guild.name, rw.guild.iconURL())
-.setDescription(`          <@${men.id}>
-BANNED
-BANNER : <@${rw.author.id}> `)
+.setDescription(` 
+🎤 | **Voice Bannded**
+<@${men.id}>
+
+👑 | BANNER : <@${rw.author.id}> `)
 .setThumbnail("")
 rw.channel.send(Embed11).then(rw => {rw.delete(10000)})
     }
