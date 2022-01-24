@@ -59,7 +59,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username} BOY GIFS`,
+          description: `👦 | ${message.author.username} BOY GIFS`,
           image: {
             url: man[Math.floor(Math.random() * man.length)]
           }
@@ -89,7 +89,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username} GIRL GIFS `,
+          description: `👧 | ${message.author.username} GIRL GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -127,7 +127,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username} BABY GIFS `,
+          description: `👶 | ${message.author.username} BABY GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -158,7 +158,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username} ANIME GIFS `,
+          description: `🧸 | ${message.author.username} ANIME GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -189,7 +189,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username} SMOKE GIFS `,
+          description: `🚬 | ${message.author.username} SMOKE GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -219,7 +219,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username} SAD GIFS`,
+          description: `🙍 | ${message.author.username} SAD GIFS`,
           image: {
             url: sads[Math.floor(Math.random() * sads.length)]
           }
@@ -254,7 +254,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username} NEON GIFS `,
+          description: `⁉️ | ${message.author.username} NEON GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -290,7 +290,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username}   Couple GIFS `,
+          description: `👩‍❤️‍💋‍👨 | ${message.author.username}   Couple GIFS `,
           image: {
             url: loves[Math.floor(Math.random() * loves.length)]
           }
@@ -321,7 +321,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username} CAT GIFS `,
+          description: `🐱 | ${message.author.username} CAT GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -352,7 +352,7 @@ client.on("message", message => {
     message.channel
       .send({
         embed: {
-          description: ` ${message.author.username} CARTOON GIFS `,
+          description: `⚜️ | ${message.author.username} CARTOON GIFS `,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -472,20 +472,20 @@ client.on("message", message => {
 ////////
 client.on("message", message => {
   if(message.content.startsWith(PREFIX + "nick")){
-      if (!message.member.hasPermission("MANAGE_NICKNAMES")) return message.reply("**You Dont hAve Premission MANAGE NICKNAMES**")
+      if (!message.member.hasPermission("MANAGE_NICKNAMES")) return message.reply("❌ | **You Dont hAve Premission MANAGE NICKNAMES**")
   var user = message.mentions.members.first();
   var args = message.content.split(" ").slice(2);
   var nick = args.join(" ");
-  if(!user || !args) return message.channel.send(`?nick tag member`);
+  if(!user || !args) return message.channel.send(`.nick tag member`);
   message.guild.member(user.user).setNickname(`${nick}`);
   const blackj = new Discord.MessageEmbed()
   .setAuthor(message.author.username,message.author.avatarURL())
   .setThumbnail(message.author.avatarURL())
   .setTitle("**Done The Changed NickName**")
-  .addField("_Name User_", user)
-  .addField("_Nickname New_", nick)
-  .addField("_Moderation_", message.author.tag)
-  .setColor("FF0000")
+  .addField("👨‍🏫 | **Name User**", user)
+  .addField("✅ | **Nickname New**", nick)
+  .addField("👑 | **Moderation**", message.author.tag)
+  .setColor("RANDOM")
   message.channel.send(blackj)
   }
   });
