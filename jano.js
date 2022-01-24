@@ -1429,7 +1429,7 @@ Link
 client.on("message", message => {
   if (message.content.startsWith(prefix + "slap")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("slap <@USER>");
+    if (!user) return message.reply("**${prefix}**slap <@USER>");
     let slaps = [
       "https://media.discordapp.net/attachments/738277612039962688/775009108402372608/image0.gif",
       "https://media.discordapp.net/attachments/738277612039962688/775009109166522428/image1.gif",
@@ -1452,7 +1452,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "love")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("%love <@USER>");
+    if (!user) return message.reply("**${prefix}**love <@USER>");
     let loves = [
       "https://media.discordapp.net/attachments/738277612039962688/775017084848439296/image0.gif",
       "https://media.discordapp.net/attachments/738277612039962688/775017085545086996/image2.gif",
@@ -1477,7 +1477,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "hug")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("%Hug <@USER>");
+    if (!user) return message.reply("**${prefix}**Hug <@USER>");
 
     let hugs = [
       "https://media.discordapp.net/attachments/738277612039962688/775010008437096508/image0.gif",
@@ -1504,7 +1504,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "kiss")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("%Kiss <@USER>");
+    if (!user) return message.reply("**${prefix}**Kiss <@USER>");
     var kiss = [
       "https://media.discordapp.net/attachments/738277612039962688/775017819980431360/image0.gif",
       "https://media.discordapp.net/attachments/738277612039962688/775017820161179648/image1.gif",
@@ -1531,7 +1531,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "boom")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("%boom <@USER>");
+    if (!user) return message.reply("**${prefix}**boom <@USER>");
 
     let bombs = [
       "https://media.discordapp.net/attachments/738277612039962688/775016118678454282/image0.gif",
