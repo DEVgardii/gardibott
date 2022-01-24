@@ -470,25 +470,31 @@ client.on("message", message => {
   }
 });
 ////////
-client.on("message", message => {
-  if(message.content.startsWith(PREFIX + "nick")){
-      if (!message.member.hasPermission("MANAGE_NICKNAMES")) return message.reply("❌ | **You Dont hAve Premission MANAGE NICKNAMES**")
-  var user = message.mentions.members.first();
-  var args = message.content.split(" ").slice(2);
-  var nick = args.join(" ");
-  if(!user || !args) return message.channel.send(`.nick tag member`);
-  message.guild.member(user.user).setNickname(`${nick}`);
-  const blackj = new Discord.MessageEmbed()
-  .setAuthor(message.author.username,message.author.avatarURL())
-  .setThumbnail(message.author.avatarURL())
-  .setTitle("**Done The Changed NickName**")
-  .addField("👨‍🏫 | **Name User**", user)
-  .addField("✅ | **Nickname New**", nick)
-  .addField("👑 | **Moderation**", message.author.tag)
-  .setColor("RANDOM")
-  message.channel.send(blackj)
-  }
-  });
+client.on("message",message=>{
+    if(message.content.startsWith(prefix+"setnick")){
+      if(!message.member.hasPermission("CHANGE_NICKNAME")) return message.reply("❌ | You Dont Have Permission")
+      const args = message.content.slice(prefix.length).trim().split(/ +/g);
+      let member = message.mentions.users.first() || message.guild.members.cache.get(args[1])||message.guild.members.cache.find(r => r.user.username === args[1])
+      if(!member) return message.reply("❓ | Type User Example:${prefix}setnick @TAG hhhhh")
+      let nick = message.content.split(" ").slice(2).join(" ")
+      let g = message.guild.members.cache.get(member.id)
+      if(!nick){
+g.setNickname(member.username)
+      }
+g.setNickname(nick)
+const l = g.nickname|| member.username
+let embed = new Discord.MessageEmbed()
+.setAuthor(message.member.user.username,message.member.user.avatarURL({dynamic:true}))
+.setThumbnail(message.member.user.avatarURL({dynamic:true}))
+.setTitle("📇"+"New NickName:"+"📇")
+.addField(`👨‍🏫 | User Nick Change`,`${member}`,true)
+.addField(`🔍 | Befor:`,`**${l}**`,true)
+.addField(`🔎 | After:`,`**${nick}**`,true)
+.setFooter(message.member.user.username,message.member.user.avatarURL({dynamic:true}))
+.setTimestamp()
+message.channel.send(embed)
+    }
+  })
 
 //////////////
 
