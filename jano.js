@@ -840,7 +840,7 @@ client.on('message',async message => {
     const kick = new Discord.MessageEmbed()
     .setTitle("🗣"+'**Voice kicked In a Server**'+"🗣")
     .addField('〽 | Server', message.guild.name)
-    .addField('👤 | Name member ', tag)
+    .addField('👤 | Name member ', `${user.username}`)
     .addField('👑 | Moderation', message.author.tag)
     .setFooter(`${client.user.username}`) 
     .setColor("RANDOM")
