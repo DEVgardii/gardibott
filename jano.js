@@ -838,7 +838,7 @@ client.on('message',async message => {
  
     message.mentions.members.first().voice.kick();
  
-    message.channel.send(`:white_check_mark: **kicked from the voice! **`)
+    message.channel.send(`:white_check_mark: ** ${user.username} kicked from the voice! **`)
   }
 }) 
 
