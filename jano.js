@@ -894,10 +894,12 @@ client.on("message", message => {
       .member(user.id)
       .voice.setChannel(message.member.voice.channel.id)
       .then(() => {
-        message.channel.send(
-          `**${user.user.username}** has been moved to **${
+	    const embed = new Discord.MessageEmbed()
+	    .setTitle(`**${user.user.username}** has been moved to **${
             message.guild.member(message.author).voice.channel.name
           }**`
+	.setColor("RANDOM")
+        message.channel.send(embed)
         );
       });
   }
