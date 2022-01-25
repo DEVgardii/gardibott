@@ -32,13 +32,32 @@ client.on('message', id441 => {
 
 //////////////////
 client.on("guildCreate", guild => {
-  client.channels.cache.get("933029914024767488").send(`
-:join: **Join Server**: ${client.guilds.cache.size}
-:Servers: **Server Name**: ${guild.name}
-:owner: **Server Owner**: ${guild.owner}
-:iduser: **Server Id**: ${guild.id}
-:Users: **Member Count**: ${guild.memberCount}`);
+  let channel = client.channels.cache.get("933029914024767488");
+  let embed = new MessageEmbed().setColor("#ff0000")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( `✅ Join Server`)
+  .addField("🔠 **Server Name**", `${guild.name}`)
+  .addField("👑 **Server Owner**", `${guild.owner}`)
+  .addField("🆔 **Server Id**", `${guild.id}`)
+  .addField("👥 **Member Count**", `${guild.memberCount}`)
+  .setFooter(`${client.user.tag}`);
+  channel.send(embed);
 });
+
+client.on("guildDelete", guild => {
+  let channel = client.channels.cache.get("933029914024767488");
+  let embed = new MessageEmbed()
+  .setColor("RANDOM")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( `❌ Left Server`)
+  .addField("🔠 **Server Name**", `${guild.name}`)
+  .addField("👑 **Server Owner**", `${guild.owner}`)
+  .addField("🆔 **Server Id**", `${guild.id}`)
+  .addField("👥 **Member Count**", `${guild.memberCount}`)
+  .setFooter(`${client.user.tag}`);
+  channel.send(embed);
+});
+
 ///////////////////
 
 client.on("message", message => {
