@@ -988,13 +988,6 @@ client.on("message", async message => {
           .setColor("RANDOM");
     message.channel.send(embed);
   }
-  if (message.content.toLowerCase() === "") {
-    let unmute = new Discord.MessageEmbed()
-      .setTitle(`Command: unmute `)
-      .addField("Usage", `${prefix}unmute @user`)
-      .addField("Information", "unmute Members");
-    message.channel.send(unmute);
-  }
 });
 
 client.on("message", async message => {
