@@ -25,18 +25,6 @@ message.setNickname(`${message.user.username} ᴰᔆ`);
 /////////////
 
 
-let owner = ['881116033916735570' ]
-client.on('message', message => {
-let guildID = message.content.split(' ')[1]
-let guild = client.guilds.cache.get(guildID)
-if(message.content.startsWith(PREFIX + 'left')) {
-  if(!owner.includes(message.author.id)) return message.reply("AEKAY AEKAY")
-  
-if(!guild)return message.channel.send('**Send The Server ID**')
-message.channel.send(`I am gonna leave => [${guild.name}]`)
-guild.leave()
-}
-}) 
 
 
 
