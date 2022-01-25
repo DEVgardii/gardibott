@@ -97,14 +97,6 @@ client.on("message", message => {
       });
   }
 });
-client.on('message',function(message) {
- 
-let args = message.content.split(" ").slice(1).join(" ");
-if(message.content.startsWith(PREFIX + "say")) {
-if(!args) return;
-message.channel.send(`** ${args}**`);
-}
-});
 client.on("message", message => {
   if (message.content.startsWith(PREFIX + "baby")) {
     let girl = [
@@ -712,7 +704,7 @@ message.channel.send(embed)
 
   client.on("message", message => {
         switch(message.content.toLowerCase()) {
-            case (prefix + "!unban-all"):
+            case (prefix + "uban-all"):
                 if (message.member.hasPermission("ADMINISTRATOR")) {
                     message.guild.fetchBans().then(bans => {
                         if (bans.size == 0) {message.reply("🔎 | There are no banned users."); throw "No members to unban."};
@@ -732,7 +724,7 @@ client.on('message', rw => {
 if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
 let men = rw.mentions.users.first()
 let mas = rw.author
-if(!men) return rw.channel.send('**:rolling_eyes: - I cant find this member **'); 
+if(!men) return rw.channel.send('🔎 | `MANTION THE MEMBER `'); 
 rw.guild.channels.cache.forEach(c => {
 c.createOverwrite(men.id, { 
           CONNECT: false
@@ -857,7 +849,7 @@ client.on('message',async message => {
 ////////////
 
 client.on("message", message => {
-  if (message.content.startsWith(prefix + "moveall")) {
+  if (message.content.startsWith(prefix + "movall")) {
     if (!message.member.hasPermission("MOVE_MEMBERS"))
       return message.channel.send("**❌ |  You Dont Have Perms `MOVE_MEMBERS`**");
     if (!message.guild.member(client.user).hasPermission("MOVE_MEMBERS"))
@@ -1136,14 +1128,14 @@ const embed = new Discord.MessageEmbed()
 ============
 **⚙️┇Moderator**
 **__\`mute\`__** - **__\`unmute\`__** - **__\`vmute\`__** - **__\`unvmute\`__**
-\`move\` - \`moveall\` - \`kick\` - \`vkick\`
-**__\`vban\`__** - **__\`unvban\`__** - **__\`ban\`__** - **__\`unban\`__** - **__\`unban-all\`__**
+\`move\` - \`movall\` - \`kick\` - \`vkick\`
+**__\`vban\`__** - **__\`unvban\`__** - **__\`ban\`__** - **__\`unban\`__** - **__\`uban-all\`__**
 \`lock\` - \`unlock\` - \`clear\` - \`say\` - \`esay\`
 **__\`open\`__** - **__\`close\`__** - **__\`openall\`__** - **__\`closeall\`__**
-\`nick\`
+\`setnick\`
 ============
 **🤹‍♀️┇Gif**
-> \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\` - \`carton\`
+> \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\` - \`cartoon\`
 ============
 **📸┇Photo**
 > \`pboy\` - \`pgirl\` - \`panime\`
@@ -1558,7 +1550,7 @@ client.on("message", message => {
         `**All Bots Is ${
           message.guild.members.cache.filter(m => m.user.bot).size
         } In Server**
-${botssize.join("🤖 | \n")}`
+${botssize.join(" \n")}`
       )
       .setFooter(client.user.username, client.user.avatarURL())
       .setTimestamp();
