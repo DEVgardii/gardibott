@@ -1285,10 +1285,10 @@ client.on("message", message => {
   if (commands[0] == prefix + "esay") {
     if (!message.guild) return;
     if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
-      return message.reply("**You Dont Have `ADMINISTRATOR` Permission ** ");
+      return message.reply("❌ | **You Dont Have `ADMINISTRATOR` Permission ** ");
     if (!message.guild.member(client.user).hasPermission("ADMINISTRATOR"))
       return message.reply(
-        "Please Check My Role Permission To `ADMINISTRATOR"
+        "❌ | Please Check My Role Permission To `ADMINISTRATOR"
       );
     var args = message.content
       .split(" ")
@@ -1314,22 +1314,21 @@ client.on("message", message => {
   if (message.author.bot) return;
   let args = message.content.split(" ");
   let command = args[0].toLowerCase();
-  if (command === prefix + "clear") 
-  if (command === "0") {
+  if (command === prefix + "clear")  {
     if (!message.member.hasPermission("MANAGE_MESSAGES"))
       return message.channel.send(
-        `❌ You are missing the permission \`MANAGE MESSAGES\`.`
+        `❌ | You are missing the permission \`MANAGE MESSAGES\`.`
       );
     if (!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES"))
       return message.channel.send(
-        `❌ I Am missing the permission \`MANAGE MESSAGES\`.`
+        `❌ | I Am missing the permission \`MANAGE MESSAGES\`.`
       );
     if (!args[1]) {
       message.channel
         .bulkDelete(100)
         .then(m =>
           message.channel
-            .send(`\`\`\`\nDeleted ${m.size} messages\n\`\`\``)
+            .send(`\`\`\`\n✅ | Deleted ${m.size} messages\n\`\`\``)
             .then(p => p.delete({ timeout: 1500 }))
         );
     } else {
@@ -1338,7 +1337,7 @@ client.on("message", message => {
           .bulkDelete(args[1])
           .then(m =>
             message.channel
-              .send(`\`\`\`\nDeleted ${m.size} messages\n\`\`\``)
+              .send(`\`\`\`\n✅ | Deleted ${m.size} messages\n\`\`\``)
               .then(p => p.delete({ timeout: 1500 }))
           );
       });
@@ -1421,7 +1420,7 @@ Link
 client.on("message", message => {
   if (message.content.startsWith(prefix + "slap")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("**${prefix}**slap <@USER>");
+    if (!user) return message.reply("🙊 | **${prefix}**slap <@USER>");
     let slaps = [
       "https://media.discordapp.net/attachments/738277612039962688/775009108402372608/image0.gif",
       "https://media.discordapp.net/attachments/738277612039962688/775009109166522428/image1.gif",
@@ -1444,7 +1443,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "love")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("**${prefix}**love <@USER>");
+    if (!user) return message.reply("🙊 | **${prefix}**love <@USER>");
     let loves = [
       "https://media.discordapp.net/attachments/738277612039962688/775017084848439296/image0.gif",
       "https://media.discordapp.net/attachments/738277612039962688/775017085545086996/image2.gif",
@@ -1469,7 +1468,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "hug")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("**${prefix}**Hug <@USER>");
+    if (!user) return message.reply("🙊 | **${prefix}**hug <@USER>");
 
     let hugs = [
       "https://media.discordapp.net/attachments/738277612039962688/775010008437096508/image0.gif",
@@ -1496,7 +1495,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "kiss")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("**${prefix}**Kiss <@USER>");
+    if (!user) return message.reply("🙊 | **${prefix}**kiss <@USER>");
     var kiss = [
       "https://media.discordapp.net/attachments/738277612039962688/775017819980431360/image0.gif",
       "https://media.discordapp.net/attachments/738277612039962688/775017820161179648/image1.gif",
@@ -1523,7 +1522,7 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.content.startsWith(prefix + "boom")) {
     let user = message.mentions.users.first();
-    if (!user) return message.reply("**${prefix}**boom <@USER>");
+    if (!user) return message.reply("🙊 | **${prefix}**boom <@USER>");
 
     let bombs = [
       "https://media.discordapp.net/attachments/738277612039962688/775016118678454282/image0.gif",
