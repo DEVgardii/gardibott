@@ -24,6 +24,50 @@ message.setNickname(`${message.user.username} ᴰᔆ`);
 });
 /////////////
 
+
+
+
+client.on("guildCreate", guild => {
+  let channel = client.channels.cache.get("933029914024767488");
+  let embed = new MessageEmbed().setColor("GREEN")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( `✅ Join Server`)
+  .addField("🔠 **Server Name**", `${guild.name}`)
+  .addField("👑 **Server Owner**", `<@${guild.ownerID}>`)
+  .addField("👑 **Server Owner**", `${guild.owner}`)
+  .addField("🆔 **Server Id**", `${guild.id}`)
+  .addField("👥 **Member Count**", `${guild.memberCount}`)
+  .setFooter(`${client.user.tag}`);
+  channel.send(embed);
+});
+
+client.on("guildDelete", guild => {
+  let channel = client.channels.cache.get("933029914024767488");
+  let embed = new MessageEmbed()
+  .setColor("#FF0000")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( `❌ Left Server`)
+  .addField("🔠 **Server Name**", `${guild.name}`)
+  .addField("👑 **Server Owner**", `<@${guild.ownerID}>`)
+  .addField("👑 **Server Owner**", `${guild.owner}`)
+  .addField("🆔 **Server Id**", `${guild.id}`)
+  .addField("👥 **Member Count**", `${guild.memberCount}`)
+  .setFooter(`${client.user.tag}`);
+  channel.send(embed);
+});
+function delay(delayInms) {
+ return new Promise(resolve => {
+   setTimeout(() => {
+     resolve(2);
+   }, delayInms);
+ });
+}
+
+
+
+////////////////////////////
+
+
 client.on('message', id441 => {
   const madara = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (id441.content.match(madara)) {
