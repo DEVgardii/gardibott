@@ -913,13 +913,6 @@ client.on("message", message => {
         );
       });
   }
-  if (message.content.toLowerCase() === prefix + "hmove") {
-    let move = new Discord.MessageEmbed()
-      .setTitle(`Command: move`)
-      .addField("Usage", `${prefix}move @user`)
-      .addField("Information", "move members");
-    message.channel.send(move);
-  }
 });
 
 /////////////
