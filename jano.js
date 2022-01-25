@@ -1102,16 +1102,14 @@ embed: new Discord.MessageEmbed()
 }
 });
 ///////////
-
-
-let smsm = ['881116033916735570']
+let smsm = ['881116033916735570','']
 client.on('message', message=> {
-  if(message.content.startsWith(prefix + "setava")){
+  if(message.content.startsWith(prefix + "setavatar")){
   if(!smsm.includes(message.author.id))return
   const args = message.content.split(" ").slice(1).join(" ")
-  if(!args) return message.reply(new Discord.MessageEmbed().setTitle(``))
+  if(!args) return message.reply(new Discord.MessageEmbed().setTitle(`Hi`))
   client.user.setAvatar(`${args}`)
-  message.channel.send(`> Done SetAvatar To\n\n\n||${args}||`)
+  message.channel.send(`> Done SetAvatar To\n||${args}||`)
   }
 }) 
 /////////////////////
