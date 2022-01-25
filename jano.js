@@ -31,7 +31,14 @@ client.on('message', id441 => {
 })
 
 //////////////////
-
+client.on("guildCreate", guild => {
+  client.channels.cache.get("933029914024767488").send(`
+:join: **Join Server**: ${client.guilds.cache.size}
+:Servers: **Server Name**: ${guild.name}
+:owner: **Server Owner**: ${guild.owner}
+:iduser: **Server Id**: ${guild.id}
+:Users: **Member Count**: ${guild.memberCount}`);
+});
 ///////////////////
 
 client.on("message", message => {
