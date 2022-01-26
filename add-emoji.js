@@ -11,7 +11,6 @@ module.exports = {
   aliases: ["upload_emoji", "a-emote"],
   description: "Steal emojis and upload it on your server",
   usage: "addemoji <emoji>",
-  category: "admin",
   },
   run: async (bot, message, args) => {
     
