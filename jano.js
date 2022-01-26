@@ -48,8 +48,9 @@ client.on("guildDelete", guild => {
 👑 **Server Owner** | <@${guild.ownerID}>
 🆔 **Server Id** | ${guild.id}
 👥 **Member Count** | ${guild.memberCount}
- Servers | ${client.guilds.cache.size}`);
+ Servers | ${client.guilds.cache.size}`)
 });
+
 ///////////////////
 
 client.on("message", message => {
