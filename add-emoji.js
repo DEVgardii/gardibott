@@ -1,6 +1,9 @@
 const db = require("old-wio.db");
 const { MessageEmbed } = require("discord.js");
 const Discord = require("discord.js");
+const { 
+  PREFIX, 
+} = require(`../index.js`);
 
 module.exports = {
   config: {
