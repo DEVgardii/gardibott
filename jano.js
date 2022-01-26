@@ -41,6 +41,15 @@ client.on("guildCreate", guild => {
  Servers | ${client.guilds.cache.size}`)
 });
 
+
+client.on("guildDelete", guild => {
+  client.channels.cache.get("933150339908141127").send(`
+  🔠 **Server Name** | ${guild.name}
+👑 **Server Owner** | <@${guild.ownerID}>
+🆔 **Server Id** | ${guild.id}
+👥 **Member Count** | ${guild.memberCount}
+ Servers | ${client.guilds.cache.size}`);
+});
 ///////////////////
 
 client.on("message", message => {
