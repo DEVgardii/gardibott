@@ -44,7 +44,7 @@ client.on("guildCreate", guild => {
 
 client.on("guildDelete", guild => {
   client.channels.cache.get("933029914024767488").send(`
-  🔠 **Server Name** | ${guild.name}
+🔠 **Server Name** | ${guild.name}
 👑 **Server Owner** | <@${guild.ownerID}>
 🆔 **Server Id** | ${guild.id}
 👥 **Member Count** | ${guild.memberCount}
