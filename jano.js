@@ -16,7 +16,7 @@ const prefix = ".";
 const PREFIX = ".";
 ////////////////
 client.on('guildMemberAdd', message => {
-if (message.guild.id === ("758704504047665192"))
+if (message.guild.id === ("878271484911583264"))
 {
  let user = message.author;
 message.setNickname(`${message.user.username} ᴰᔆ`);
@@ -1067,7 +1067,7 @@ client.on("message", message => {
 });
 //////////////////
 
-const channelid = "932716219348430858"; //id channele vc
+const channelid = "937120311739027497"; //id channele vc
 client.on("ready", () => {
   const channel = client.channels.cache.get(channelid);
   if (!channel) return console.error("The channel does not exist!");
@@ -1141,11 +1141,11 @@ const embed = new Discord.MessageEmbed()
 > \`kiss\` - \`slap\` - \`hug\` - \`love\` - \`boom\`
 ============
 **💎┇Link**
-[**Support**](https://discord.gg/5cRNwVX89x)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
+[**Support**](https://discord.gg/R9emxmvgRh)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
 `)
 
     .setFooter(` Gardi bot ✨ | By : PW๛ᗰᗩᗰ  ᘜᗩᖇᗪI ᴰᔆ✨#1000`, client.user.avatarURL)
-   .setURL("https://discord.gg/5cRNwVX89x")
+   .setURL("https://discord.gg/R9emxmvgRh")
       
     message.channel.send(embed);
     message.react("<a:jano_27:799630916820795422>");
@@ -1364,7 +1364,7 @@ client.on("message", message => {
  \`🤪funny\`
  \`📸photo\`
 Link
-[support](https://discord.gg/5cRNwVX89x)`)
+[support](https://discord.gg/R9emxmvgRh)`)
     .setFooter(``)
     .setImage(``)
     .setTitle(``) 
