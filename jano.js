@@ -32,7 +32,7 @@ client.on('message', id441 => {
 
 ////////////////////
 client.on("guildCreate", guild => {
-  client.channels.cache.get("933150339908141127").send(`
+  client.channels.cache.get("933029914024767488").send(`
 :join: **Join Server**: ${client.guilds.cache.size}
 :Servers: **Server Name**: ${guild.name}
 :owner: **Server Owner**: ${guild.owner}
@@ -41,7 +41,7 @@ client.on("guildCreate", guild => {
 });
 
 client.on("guildDelete", guild => {
-  client.channels.cache.get("933150339908141127").send(`
+  client.channels.cache.get("933029914024767488").send(`
 :left: **Lift Server**: ${client.guilds.cache.size}
 :Servers: **Server Name**: ${guild.name}
 :owner: **Server Owner**: ${guild.owner}
