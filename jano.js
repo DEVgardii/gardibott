@@ -32,6 +32,36 @@ client.on('message', id441 => {
 
 ////////////////////
 
+   client.on('message', message => {
+     if (message.content.startsWith(prefix + "role")) {
+  
+      var user = message.mentions.members.first() || client.users.cache.get(message.content.split(' ')[1])
+      var role = message.mentions.roles.first()
+      var r = message.guild.roles.cache.find(r => r.name === `${role}`)
+      var time  = message.content.split(" ").slice(3).join(" ")
+     
+      if (!user) return message.channel.send(`**Mention A User**`)
+      if (!role) return message.channel.send(`**Mention A Role**`)
+      if (!time) return message.channel.sene(`**Type The Time **`)
+  if(message.guild.member(user).roles.highest.position >= message.member.roles.highest.position && message.guild.ownerID !== message.author.id) return message.channel.send(` **You can't give Roles higher than your role**`);
+
+      var embed = new Discord.MessageEmbed()
+      .setDescription(`**Succesfully Added ${role} To ${user}**`)
+      message.channel.send(embed)
+        user.roles.add(role.id)
+
+        setTimeout(() => {
+user.roles.remove(role)
+
+        }, ms(time))
+  
+    
+    
+    }
+    });
+  
+  
+
 ///////////////////
 
 client.on("message", message => {
@@ -1130,7 +1160,7 @@ const embed = new Discord.MessageEmbed()
 **__\`vban\`__** - **__\`unvban\`__** - **__\`ban\`__** - **__\`unban\`__** - **__\`uban-all\`__**
 \`lock\` - \`unlock\` - \`clear\` - \`say\` - \`esay\`
 **__\`open\`__** - **__\`close\`__** - **__\`openall\`__** - **__\`closeall\`__**
-\`setnick\`
+\`setnick\` - \`role\`
 ============
 **🤹‍♀️┇Gif**
 > \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\` - \`cartoon\`
