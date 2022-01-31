@@ -32,7 +32,23 @@ client.on('message', id441 => {
 
 ////////////////////
 
-
+client.on('message', message => {
+  
+  
+  
+    if(message.content.startsWith(prefix + 'ava-server')) {
+  
+    
+      var embed = new Discord.MessageEmbed()
+      
+  .setDescription(`**[Avatar Link](${message.guild.iconURL()})**`)
+  .setImage(message.guild.iconURL({dynamic : true, size : 1024}))
+  
+  
+  message.channel.send(embed)
+    }
+  });
+  
 
 ///////////////////
 
