@@ -1148,7 +1148,7 @@ const embed = new Discord.MessageEmbed()
 **__\`vban\`__** - **__\`unvban\`__** - **__\`ban\`__** - **__\`unban\`__** - **__\`uban-all\`__**
 \`lock\` - \`unlock\` - \`clear\` - \`say\` - \`esay\`
 **__\`open\`__** - **__\`close\`__** - **__\`openall\`__** - **__\`closeall\`__**
-\`setnick\` - \`role\`
+\`setnick\` - \`ava-server\`
 ============
 **🤹‍♀️┇Gif**
 > \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\` - \`cartoon\`
