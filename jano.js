@@ -16,7 +16,7 @@ const prefix = ".";
 const PREFIX = ".";
 ////////////////
 client.on('guildMemberAdd', message => {
-if (message.guild.id === ("878271484911583264"))
+if (message.guild.id === (""))
 {
  let user = message.author;
 message.setNickname(`${message.user.username} ᴰᔆ`);
