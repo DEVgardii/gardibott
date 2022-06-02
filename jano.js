@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const devs = "881116033916735570";
+const devs = "888125940318765146";
 const moment = require("moment");
 const client = new Discord.Client();
 const express = require('express');
