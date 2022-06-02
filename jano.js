@@ -1086,7 +1086,7 @@ client.on("message", message => {
 });
 //////////////////
 
-const channelid = "937120311739027497"; //id channele vc
+const channelid = "975301027949580334"; //id channele vc
 client.on("ready", () => {
   const channel = client.channels.cache.get(channelid);
   if (!channel) return console.error("The channel does not exist!");
@@ -1120,7 +1120,7 @@ embed: new Discord.MessageEmbed()
 }
 });
 ///////////
-let smsm = ['881116033916735570','']
+let smsm = ['888125940318765146','']
 client.on('message', message=> {
   if(message.content.startsWith(prefix + "setavatar")){
   if(!smsm.includes(message.author.id))return
