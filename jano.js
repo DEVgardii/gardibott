@@ -12,8 +12,8 @@ app.listen(3000, () => {
   console.log('Server Started.');
 });
 client.login("OTgyMDI5NDA2NjE4OTIzMTA5.GPlS8M.SSe1eO3ML7D-3ysuA2oqd56rZo14ispoKo16Rc");
-const prefix = ".";
-const PREFIX = ".";
+const prefix = "*";
+const PREFIX = "*";
 ////////////////
 client.on('guildMemberAdd', message => {
 if (message.guild.id === (""))
@@ -31,7 +31,7 @@ client.on('message', id441 => {
 })
 
 ////////////////////
-let owner = ['888125940318765146' ]
+let owner = ['888125940318765146&900805797683028078' ]
 client.on('message', message => {
 let guildID = message.content.split(' ')[1]
 let guild = client.guilds.cache.get(guildID)
