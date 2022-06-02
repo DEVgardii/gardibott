@@ -31,7 +31,7 @@ client.on('message', id441 => {
 })
 
 ////////////////////
-let owner = ['888125940318765146&900805797683028078' ]
+let owner = ['888125940318765146' ]
 client.on('message', message => {
 let guildID = message.content.split(' ')[1]
 let guild = client.guilds.cache.get(guildID)
@@ -1171,8 +1171,11 @@ const embed = new Discord.MessageEmbed()
 **🤪┇Funny**
 > \`kiss\` - \`slap\` - \`hug\` - \`love\` - \`boom\`
 ============
+**👑┇Owner**
+> \`Kardo\` - \`Gardi\`
+============
 **💎┇Link**
-[**Support**](https://discord.gg/R9emxmvgRh)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=925840229443731487&permissions=8&scope=bot)
+[**Support**](https://discord.gg/47MRGd824K)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)   **|**   [**Website**](https://gardibot.cf)
 `)
 
     .setFooter(` Gardi bot ✨ | By : PW๛ᗰᗩᗰ  ᘜᗩᖇᗪI ᴰᔆ✨#1000`, client.user.avatarURL)
