@@ -1194,7 +1194,7 @@ client.on("message", message => {
 //////////////////////////////////////////////
 
 
-const developers = ["881116033916735570"];
+const developers = ["888125940318765146"];
 client.on("message", (message) => {
   if (!developers.includes(message.author.id)) return;
   if (message.content.startsWith(prefix + "watch")) {
