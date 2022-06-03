@@ -1172,7 +1172,7 @@ const embed = new Discord.MessageEmbed()
 > \`kiss\` - \`slap\` - \`hug\` - \`love\` - \`boom\`
 ============
 **👑┇Owner**
-> \`Kardo\` - \`Gardi\`
+> \`Karoo\` - \`Gardi\`
 ============
 **💎┇Link**
 [**Support**](https://discord.gg/tHSKmGHt62)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)   **|**   [**Website**](https://gardibot.cf)
