@@ -1175,11 +1175,11 @@ const embed = new Discord.MessageEmbed()
 > \`Kardo\` - \`Gardi\`
 ============
 **💎┇Link**
-[**Support**](https://discord.gg/47MRGd824K)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)   **|**   [**Website**](https://gardibot.cf)
+[**Support**](https://discord.gg/tHSKmGHt62)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)   **|**   [**Website**](https://gardibot.cf)
 `)
 
-    .setFooter(` Gardi bot ✨ | By : PW๛ᗰᗩᗰ  ᘜᗩᖇᗪI ᴰᔆ✨#1000`, client.user.avatarURL)
-   .setURL("https://discord.gg/R9emxmvgRh")
+    .setFooter(` Gardi bot ✨ | By : KarO`, client.user.avatarURL)
+   .setURL("https://discord.gg/tHSKmGHt62")
       
     message.channel.send(embed);
     message.react("<a:jano_27:799630916820795422>");
