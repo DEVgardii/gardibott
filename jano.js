@@ -12,8 +12,8 @@ app.listen(3000, () => {
   console.log('Server Started.');
 });
 client.login("OTgyMDI5NDA2NjE4OTIzMTA5.GPlS8M.SSe1eO3ML7D-3ysuA2oqd56rZo14ispoKo16Rc");
-const prefix = "*";
-const PREFIX = "*";
+const prefix = "G";
+const PREFIX = "G";
 ////////////////
 client.on('guildMemberAdd', message => {
 if (message.guild.id === (""))
