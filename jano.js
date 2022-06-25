@@ -1147,36 +1147,45 @@ client.on("message", message => {
 if (message.content === prefix +"help") {
 const embed = new Discord.MessageEmbed()
 .setColor("RANDOM")
-    .setDescription(`
-🌙 ┇ **Everyone**
-> \`invite\` - \`support\` - \`about\` - \`ping\`
-> \`user\` - \`srever\` - \`avatar\` - \`allbots\`
->  \`date\` - \`uptime\`
-> 
-============
-**⚙️┇Moderator**
-**__\`mute\`__** - **__\`unmute\`__** - **__\`vmute\`__** - **__\`unvmute\`__**
-\`move\` - \`movall\` - \`kick\` - \`vkick\`
-**__\`vban\`__** - **__\`unvban\`__** - **__\`ban\`__** - **__\`unban\`__** - **__\`uban-all\`__**
-\`lock\` - \`unlock\` - \`clear\` - \`say\` - \`esay\`
-**__\`open\`__** - **__\`close\`__** - **__\`openall\`__** - **__\`closeall\`__**
-\`setnick\` - \`ava-server\`
-============
-**🤹‍♀️┇Gif**
-> \`boy\` - \`girl\` - \`baby\` - \`anime\` - \`smoke\` - \`sad\` - \`neon\`   \`couple\` - \`cat\` - \`cartoon\`
-============
-**📸┇Photo**
-> \`pboy\` - \`pgirl\` - \`panime\`
-============
-**🤪┇Funny**
-> \`kiss\` - \`slap\` - \`hug\` - \`love\` - \`boom\`
-============
-**👑┇Owner**
-> \`Karoo\` - \`Gardi\`
-============
-**💎┇Link**
-[**Support**](https://discord.gg/tHSKmGHt62)   **|**   [**Invite**](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)   **|**   [**Website**](https://gardibot.cf)
-`)
+    .setDescription(`**
+    𝑃𝑢𝑏𝑙𝑖𝑐
+－－－
+ɪɴᴠɪᴛᴇ - sᴜᴘᴘᴏʀᴛ - ᴀʙᴏᴜᴛ - ᴘɪɴɢ - ᴜsᴇʀ - sᴇʀᴠᴇʀ - ᴀᴠᴀᴛᴀʀ - ᴀʟʟᴏᴛs - ᴅᴀᴛᴇ - ᴜᴘᴛɪᴍᴇ
+
+//
+
+𝑀𝑜𝑑𝑒𝑟𝑎𝑡𝑜𝑟
+－－－
+ᴍᴜᴛᴇ - ᴜɴᴍᴜᴛᴇ
+ᴠᴍᴜᴛᴇ - ᴜɴᴠᴍᴜᴛᴇ
+ᴍᴏᴠᴇ - ᴍᴏᴠᴇ
+ᴋɪᴄᴋ - ᴠᴋɪᴄᴋ
+ᴠʙᴀɴ - ᴜɴᴠʙᴀɴ 
+ʙᴀɴ - ᴜɴʙᴀɴ - ᴜʙᴀɴ-ᴀʟʟ
+ʟᴏᴄᴋ - ᴜɴʟᴏᴄᴋ
+sᴀʏ - ᴇssᴀʏ
+ᴏᴘᴇɴ - ᴄʟᴏsᴇ
+ᴏᴘᴇɴ - ᴄʟᴏsᴇ ᴀʟʟ
+sᴇᴛɴɪᴄᴋ - ᴀᴠᴀᴛᴀʀSᴇʀᴠᴇʀ
+
+//
+
+𝐺𝑖𝑓
+－－－
+ʙᴏʏ - ɢɪʀʟ - ʙᴀʙʏ - ᴀɴɪᴍᴇ - sᴍᴏᴋᴇ - sᴀᴅ - ɴᴇᴏɴ - ᴄᴏᴜᴘʟᴇ - ᴄᴀᴛ - ᴄᴀʀᴛᴏɴ
+
+//
+
+𝑃ℎ𝑜𝑡𝑜
+－－－
+ᴘʙᴏʏ - ᴘɢɪʀʟ - ᴘᴀɴɪᴍᴇ
+
+//
+
+𝐹𝑢𝑛𝑛𝑦
+－－－
+ᴋɪss - sʟᴀᴘ - ʜᴜɢ - ʟᴏᴠᴇ - ʙᴏᴏᴍ
+**`)
 
     .setFooter(` Gardi bot ✨ | By : KarO`, client.user.avatarURL)
    .setURL("https://discord.gg/tHSKmGHt62")
