@@ -1187,7 +1187,7 @@ pboy - pgirl - panime
 kiss - slap - hug - love - boom
 
 //
-
+**
 𝐿𝑖𝑛𝑘
 －－
 𝑆𝑛𝑎𝑝𝐶ℎ𝑎𝑡(https://www.snapchat.com/add/gardihub)
@@ -1195,8 +1195,7 @@ kiss - slap - hug - love - boom
 𝑆𝑢𝑝𝑝𝑜𝑟𝑡𝐷𝑖𝑠𝑐𝑜𝑟𝑑(comming soon)
 𝐷𝑒𝑏𝑙𝑜𝑝𝑒𝑡𝐵𝑜𝑡(@888125940318765146)
 𝑂𝑤𝑛𝑒𝑟𝐵𝑜𝑡(@888125940318765146)
-
-**`)
+`)
 
     .setFooter(` Gardi bot ✨ | By : KarO`, client.user.avatarURL)
    .setURL("https://discord.gg/tHSKmGHt62")
