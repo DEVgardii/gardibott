@@ -1190,7 +1190,7 @@ kiss - slap - hug - love - boom
 **
 𝐿𝑖𝑛𝑘
 －－
-𝑆𝑛𝑎𝑝𝐶ℎ𝑎𝑡(https://www.snapchat.com/add/gardihub)
+𝑆𝑛𝑎𝑝𝐶ℎ𝑎𝑡('https://www.snapchat.com/add/gardihub')
 𝑊𝑒𝑏𝑠𝑖𝑡𝑒(cooming soon)
 𝑆𝑢𝑝𝑝𝑜𝑟𝑡𝐷𝑖𝑠𝑐𝑜𝑟𝑑(comming soon)
 𝐷𝑒𝑏𝑙𝑜𝑝𝑒𝑡𝐵𝑜𝑡(@888125940318765146)
