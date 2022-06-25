@@ -987,23 +987,7 @@ client.on("message", message => {
   if (message.content === prefix + "invite") {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
-    const embed = new Discord.MessageEmbed()
-       .setColor("random")
-    .setDescription (`
-☺️Invite is me
---------------
-📊I work
-\` ⚙️moderation \`
-\`🤹gif\`
-\` 🤪funny\`
-\`📸photo\`
-Link
-[invite]( https://discord.com/api/oauth2/authorize?client_id=765396847379480660&permissions=8&scope=bot)`)
-    .setFooter(``)
-    .setImage(``)
-    .setTitle(``) 
-    .setThumbnail(client.user.avatarURL())
-    message.channel.send(embed);
+    message.channel.send(`[INVITE](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)`));
   }
 });
 
@@ -1013,132 +997,18 @@ Link
 
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
-client.on("message", message => {
-  if (message.content.startsWith(prefix + "slap")) {
-    let user = message.mentions.users.first();
-    if (!user) return message.reply("🙊 | **${prefix}**slap <@USER>");
-    let slaps = [
-      "https://media.discordapp.net/attachments/738277612039962688/775009108402372608/image0.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775009109166522428/image1.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775009109383577621/image2.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775009109585821746/image3.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775009109749006406/image4.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775009110177349692/image6.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775009110373433364/image7.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775009110525345797/image8.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775009110663233576/image9.gif"
-    ];
-    const embed = new Discord.MessageEmbed()
-      .setDescription(`${message.author.username} Slap ${user.username}!`)
-      .setColor(`RANDOM`)
-      .setImage(slaps[Math.floor(Math.random() * slaps.length)]);
-    message.channel.send(embed);
-  }
-});
+
 //////////////////////////////////////////////////////////////////
-client.on("message", message => {
-  if (message.content.startsWith(prefix + "love")) {
-    let user = message.mentions.users.first();
-    if (!user) return message.reply("🙊 | **${prefix}**love <@USER>");
-    let loves = [
-      "https://media.discordapp.net/attachments/738277612039962688/775017084848439296/image0.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017085545086996/image2.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017085721116732/image3.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017085948133406/image4.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017086127702047/image5.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017086300717068/image6.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017086522228766/image7.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017086757634128/image8.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017087004442634/image9.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017087004442634/image9.gif"
-    ];
 
-    const embed = new Discord.MessageEmbed()
-      .setDescription(`${message.author.username} Love ${user.username}!`)
-     .setColor(`RANDOM`)
-      .setImage(loves[Math.floor(Math.random() * loves.length)]);
-    message.channel.send(embed);
-  }
-});
 //////////////////////////////////////////////////////////////////
-client.on("message", message => {
-  if (message.content.startsWith(prefix + "hug")) {
-    let user = message.mentions.users.first();
-    if (!user) return message.reply("🙊 | **${prefix}**hug <@USER>");
 
-    let hugs = [
-      "https://media.discordapp.net/attachments/738277612039962688/775010008437096508/image0.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775010008676433945/image1.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775010008823103508/image2.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775010008982224896/image3.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775010009151045692/image4.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775010009322094602/image5.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775010009578340382/image6.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775010009796575262/image7.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775010009972867082/image8.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775010010152566804/image9.gif"
-    ];
-
-    const embed = new Discord.MessageEmbed()
-      .setDescription(`${message.author.username} Hugs ${user.username}!`)
-      .setColor(`RANDOM`)
-      .setImage(hugs[Math.floor(Math.random() * hugs.length)])
-      .setFooter("hug");
-    message.channel.send(embed);
-  }
-});
 //////////////////////////////////////////////////////////////////
-client.on("message", message => {
-  if (message.content.startsWith(prefix + "kiss")) {
-    let user = message.mentions.users.first();
-    if (!user) return message.reply("🙊 | **${prefix}**kiss <@USER>");
-    var kiss = [
-      "https://media.discordapp.net/attachments/738277612039962688/775017819980431360/image0.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017820161179648/image1.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017820445868032/image2.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017820643262465/image3.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017820853239808/image4.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017821129932860/image5.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775017821611753472/image7.gif",
-      "https://media.discordapp.net/attachments/725046590242291763/775020613109678090/image0.gif"
-    ];
 
-    const embed = new Discord.MessageEmbed()
-      .setDescription(`${message.author.username} kiss ${user.username}!`)
-      .setColor(`RANDOM`)
-      .setImage(kiss[Math.floor(Math.random() * kiss.length)]);
-    message.channel.send(embed);
-  }
-});
 //////////////////////////////////////////////////////////////////
 
 ///////////////////////
 
 //////////////////////////////////////////////////////////////////
-client.on("message", message => {
-  if (message.content.startsWith(prefix + "boom")) {
-    let user = message.mentions.users.first();
-    if (!user) return message.reply("🙊 | **${prefix}**boom <@USER>");
-
-    let bombs = [
-      "https://media.discordapp.net/attachments/738277612039962688/775016118678454282/image0.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775016118938894407/image1.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775016119148740608/image2.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775016119328833566/image3.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775016119588225094/image4.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775016119778017290/image5.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775016119966629928/image6.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775016120393924698/image8.gif",
-      "https://media.discordapp.net/attachments/738277612039962688/775016120577949706/image9.gif"
-    ];
-
-    const embed = new Discord.MessageEmbed()
-      .setDescription(`${message.author.username} boom ${user.username}!`)
-      .setColor(`RANDOM`)
-      .setImage(bombs[Math.floor(Math.random() * bombs.length)]);
-    message.channel.send(embed);
-  }
-});
 
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
