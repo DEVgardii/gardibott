@@ -966,19 +966,7 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
        .setColor("random")
     .setDescription (`
-☺️Support is me
---------------
-📊I work
- \`⚙️moderation\`
- \`🤹gif\`
- \`🤪funny\`
- \`📸photo\`
-Link
 [support](https://discord.gg/R9emxmvgRh)`)
-    .setFooter(``)
-    .setImage(``)
-    .setTitle(``) 
-    .setThumbnail(client.user.avatarURL())
     message.channel.send(embed);
   }
 });
@@ -988,7 +976,7 @@ client.on("message", message => {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
     const embed = new Discord.MessageEmbed()
-	  .setFooter(`[INVITE](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)`)
+	  .setDescription(`[INVITE](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)`)
 	  message.channel.send(embed);
   }
 });
