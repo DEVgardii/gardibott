@@ -1166,18 +1166,6 @@ open - close
 openall - closeall
 setnick - avatarServer
 
-🎑𝐺𝑖𝑓
-－－－
-boy - girl - baby - anime - smoke - sad - neon - couple  cat - carton
-
-🌠𝑃ℎ𝑜𝑡𝑜
-－－－
-pboy - pgirl - panime
-
-🤍𝐹𝑢𝑛𝑛𝑦
-－－－
-kiss - slap - hug - love - boom
-
 🖇𝐿𝑖𝑛𝑘
 －－
 👻[𝑆𝑛𝑎𝑝𝐶ℎ𝑎𝑡](https://www.snapchat.com/add/gardihub)
@@ -1193,7 +1181,7 @@ kiss - slap - hug - love - boom
 👑𝑂𝑤𝑛𝑒𝑟<@888125940318765146>
 `)
 
-    .setFooter(` Gardi bot ✨ | By : KarO`, client.user.avatarURL)
+    .setFooter(` `)
    .setURL("https://discord.gg/tHSKmGHt62")
       
     message.channel.send(embed);
