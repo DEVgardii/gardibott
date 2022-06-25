@@ -1194,8 +1194,8 @@ kiss - slap - hug - love - boom
 [𝐼𝑛𝑣𝑖𝑡𝑒](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)
 [𝑆𝑢𝑝𝑝𝑜𝑟𝑡](comming soon)
 [𝑊𝑒𝑏𝑠𝑖𝑡𝑒](cooming soon)
-[𝐷𝑒𝑣𝑙𝑜𝑝𝑒𝑟](<@888125940318765146>)
-[𝑂𝑤𝑛𝑒𝑟](<@888125940318765146>)
+𝐷𝑒𝑣𝑙𝑜𝑝𝑒𝑟<@888125940318765146>   -   <@976241045719380068>
+𝑂𝑤𝑛𝑒𝑟<@888125940318765146>
 `)
 
     .setFooter(` Gardi bot ✨ | By : KarO`, client.user.avatarURL)
