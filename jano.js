@@ -1147,7 +1147,7 @@ client.on("message", message => {
 if (message.content === prefix +"help") {
 const embed = new Discord.MessageEmbed()
 .setColor("RANDOM")
-    .setDescription(`**
+    .setDescription(`
 🌍𝑃𝑢𝑏𝑙𝑖𝑐
 －－－
 invite - support - about - ping - user - server - avatar - allbots - date - uptime
