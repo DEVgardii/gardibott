@@ -1148,13 +1148,11 @@ if (message.content === prefix +"help") {
 const embed = new Discord.MessageEmbed()
 .setColor("RANDOM")
     .setDescription(`**
-    𝑃𝑢𝑏𝑙𝑖𝑐
+🌍𝑃𝑢𝑏𝑙𝑖𝑐
 －－－
 invite - support - about - ping - user - server - avatar - allbots - date - uptime
 
-//
-
-𝑀𝑜𝑑𝑒𝑟𝑎𝑡𝑜𝑟
+⚙️𝑀𝑜𝑑𝑒𝑟𝑎𝑡𝑜𝑟
 －－－
 mute - unmute
 vmute - unvmute
@@ -1168,39 +1166,31 @@ open - close
 openall - closeall
 setnick - avatarServer
 
-//
-
-𝐺𝑖𝑓
+🎑𝐺𝑖𝑓
 －－－
 boy - girl - baby - anime - smoke - sad - neon - couple - cat - carton
 
-//
-
-𝑃ℎ𝑜𝑡𝑜
+🌠𝑃ℎ𝑜𝑡𝑜
 －－－
 pboy - pgirl - panime
 
-//
-
-𝐹𝑢𝑛𝑛𝑦
+🤍𝐹𝑢𝑛𝑛𝑦
 －－－
 kiss - slap - hug - love - boom
 
-//
-**
-𝐿𝑖𝑛𝑘
+🖇𝐿𝑖𝑛𝑘
 －－
-[𝑆𝑛𝑎𝑝𝐶ℎ𝑎𝑡](https://www.snapchat.com/add/gardihub)
+👻[𝑆𝑛𝑎𝑝𝐶ℎ𝑎𝑡](https://www.snapchat.com/add/gardihub)
 -
-[𝐼𝑛𝑣𝑖𝑡𝑒](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)
+🖇[𝐼𝑛𝑣𝑖𝑡𝑒](https://discord.com/api/oauth2/authorize?client_id=982029406618923109&permissions=8&scope=bot)
 -
-[𝑆𝑢𝑝𝑝𝑜𝑟𝑡](comming soon)
+✨[𝑆𝑢𝑝𝑝𝑜𝑟𝑡](comming soon)
 -
-[𝑊𝑒𝑏𝑠𝑖𝑡𝑒](cooming soon)
+❓[𝑊𝑒𝑏𝑠𝑖𝑡𝑒](cooming soon)
 -
-𝐷𝑒𝑣𝑙𝑜𝑝𝑒𝑟<@888125940318765146>   -   <@820702223847129138>
+👨‍💻𝐷𝑒𝑣𝑙𝑜𝑝𝑒𝑟<@888125940318765146>   -   <@820702223847129138>
 -
-𝑂𝑤𝑛𝑒𝑟<@888125940318765146>
+👑𝑂𝑤𝑛𝑒𝑟<@888125940318765146>
 `)
 
     .setFooter(` Gardi bot ✨ | By : KarO`, client.user.avatarURL)
