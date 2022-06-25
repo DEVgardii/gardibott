@@ -693,7 +693,7 @@ embed: new Discord.MessageEmbed()
 .setThumbnail(client.user.avatarURL())
 .setColor("RANDOM")
 .setTitle("Info Bot")
-.addField("👑``OWNER``", `<@881116033916735570>`, true)
+.addField("👑``OWNER``", `<@888125940318765146>`, true)
 .addField("👨‍🏫``My Name``", `${client.user.tag} `, true)
 .addField("🆔``My ID``", `[ ${client.user.id} ]`, true)
 .addField("🖇``Servers``", [client.guilds.cache.size], true)
@@ -966,7 +966,7 @@ client.on("message", message => {
     const embed = new Discord.MessageEmbed()
        .setColor("random")
     .setDescription (`
-[support](https://discord.gg/R9emxmvgRh)`)
+[support]()`)
     message.channel.send(embed);
   }
 });
