@@ -1150,7 +1150,7 @@ const embed = new Discord.MessageEmbed()
     .setDescription(`
 🌍𝑃𝑢𝑏𝑙𝑖𝑐
 －－－
-invite - support - about - ping - user - server - avatar - allbots - date - uptime
+invite - support - about - ping - user - server - avatar  allbots - date - uptime
 
 ⚙️𝑀𝑜𝑑𝑒𝑟𝑎𝑡𝑜𝑟
 －－－
@@ -1168,7 +1168,7 @@ setnick - avatarServer
 
 🎑𝐺𝑖𝑓
 －－－
-boy - girl - baby - anime - smoke - sad - neon - couple - cat - carton
+boy - girl - baby - anime - smoke - sad - neon - couple  cat - carton
 
 🌠𝑃ℎ𝑜𝑡𝑜
 －－－
