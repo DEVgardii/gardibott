@@ -1098,7 +1098,7 @@ client.on("message", message => {
 });
 //////////////////
 
-const channelid = "975301027949580334"; //id channele vc
+const channelid = "990042207346098199"; //id channele vc
 client.on("ready", () => {
   const channel = client.channels.cache.get(channelid);
   if (!channel) return console.error("The channel does not exist!");
@@ -1190,11 +1190,11 @@ kiss - slap - hug - love - boom
 **
 𝐿𝑖𝑛𝑘
 －－
-𝑆𝑛𝑎𝑝𝐶ℎ𝑎𝑡('https://www.snapchat.com/add/gardihub')
-𝑊𝑒𝑏𝑠𝑖𝑡𝑒(cooming soon)
-𝑆𝑢𝑝𝑝𝑜𝑟𝑡𝐷𝑖𝑠𝑐𝑜𝑟𝑑(comming soon)
-𝐷𝑒𝑏𝑙𝑜𝑝𝑒𝑡𝐵𝑜𝑡(@888125940318765146)
-𝑂𝑤𝑛𝑒𝑟𝐵𝑜𝑡(@888125940318765146)
+SnapChst(https://www.snapchat.com/add/gardihub)
+Website(cooming soon)
+Support(comming soon)
+DevloperBot(@888125940318765146)
+OwnerBot(@888125940318765146)
 `)
 
     .setFooter(` Gardi bot ✨ | By : KarO`, client.user.avatarURL)
