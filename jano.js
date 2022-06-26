@@ -12,16 +12,9 @@ app.listen(3000, () => {
   console.log('Server Started.');
 });
 client.login("OTgyMDI5NDA2NjE4OTIzMTA5.G5dCX2.AwoTW8udnnZ9FDEhmmn83qtQ3MR-qmnNJn5Ym8");
-const prefix = "G";
-const PREFIX = "G";
+const prefix = ".";
+const PREFIX = ".";
 ////////////////
-client.on('guildMemberAdd', message => {
-if (message.guild.id === (""))
-{
- let user = message.author;
-message.setNickname(`${message.user.username} ᴰᔆ`);
-}
-});
 
 client.on('message', id441 => {
   const madara = new RegExp(`^<@!?${client.user.id}>( |)$`);
