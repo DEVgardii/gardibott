@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
   console.log('Server Started.');
 });
-client.login("OTgyMDI5NDA2NjE4OTIzMTA5.G5dCX2.AwoTW8udnnZ9FDEhmmn83qtQ3MR-qmnNJn5Ym8");
+client.login("OTc1MzEwMTc3Njg5NTM0NTA0.Gg0Zpn.L76aZSlBre97B9xPEHS4CGbUI9rG1PmnP88v5E");
 const prefix = ".";
 const PREFIX = ".";
 ////////////////
