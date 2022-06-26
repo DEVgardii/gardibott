@@ -964,9 +964,8 @@ client.on("message", message => {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
     const embed = new Discord.MessageEmbed()
-       .setColor("random")
-    .setDescription (`
-[support]()`)
+       
+    .setDescription(`Support`)
     message.channel.send(embed);
   }
 });
