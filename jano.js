@@ -705,7 +705,7 @@ embed: new Discord.MessageEmbed()
 }
 });
 ///////////
-let smsm = ['888125940318765146','']
+let smsm = ['888125940318765146']
 client.on('message', message=> {
   if(message.content.startsWith(prefix + "setavatar")){
   if(!smsm.includes(message.author.id))return
@@ -754,7 +754,7 @@ setnick - avatarServer
 👑𝑂𝑤𝑛𝑒𝑟<@888125940318765146>
 `)
 
-    .setFooter(` `)
+    .setFooter("")
    .setURL("https://discord.gg/tHSKmGHt62")
       
     message.channel.send(embed);
@@ -964,9 +964,8 @@ client.on("message", message => {
     if (!message.channel.guild)
       return message.reply("**this command only for server**");
     const embed = new Discord.MessageEmbed()
-       
-    .setDescription(`Support`)
-    message.channel.send(embed);
+	  .setDescription(``)
+	  message.channel.send(embed);
   }
 });
 ////////////////////////////////////////////////////////////////
